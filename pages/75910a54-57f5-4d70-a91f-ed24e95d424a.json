@@ -1,0 +1,1 @@
+{"script":"defineProps([\"the\"]);","style":"","template":"<h2 class=\"text-center\">{{ the.title }}</h2><p class=\"text-center lead text-slate-700\">{{ the.description }}</p>"}

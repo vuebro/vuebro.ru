@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://vues3.ru/sitemap.xml
