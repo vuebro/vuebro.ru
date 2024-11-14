@@ -1,6 +1,6 @@
 {
   "../node_modules/ofetch/dist/index.mjs": {
-    "file": "assets/ofetch-CwKPICM-.js",
+    "file": "assets/ofetch-DfaEl5Lr.js",
     "name": "ofetch",
     "src": "../node_modules/ofetch/dist/index.mjs",
     "isDynamicEntry": true,
@@ -56,8 +56,8 @@
     "file": "assets/json-schema-traverse-DW8_mBst.js",
     "name": "json-schema-traverse"
   },
-  "_magic-string-CTxECtaK.js": {
-    "file": "assets/magic-string-CTxECtaK.js",
+  "_magic-string-l2mojYcN.js": {
+    "file": "assets/magic-string-l2mojYcN.js",
     "name": "magic-string",
     "imports": [
       "_jridgewell-CS0TOL6_.js"
@@ -67,23 +67,23 @@
     "file": "assets/ufo-CsG24Xhf.js",
     "name": "ufo"
   },
-  "_unhead-12oOAFTY.js": {
-    "file": "assets/unhead-12oOAFTY.js",
+  "_unhead-CEwDqR4t.js": {
+    "file": "assets/unhead-CEwDqR4t.js",
     "name": "unhead",
     "imports": [
       "_hookable-B8xFkYCm.js"
     ]
   },
   "_unocss-!~{00f}~.js": {
-    "file": "assets/unocss-Bp7TQC5E.css",
+    "file": "assets/unocss-DaoZmw1x.css",
     "src": "_unocss-!~{00f}~.js"
   },
-  "_unocss-BkcBwv3F.js": {
-    "file": "assets/unocss-BkcBwv3F.js",
+  "_unocss-Dac0g9vD.js": {
+    "file": "assets/unocss-Dac0g9vD.js",
     "name": "unocss",
     "imports": [
       "../node_modules/ofetch/dist/index.mjs",
-      "_magic-string-CTxECtaK.js"
+      "_magic-string-l2mojYcN.js"
     ],
     "dynamicImports": [
       "../node_modules/ofetch/dist/index.mjs",
@@ -91,7 +91,7 @@
       "../node_modules/ofetch/dist/index.mjs"
     ],
     "css": [
-      "assets/unocss-Bp7TQC5E.css"
+      "assets/unocss-DaoZmw1x.css"
     ]
   },
   "_uuid-random-C5LgB_p5.js": {
@@ -125,24 +125,24 @@
     "name": "vueuse"
   },
   "index.html": {
-    "file": "assets/index-Cog65wet.js",
+    "file": "assets/index-CWMJXuN6.js",
     "name": "index",
     "src": "index.html",
     "isEntry": true,
     "imports": [
-      "_unocss-BkcBwv3F.js",
+      "_unocss-Dac0g9vD.js",
       "_ajv-DVT_ztRr.js",
       "_ajv-keywords-fgJOexQU.js",
       "_uuid-random-C5LgB_p5.js",
       "_iconify-DZNnka9g.js",
-      "_unhead-12oOAFTY.js",
+      "_unhead-CEwDqR4t.js",
       "_vue-router-DgSFFxGk.js",
       "_vueuse-Bs6x0GOr.js",
       "_vue3-sfc-loader-CoUr1SK8.js",
       "../node_modules/ofetch/dist/index.mjs",
       "_destr-CVtkxrq9.js",
       "_ufo-CsG24Xhf.js",
-      "_magic-string-CTxECtaK.js",
+      "_magic-string-l2mojYcN.js",
       "_jridgewell-CS0TOL6_.js",
       "_fast-deep-equal-DhA4GXGS.js",
       "_json-schema-traverse-DW8_mBst.js",
@@ -156,11 +156,11 @@
       "src/views/NotFoundView.vue"
     ],
     "css": [
-      "assets/index-CKNEaLay.css"
+      "assets/index-vGiKZPT9.css"
     ]
   },
   "src/views/MultiView.vue": {
-    "file": "assets/MultiView-CKxqOE8u.js",
+    "file": "assets/MultiView-1l4WX1lC.js",
     "name": "MultiView",
     "src": "src/views/MultiView.vue",
     "isDynamicEntry": true,
@@ -168,11 +168,11 @@
       "_vueuse-Bs6x0GOr.js",
       "index.html",
       "_vue-router-DgSFFxGk.js",
-      "_unocss-BkcBwv3F.js",
+      "_unocss-Dac0g9vD.js",
       "../node_modules/ofetch/dist/index.mjs",
       "_destr-CVtkxrq9.js",
       "_ufo-CsG24Xhf.js",
-      "_magic-string-CTxECtaK.js",
+      "_magic-string-l2mojYcN.js",
       "_jridgewell-CS0TOL6_.js",
       "_ajv-DVT_ztRr.js",
       "_fast-deep-equal-DhA4GXGS.js",
@@ -181,26 +181,26 @@
       "_ajv-keywords-fgJOexQU.js",
       "_uuid-random-C5LgB_p5.js",
       "_iconify-DZNnka9g.js",
-      "_unhead-12oOAFTY.js",
+      "_unhead-CEwDqR4t.js",
       "_hookable-B8xFkYCm.js",
       "_vue3-sfc-loader-CoUr1SK8.js",
       "_vue-Cow_pXkh.js"
     ]
   },
   "src/views/NotFoundView.vue": {
-    "file": "assets/NotFoundView-CcHH3KEG.js",
+    "file": "assets/NotFoundView-B5wWPxwx.js",
     "name": "NotFoundView",
     "src": "src/views/NotFoundView.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_unhead-12oOAFTY.js",
+      "_unhead-CEwDqR4t.js",
       "index.html",
       "_hookable-B8xFkYCm.js",
-      "_unocss-BkcBwv3F.js",
+      "_unocss-Dac0g9vD.js",
       "../node_modules/ofetch/dist/index.mjs",
       "_destr-CVtkxrq9.js",
       "_ufo-CsG24Xhf.js",
-      "_magic-string-CTxECtaK.js",
+      "_magic-string-l2mojYcN.js",
       "_jridgewell-CS0TOL6_.js",
       "_ajv-DVT_ztRr.js",
       "_fast-deep-equal-DhA4GXGS.js",
@@ -216,17 +216,17 @@
     ]
   },
   "src/views/SingleView.vue": {
-    "file": "assets/SingleView-nkHarPqM.js",
+    "file": "assets/SingleView-CGgNRmxR.js",
     "name": "SingleView",
     "src": "src/views/SingleView.vue",
     "isDynamicEntry": true,
     "imports": [
       "index.html",
-      "_unocss-BkcBwv3F.js",
+      "_unocss-Dac0g9vD.js",
       "../node_modules/ofetch/dist/index.mjs",
       "_destr-CVtkxrq9.js",
       "_ufo-CsG24Xhf.js",
-      "_magic-string-CTxECtaK.js",
+      "_magic-string-l2mojYcN.js",
       "_jridgewell-CS0TOL6_.js",
       "_ajv-DVT_ztRr.js",
       "_fast-deep-equal-DhA4GXGS.js",
@@ -235,7 +235,7 @@
       "_ajv-keywords-fgJOexQU.js",
       "_uuid-random-C5LgB_p5.js",
       "_iconify-DZNnka9g.js",
-      "_unhead-12oOAFTY.js",
+      "_unhead-CEwDqR4t.js",
       "_hookable-B8xFkYCm.js",
       "_vue-router-DgSFFxGk.js",
       "_vue-Cow_pXkh.js",
