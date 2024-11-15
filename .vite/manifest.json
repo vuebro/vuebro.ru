@@ -78,8 +78,8 @@
     "file": "assets/unocss-DaoZmw1x.css",
     "src": "_unocss-!~{00f}~.js"
   },
-  "_unocss-Dac0g9vD.js": {
-    "file": "assets/unocss-Dac0g9vD.js",
+  "_unocss-wUcHOrf3.js": {
+    "file": "assets/unocss-wUcHOrf3.js",
     "name": "unocss",
     "imports": [
       "../node_modules/ofetch/dist/index.mjs",
@@ -125,12 +125,12 @@
     "name": "vueuse"
   },
   "index.html": {
-    "file": "assets/index-BplNHgSD.js",
+    "file": "assets/index-BcYRK76g.js",
     "name": "index",
     "src": "index.html",
     "isEntry": true,
     "imports": [
-      "_unocss-Dac0g9vD.js",
+      "_unocss-wUcHOrf3.js",
       "_ajv-DVT_ztRr.js",
       "_ajv-keywords-fgJOexQU.js",
       "_uuid-random-C5LgB_p5.js",
@@ -160,7 +160,7 @@
     ]
   },
   "src/views/MultiView.vue": {
-    "file": "assets/MultiView-DueEfO74.js",
+    "file": "assets/MultiView-CKo3uRoT.js",
     "name": "MultiView",
     "src": "src/views/MultiView.vue",
     "isDynamicEntry": true,
@@ -168,7 +168,7 @@
       "_vueuse-Bs6x0GOr.js",
       "index.html",
       "_vue-router-DgSFFxGk.js",
-      "_unocss-Dac0g9vD.js",
+      "_unocss-wUcHOrf3.js",
       "../node_modules/ofetch/dist/index.mjs",
       "_destr-CVtkxrq9.js",
       "_ufo-CsG24Xhf.js",
@@ -188,7 +188,7 @@
     ]
   },
   "src/views/NotFoundView.vue": {
-    "file": "assets/NotFoundView-BND424IR.js",
+    "file": "assets/NotFoundView-CuqJGO6H.js",
     "name": "NotFoundView",
     "src": "src/views/NotFoundView.vue",
     "isDynamicEntry": true,
@@ -196,7 +196,7 @@
       "_unhead-CEwDqR4t.js",
       "index.html",
       "_hookable-B8xFkYCm.js",
-      "_unocss-Dac0g9vD.js",
+      "_unocss-wUcHOrf3.js",
       "../node_modules/ofetch/dist/index.mjs",
       "_destr-CVtkxrq9.js",
       "_ufo-CsG24Xhf.js",
@@ -216,13 +216,13 @@
     ]
   },
   "src/views/SingleView.vue": {
-    "file": "assets/SingleView-CYLtZsej.js",
+    "file": "assets/SingleView-6UOe1YcR.js",
     "name": "SingleView",
     "src": "src/views/SingleView.vue",
     "isDynamicEntry": true,
     "imports": [
       "index.html",
-      "_unocss-Dac0g9vD.js",
+      "_unocss-wUcHOrf3.js",
       "../node_modules/ofetch/dist/index.mjs",
       "_destr-CVtkxrq9.js",
       "_ufo-CsG24Xhf.js",
