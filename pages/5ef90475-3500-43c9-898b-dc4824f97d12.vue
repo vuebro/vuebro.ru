@@ -1,0 +1,159 @@
+<template>
+<div class="min-h-dvh" un-cloak>
+    <div class="sticky not-prose top-0 z-50 pa-4 border-b bg-neutral-50 opacity-0 hover:opacity-100 transition-opacity duration-1000"
+        :class="{ 'opacity-100': !ready }" ref="pageHeader">
+        <el-page-header icon="" :content="current.title">
+            <template #breadcrumb>
+                <el-breadcrumb separator="/">
+                    <el-breadcrumb-item v-for="item in current.branch" :to="item.to">
+                        {{ item.name }}
+                    </el-breadcrumb-item>
+                </el-breadcrumb>
+            </template>
+            <template #title>
+                <router-link to="/" class="whitespace-nowrap flex items-center max-sm:hidden">
+                    <el-avatar src="images/vues3.svg" size="small"></el-avatar>
+                </router-link>
+            </template>
+            <template #extra>
+                <el-button circle @click="drawer = true">
+                    <icon icon="mdi:menu" class="size-5"></icon>
+                </el-button>
+            </template>
+        </el-page-header>
+    </div>
+    <router-view></router-view>
+</div>
+<footer class="not-prose text-slate-500" un-cloak>
+    <div class="pt-16 pb-12 text-sm border-t border-slate-200 bg-slate-100">
+        <div class="container px-6 mx-auto">
+            <div class="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-6">
+                <div class="col-span-4 md:col-span-8 lg:col-span-4 mb-3">
+                    <img class="not-prose -mt-16 w-full md:w-60 max-md:max-w-60 mx-auto" src="images/drakkar.svg" decoding="async">
+                    <h4 class="text-center text-base text-slate-700 font-medium">Сделано на берегах Балтики</h4>
+                </div>
+                <nav class="col-span-2 md:col-span-4 lg:col-span-2" v-for="{ name, children, icon } in views">
+                    <h3 class="mb-6 text-base text-slate-700 font-medium">
+                        <icon :icon="icon" class="mr-2 size-8 inline"></icon><span>{{ name }}</span>
+                    </h3>
+                    <ul>
+                        <li v-for="child in children" class="mb-2 leading-6">
+                            <router-link :to="child.to" v-if="child?.enabled"
+                                class="transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600">
+                                <icon :icon="child.icon" class="mr-2 size-6 inline"></icon><span>{{ child.name }}</span>
+                            </router-link>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="py-4 text-sm border-t border-slate-200 bg-slate-100">
+        <div class="container px-6 mx-auto">
+            <div class="flex flex-col md:flex-row w-full gap-4 justify-between">
+                <div class="flex items-center col-span-1 gap-4 text-base font-medium leading-6"><img class="size-6 shrink-0" src="images/vues3.svg">{{ the.description }}
+                </div>
+                <nav class="text-right col-span-2 md:col-span-4 lg:col-span-6">
+                    <ul class="flex items-center justify-end gap-4">
+                        <li v-for="{icon, href} in social">
+                            <a :href="href" target="_blank" rel="noopener noreferrer"
+                                class="transition-colors duration-300 hover:text-sky-600 focus:text-sky-700">
+                                <icon class="size-6 shrink-0" :icon="icon"></icon>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</footer>
+<div id="drawer not-prose">
+    <el-drawer v-model="drawer" :title="the.header" class="w-full sm:w-96" size="">
+        <el-menu :router="true" :default-openeds="[0, 1, 2]">
+            <el-sub-menu v-for="({ name, $children, icon }, index) in views" :index="index">
+                <template #title>
+                    <icon :icon="icon" class="icon"></icon><span>{{ name }}</span>
+                </template>
+                <el-menu-item v-for="(child, index2) in $children" :route="{ name: child.id }" :index="index2">
+                    <icon :icon="child.icon" class="icon"></icon><span>{{ child.name }}</span>
+                </el-menu-item>
+            </el-sub-menu>
+        </el-menu>
+    </el-drawer>
+</div>
+<el-backtop></el-backtop>
+</template>
+
+<script setup>
+import "./node_modules/@highlightjs/cdn-assets/styles/stackoverflow-light.min.css";
+import "./node_modules/element-plus/dist/index.css";
+
+import { computed, ref, inject } from "vue";
+
+import ElementPlus from "element-plus";
+import { Icon } from '@iconify/vue';
+
+import hljs from "highlight.js/lib/core";
+import javascript from "highlight.js/lib/languages/javascript";
+import css from "highlight.js/lib/languages/css";
+import xml from "highlight.js/lib/languages/xml";
+import hljsVuePlugin from "@highlightjs/vue-plugin";
+
+hljs.default.registerLanguage("javascript", javascript.default);
+hljs.default.registerLanguage("css", css.default);
+hljs.default.registerLanguage("xml", xml.default);
+
+window.app.component("Icon", Icon);
+window.app.use(ElementPlus.default);
+window.app.use(hljsVuePlugin.default);
+
+const { id } = defineProps(["id"]);
+const pages = inject("pages");
+const the = pages[id];
+const views = computed(() => the.$children.filter(({ $children }) => $children.length));
+const currentId = inject("id");
+const current = computed(() => pages[currentId.value]);
+
+let timeoutID;
+const ready = ref(true);
+const pageHeader = ref(null);
+const scroll = () => {
+    ready.value = false;
+    if (timeoutID) clearTimeout(timeoutID);
+    if (window.scrollY > pageHeader.value?.offsetHeight) timeoutID = setTimeout(() => {
+        ready.value = true;
+    }, 2000);
+};
+document.addEventListener("scroll", scroll);
+scroll();
+
+const drawer = ref(false);
+
+const social = [{
+    icon: "fa-brands:github",
+    href: "https://github.com/vues3"
+}, {
+    icon: "fa-brands:facebook",
+    href: "https://facebook.com/vues3"
+}, {
+    icon: "fa-brands:vk",
+    href: "https://vk.com/vues3"
+}];
+
+</script>
+
+<style scoped>
+.el-drawer .el-menu {
+    border-right: none;
+}
+
+#drawer :deep(.el-drawer__body) {
+    padding: 0;
+}
+
+.icon {
+    margin-right: 1rem;
+    width: 2rem;
+    height: 2rem;
+}
+</style>
