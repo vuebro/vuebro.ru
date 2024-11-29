@@ -1,1 +1,0 @@
-{"script":"defineProps([\"the\"]);","style":"","template":"<div class=\"container mx-auto\" un-cloak>\n    <h2 class=\"text-center\">{{ the.title }}</h2>\n    <p class=\"text-center lead text-slate-700\">{{ the.description }}</p>\n</div>"}

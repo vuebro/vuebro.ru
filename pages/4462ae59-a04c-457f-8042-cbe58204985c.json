@@ -1,1 +1,0 @@
-{"script":"defineProps([\"the\"]);","style":"","template":"<h2 class=\"text-center\">{{ the.title }}</h2><div>https://yandex.cloud/ru/docs/storage/operations/buckets/cors</div>"}
