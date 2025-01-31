@@ -107,8 +107,8 @@ hljs.default.registerLanguage("css", css.default);
 hljs.default.registerLanguage("xml", xml.default);
 
 window.app.component("Icon", Icon);
-window.app.use(ElementPlus.default);
-window.app.use(hljsVuePlugin.default);
+window.app.use(ElementPlus);
+window.app.use(hljsVuePlugin);
 
 const { id } = defineProps(["id"]);
 const pages = inject("pages");
