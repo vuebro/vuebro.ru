@@ -38,7 +38,7 @@
 </template>
 
 <script setup>
-import { useMouse } from "./node_modules/@vueuse/core/index.mjs";
+import { useMouse } from "@vueuse/core";
 const { x, y } = useMouse();
 
 import { inject } from "vue";
@@ -52,10 +52,7 @@ const params = [{
 }, {
     key: "@vueuse/shared",
     value: "https://unpkg.com/@vueuse/shared/index.mjs"
-}, {
-    key: "vue-demi",
-    value: "https://unpkg.com/vue-demi/lib/index.mjs"
-},];
+}];
 const js = `import { useMouse } from "@vueuse/core";
 const { x, y } = useMouse();`;
 const html = `<div class="grid grid-flow-col grid-gap-4 place-content-center place-items-center font-mono">

@@ -1,21 +1,16 @@
 <template>
-    <div class="flex items-center bg-cover bg-center min-h-[66dvh]"
-        :style="`background-image:url(${the.images[0].url})`" un-cloak>
-        <div class="container mx-auto px-4 py-12 place-items-center grid">
-            <div
-                class="gap-4 flex items-center justify-around w-full flex-col lg:flex-row-reverse bg-black/20 rounded-3xl shadow-2xl pa-6 backdrop-blur-sm bg-clip-border border-2 border-white/80">
-                <img src="images/vues3.svg" class="w-36 lg:w-48 rounded-full lg:ma-10" decoding="async">
-                <div class="text-center lg:text-left text-xs sm:text-sm md:text-base">
-                    <h3 class="text-2xl lg:text-3xl text-slate-50 mb-6 font-['Rubik_Mono_One'] drop-shadow">{{
-                        visible
-                        }}<span class="blink underline decoration-white decoration-4 text-transparent">{{ title[length]
-                            }}</span><span class="invisible">{{ invisible }}</span>
-                    </h3>
-                    <el-text size="large" class="!text-slate-50 drop-shadow" tag="b">{{ the.description }}</el-text>
-                </div>
-            </div>
+    <div class="container mx-auto gap-4 flex items-center justify-around w-full flex-col lg:flex-row-reverse pa-6 text-slate-700">
+        <img src="images/vues3.svg" class="w-36 lg:w-48 rounded-full ma-10 drop-shadow-2xl" decoding="async">
+        <div class="text-center lg:text-left text-xs sm:text-sm md:text-base">
+            <h3 class="text-4xl lg:text-5xl mb-6 font-['Kelly_Slab']">{{
+                visible
+            }}<span class="blink underline decoration-slate-700 decoration-4 text-transparent">{{ title[length]
+                    }}</span><span class="invisible">{{ invisible }}</span>
+            </h3>
+            <el-text size="large" tag="b">{{ the.description }}</el-text>
         </div>
     </div>
+    <div class="absolute -z-10 inset-0 m-auto max-w-xs h-[357px] blur-[118px] sm:max-w-md md:max-w-lg bg-gradient"></div>
 </template>
 
 <script setup>
@@ -48,5 +43,15 @@ setInterval(() => { index.value += 1; }, 200);
     50% {
         opacity: 0;
     }
+}
+
+.bg-gradient {
+    background: linear-gradient(
+              106.89deg,
+              rgba(192, 132, 252, 0.11) 15.73%,
+              rgba(14, 165, 233, 0.41) 15.74%,
+              rgba(232, 121, 249, 0.26) 56.49%,
+              rgba(79, 70, 229, 0.4) 115.91%
+            );
 }
 </style>

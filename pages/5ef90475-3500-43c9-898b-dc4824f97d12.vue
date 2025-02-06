@@ -91,7 +91,8 @@
 import "./node_modules/@highlightjs/cdn-assets/styles/stackoverflow-light.min.css";
 import "./node_modules/element-plus/dist/index.css";
 
-import { computed, ref, inject } from "vue";
+import { computed, ref, inject, useTemplateRef, onMounted } from "vue";
+import { get, set } from "@vueuse/core";
 
 import ElementPlus from "element-plus";
 import { Icon } from '@iconify/vue';
@@ -113,22 +114,26 @@ window.app.use(hljsVuePlugin);
 const { id } = defineProps(["id"]);
 const pages = inject("pages");
 const the = pages[id];
+
 const views = computed(() => the.$children.filter(({ $children }) => $children.length));
 const currentId = inject("id");
-const current = computed(() => pages[currentId.value]);
+const current = computed(() => pages[get(currentId)]);
 
-let timeoutID;
 const ready = ref(true);
-const pageHeader = ref(null);
-const scroll = () => {
-    ready.value = false;
-    if (timeoutID) clearTimeout(timeoutID);
-    if (window.scrollY > pageHeader.value?.offsetHeight) timeoutID = setTimeout(() => {
-        ready.value = true;
-    }, 2000);
-};
-document.addEventListener("scroll", scroll);
-scroll();
+const pageHeaderRef = useTemplateRef("pageHeader");
+onMounted(() => {
+    let timeoutID;
+    const scroll = () => {
+        set(ready, false);
+        if (timeoutID) clearTimeout(timeoutID);
+        if (window.scrollY > get(pageHeaderRef, "offsetHeight")) timeoutID = setTimeout(() => {
+            set(ready, true);
+        }, 2000);
+    };
+    document.addEventListener("scroll", scroll);
+    scroll();
+});
+
 
 const drawer = ref(false);
 

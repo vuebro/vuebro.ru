@@ -4,15 +4,15 @@
     "": {
       "dependencies": {
         "@element-plus/icons-vue": "^2.3.1",
-        "@highlightjs/cdn-assets": "^11.10.0",
+        "@highlightjs/cdn-assets": "^11.11.1",
         "@highlightjs/vue-plugin": "^2.1.0",
-        "@iconify/vue": "^4.1.2",
-        "@vueuse/core": "^12.0.0",
-        "@vueuse/shared": "^12.0.0",
-        "element-plus": "^2.8.8",
-        "quasar": "^2.17.4",
-        "vue-demi": "^0.14.10",
-        "vuetify": "^3.7.4",
+        "@iconify/vue": "^4.3.0",
+        "@vueuse/components": "^12.5.0",
+        "@vueuse/core": "^12.5.0",
+        "@vueuse/shared": "^12.5.0",
+        "element-plus": "^2.9.3",
+        "quasar": "^2.17.7",
+        "vuetify": "^3.7.11",
       },
     },
   },
@@ -71,6 +71,8 @@
 
     "@vue/shared": ["@vue/shared@3.5.13", "", {}, "sha512-/hnE/qP5ZoGpol0a5mDi45bOd7t3tjYJBjsgCsivow7D48cJeV5l05RD82lPqi7gRiphZM37rnhW1l6ZoCNNnQ=="],
 
+    "@vueuse/components": ["@vueuse/components@12.5.0", "", { "dependencies": { "@vueuse/core": "12.5.0", "@vueuse/shared": "12.5.0", "vue": "^3.5.13" } }, "sha512-aLgEW8bidRZ4qkVOIl958NAev+XKYTtbfsIj5ObjiDwvBDqxmGVCwMQvWHUQN37tb8JSkRF22gTUbXNt0iSwLQ=="],
+
     "@vueuse/core": ["@vueuse/core@12.5.0", "", { "dependencies": { "@types/web-bluetooth": "^0.0.20", "@vueuse/metadata": "12.5.0", "@vueuse/shared": "12.5.0", "vue": "^3.5.13" } }, "sha512-GVyH1iYqNANwcahAx8JBm6awaNgvR/SwZ1fjr10b8l1HIgDp82ngNbfzJUgOgWEoxjL+URAggnlilAEXwCOZtg=="],
 
     "@vueuse/metadata": ["@vueuse/metadata@12.5.0", "", {}, "sha512-Ui7Lo2a7AxrMAXRF+fAp9QsXuwTeeZ8fIB9wsLHqzq9MQk+2gMYE2IGJW48VMJ8ecvCB3z3GsGLKLbSasQ5Qlg=="],
@@ -119,7 +121,7 @@
 
     "vue-demi": ["vue-demi@0.14.10", "", { "peerDependencies": { "@vue/composition-api": "^1.0.0-rc.1", "vue": "^3.0.0-0 || ^2.6.0" }, "optionalPeers": ["@vue/composition-api"], "bin": { "vue-demi-fix": "bin/vue-demi-fix.js", "vue-demi-switch": "bin/vue-demi-switch.js" } }, "sha512-nMZBOwuzabUO0nLgIcc6rycZEebF6eeUfaiQx9+WSk8e29IbLvPU9feI6tqW4kTo3hvoYAJkMh8n8D0fuISphg=="],
 
-    "vuetify": ["vuetify@3.7.9", "", { "peerDependencies": { "typescript": ">=4.7", "vite-plugin-vuetify": ">=1.0.0", "vue": "^3.3.0", "webpack-plugin-vuetify": ">=2.0.0" }, "optionalPeers": ["typescript", "vite-plugin-vuetify", "webpack-plugin-vuetify"] }, "sha512-9pHu6ESdg/lYYCrdXb2uoLZGbw2bysWLaqMu2bzQPMTrMj1GfgcL0k/siTGkUa+o0cVWzvlP/cnjOFGMTxH3og=="],
+    "vuetify": ["vuetify@3.7.11", "", { "peerDependencies": { "typescript": ">=4.7", "vite-plugin-vuetify": ">=1.0.0", "vue": "^3.3.0", "webpack-plugin-vuetify": ">=2.0.0" }, "optionalPeers": ["typescript", "vite-plugin-vuetify", "webpack-plugin-vuetify"] }, "sha512-50Z2SNwPXbkGmve4CwxOs4sySZGgLwQYIDsKx+coSrfIBqz8IyXgxRFQdrvgoehIwUjGTNqaPZymuK5rMFkfHA=="],
 
     "element-plus/@vueuse/core": ["@vueuse/core@9.13.0", "", { "dependencies": { "@types/web-bluetooth": "^0.0.16", "@vueuse/metadata": "9.13.0", "@vueuse/shared": "9.13.0", "vue-demi": "*" } }, "sha512-pujnclbeHWxxPRqXWmdkKV5OX4Wk4YeK7wusHqRwU0Q7EFusHoqNA/aPhB6KCh9hEqJkLAJo7bb0Lh9b+OIVzw=="],
 
