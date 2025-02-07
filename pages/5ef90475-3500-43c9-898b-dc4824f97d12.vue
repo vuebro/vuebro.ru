@@ -1,6 +1,6 @@
 <template>
     <div class="min-h-dvh" un-cloak>
-        <div class="sticky not-prose top-0 z-50 pa-4 border-b bg-neutral-50 opacity-0 hover:opacity-100 transition-opacity duration-1000"
+        <div class="sticky top-0 z-50 pa-4 border-b bg-neutral-50 opacity-0 hover:opacity-100 transition-opacity duration-1000"
             :class="{ 'opacity-100': !ready }" ref="pageHeader">
             <el-page-header icon="" :content="current.title">
                 <template #breadcrumb>
@@ -24,12 +24,12 @@
         </div>
         <router-view></router-view>
     </div>
-    <footer class="not-prose text-slate-500" un-cloak>
+    <footer class="text-slate-500" un-cloak>
         <div class="pt-16 pb-12 text-sm border-t border-slate-200 bg-slate-100">
             <div class="container px-6 mx-auto">
                 <div class="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-6">
                     <div class="col-span-4 md:col-span-8 lg:col-span-4 mb-3">
-                        <img class="not-prose -mt-16 w-full md:w-60 max-md:max-w-60 mx-auto" src="images/drakkar.svg"
+                        <img class="-mt-16 w-full md:w-60 max-md:max-w-60 mx-auto" src="images/drakkar.svg"
                             decoding="async">
                         <h4 class="text-center text-base text-slate-700 font-medium">Сделано на берегах Балтики</h4>
                     </div>
@@ -70,7 +70,7 @@
             </div>
         </div>
     </footer>
-    <div id="drawer not-prose">
+    <div id="drawer">
         <el-drawer v-model="drawer" :title="the.header" class="w-full sm:w-96" size="">
             <el-menu :router="true" :default-openeds="[0, 1, 2]">
                 <el-sub-menu v-for="({ name, $children, icon }, index) in views" :index="index">
