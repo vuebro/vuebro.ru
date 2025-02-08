@@ -141,9 +141,6 @@ const social = [{
     icon: "fa-brands:github",
     href: "https://github.com/vues3"
 }, {
-    icon: "fa-brands:facebook",
-    href: "https://facebook.com/vues3"
-}, {
     icon: "fa-brands:vk",
     href: "https://vk.com/vues3"
 }];
