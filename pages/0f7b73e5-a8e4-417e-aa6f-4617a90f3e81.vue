@@ -1,7 +1,7 @@
 <template>
     <el-carousel type="card" :height="height" indicator-position="outside">
         <el-carousel-item v-for="({ alt, url }, i) in images" class="!h-fit"
-            v-element-size="({ height }) => { heights[i] = height }"><img :src="url" :alt="alt"></el-carousel-item>
+            v-element-size="({ height }) => { heights[i] = height }"><img :src="url" :alt="alt" decoding="async"></el-carousel-item>
     </el-carousel>
 </template>
 
