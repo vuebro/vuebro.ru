@@ -1,21 +1,19 @@
 <template>
-<div class="container mx-auto px-4" un-cloak>
     <div class="flex flex-col text-center mb-12">
         <icon :icon="the.icon" class="size-20 mx-auto"></icon>
         <h2 class="text-4xl my-5 font-['Caveat']">{{ the.title }}</h2>
         <el-text size="large">{{ the.description }}</el-text>
     </div>
     <div class="gap-6 flex flex-wrap justify-center">
-        <a v-for="{href, icon, title, name} in btns" :href="href" target="_blank" rel="noopener noreferrer"
+        <a v-for="{ href, icon, title, name } in btns" :href="href" target="_blank" rel="noopener noreferrer"
             class="bg-white inline-flex shadow-md rounded h-16 w-44 items-center justify-start gap-2 whitespace-nowrap border border-slate-900 px-3.5 text-base text-slate-900 font-semibold tracking-wide">
             <icon :icon="icon" class="size-10"></icon>
             <span class="flex flex-col">
                 <span class="text-xs font-normal">{{ title }}</span>
-            <span>{{ name }}</span>
+                <span>{{ name }}</span>
             </span>
         </a>
     </div>
-</div>
 </template>
 
 <script setup>
@@ -50,5 +48,3 @@ const btns = [{
     icon: "vscode-icons:file-type-snapcraft"
 }];
 </script>
-
-
