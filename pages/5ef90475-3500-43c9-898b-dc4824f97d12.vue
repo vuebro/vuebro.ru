@@ -24,14 +24,14 @@
         </div>
         <router-view></router-view>
     </div>
-    <footer class="text-slate-500" un-cloak>
+    <footer class="text-slate-500 mt-24" un-cloak>
         <div class="pt-16 pb-12 text-sm border-t border-slate-200 bg-slate-100">
             <div class="container px-6 mx-auto">
                 <div class="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-6">
                     <div class="col-span-4 md:col-span-8 lg:col-span-4 mb-3">
                         <img class="-mt-16 w-full md:w-60 max-md:max-w-60 mx-auto" src="images/drakkar.svg"
                             decoding="async">
-                        <h4 class="text-center text-base text-slate-700 font-medium">Сделано на берегах Балтики</h4>
+                        <h4 class="text-center text-base text-slate-700 font-medium">{{ madeof }}</h4>
                     </div>
                     <nav class="col-span-2 md:col-span-4 lg:col-span-2" v-for="{ name, children, icon } in views">
                         <h3 class="mb-6 text-base text-slate-700 font-medium">
@@ -70,7 +70,7 @@
             </div>
         </div>
     </footer>
-    <div id="drawer">
+    <div id="drawer" un-cloak>
         <el-drawer v-model="drawer" :title="the.header" class="w-full sm:w-96" size="">
             <el-menu :router="true" :default-openeds="[0, 1, 2]">
                 <el-sub-menu v-for="({ name, $children, icon }, index) in views" :index="index">
@@ -91,12 +91,12 @@
 import "./node_modules/@highlightjs/cdn-assets/styles/stackoverflow-light.min.css";
 import "./node_modules/element-plus/dist/index.css";
 
+import { createVuetify, components, directives } from "vuetify";
+import { Quasar } from "quasar";
 import { computed, ref, inject, useTemplateRef, onMounted } from "vue";
 import { get, set } from "@vueuse/core";
-
 import ElementPlus from "element-plus";
 import { Icon } from '@iconify/vue';
-
 import hljs from "highlight.js/lib/core";
 import javascript from "highlight.js/lib/languages/javascript";
 import css from "highlight.js/lib/languages/css";
@@ -107,20 +107,30 @@ hljs.default.registerLanguage("javascript", javascript.default);
 hljs.default.registerLanguage("css", css.default);
 hljs.default.registerLanguage("xml", xml.default);
 
+window.app.use(createVuetify({ components, directives }));
 window.app.component("Icon", Icon);
 window.app.use(ElementPlus);
-window.app.use(hljsVuePlugin);
+window.app.use(Quasar);
+window.app.use(hljsVuePlugin.default);
 
-const { id } = defineProps(["id"]);
-const pages = inject("pages");
-const the = pages[id];
+const { id } = defineProps(["id"]),
+    pages = inject("pages"),
+    the = pages[id],
+    views = computed(() => the.$children.filter(({ $children }) => $children.length)),
+    currentId = inject("id"),
+    current = computed(() => pages[get(currentId)]),
+    ready = ref(true),
+    pageHeaderRef = useTemplateRef("pageHeader"),
+    drawer = ref(false),
+    social = [{
+        icon: "fa-brands:github",
+        href: "https://github.com/vues3"
+    }, {
+        icon: "fa-brands:vk",
+        href: "https://vk.com/vues3"
+    }],
+    madeof = "Сделано на берегах Балтики";
 
-const views = computed(() => the.$children.filter(({ $children }) => $children.length));
-const currentId = inject("id");
-const current = computed(() => pages[get(currentId)]);
-
-const ready = ref(true);
-const pageHeaderRef = useTemplateRef("pageHeader");
 onMounted(() => {
     let timeoutID;
     const scroll = () => {
@@ -133,18 +143,6 @@ onMounted(() => {
     document.addEventListener("scroll", scroll);
     scroll();
 });
-
-
-const drawer = ref(false);
-
-const social = [{
-    icon: "fa-brands:github",
-    href: "https://github.com/vues3"
-}, {
-    icon: "fa-brands:vk",
-    href: "https://vk.com/vues3"
-}];
-
 </script>
 
 <style scoped>
