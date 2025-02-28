@@ -1,5 +1,5 @@
 <template>
-    <div class="sm:py-24 [&>*]:font-[Helvetica_Neue,Helvetica,Arial,sans-serif]">
+    <div class="sm:py-24 font-light antialiased [&>*]:font-[Helvetica_Neue,Helvetica,Arial,sans-serif]">
         <div class="my-24 flex justify-center"><icon class="text-2xl sm:text-6xl flex justify-items-center" icon="bxs:chevrons-down"></icon></div>
         <h2 class="mb-6 text-2xl sm:text-5xl">{{ doesnt }}</h2>
         <h2 class="mb-6 text-2xl sm:text-5xl font-bold">{{ separator }}</h2>
@@ -7,8 +7,8 @@
         <h1 class="sm:my-24 text-3xl sm:text-7xl">Попробуй <span class="text-white bg-black italic">&nbsp;новую технологию&nbsp;</span> разработки сайтов</h1>
         <div class="my-24 flex justify-center"><icon class="text-2xl sm:text-6xl flex justify-items-center" icon="bxs:chevrons-down"></icon></div>
     </div>
-    <ul class="divide-y divide-slate-600" un-cloak>
-        <li class="flex items-center gap-4 px-4 py-12 flex-nowrap" v-for="{ text, icon } in features">
+    <ul class="divide-y-2 divide-dashed divide-black" un-cloak>
+        <li class="flex items-center gap-4 px-4 py-6 flex-nowrap" v-for="{ text, icon } in features">
             <div>
                 <Icon :icon="icon" class="size-12" />
             </div>
