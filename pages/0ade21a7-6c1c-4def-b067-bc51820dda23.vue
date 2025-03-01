@@ -67,7 +67,7 @@ const typewriter = `${the.title}_`,
     invisible = computed(() => typewriter.substring(length.value + 1));
 
 const btns = [{
-    name: "run.vues3.ru",
+    name: "www",
     title: "Open web app",
     href: "https://run.vues3.ru",
     icn: "mdi:web"

@@ -90,6 +90,7 @@
 <script setup>
 import "./node_modules/@highlightjs/cdn-assets/styles/stackoverflow-light.min.css";
 import "./node_modules/element-plus/dist/index.css";
+import "./node_modules/animate.css/animate.min.css";
 
 import { createVuetify, components, directives } from "vuetify";
 import { Quasar } from "quasar";

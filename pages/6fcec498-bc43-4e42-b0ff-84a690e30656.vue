@@ -8,10 +8,10 @@
         <el-text>Сайт проекта: <a href="https://vuetifyjs.com"
                 target="_blank">https://vuetifyjs.com</a></el-text>
         <h3 class="mt-8 mb-3 !font-semibold !text-2xl">Importmap</h3>
-        <dl class="grid grid-cols-[repeat(2,auto)] gap-x-4 w-fit">
+        <dl class="grid grid-cols-[repeat(2,auto)] gap-x-4">
             <template v-for="{ key, value } in params">
                 <dt class="font-bold text-slate-700">{{ key }}</dt>
-                <dd class="text-slate-500">{{ value }}</dd>
+                <dd class="text-slate-500 overflow-hidden text-ellipsis">{{ value }}</dd>
             </template>
         </dl>
         <h3 class="mt-8 mb-3 !font-semibold !text-2xl">Код для подключения библиотеки</h3>
