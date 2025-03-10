@@ -31,7 +31,7 @@
                     <div class="col-span-4 md:col-span-8 lg:col-span-4 mb-3">
                         <img class="-mt-16 w-full md:w-60 max-md:max-w-60 mx-auto" src="images/drakkar.svg"
                             decoding="async">
-                        <h4 class="text-center text-base text-slate-700 font-medium">{{ madeof }}</h4>
+                        <h4 class="text-center text-base text-slate-700 font-medium">{{ t("madeof") }}</h4>
                     </div>
                     <nav class="col-span-2 md:col-span-4 lg:col-span-2" v-for="{ name, children, icon } in views">
                         <h3 class="mb-6 text-base text-slate-700 font-medium">
@@ -96,6 +96,7 @@ import { createVuetify, components, directives } from "vuetify";
 import { Quasar } from "quasar";
 import { computed, ref, inject, useTemplateRef, onMounted } from "vue";
 import { get, set } from "@vueuse/core";
+import { createI18n, useI18n } from "vue-i18n";
 import ElementPlus from "element-plus";
 import { Icon } from '@iconify/vue';
 import hljs from "highlight.js/lib/core";
@@ -108,11 +109,28 @@ hljs.default.registerLanguage("javascript", javascript.default);
 hljs.default.registerLanguage("css", css.default);
 hljs.default.registerLanguage("xml", xml.default);
 
+
 window.app.use(createVuetify({ components, directives }));
 window.app.component("Icon", Icon);
+window.app.use(createI18n({ legacy: false, locale: "ru", fallbackLocale: "en" }))
 window.app.use(ElementPlus);
 window.app.use(Quasar);
 window.app.use(hljsVuePlugin.default);
+
+const { t } = useI18n({
+  messages: {
+    en: {
+      madeof: "Made on the shores of the Baltic Sea",
+      socialUrl: "https://facebook.com/vues3",
+      socialIcon: "fa-brands:facebook"
+    },
+    ru: {
+      madeof: "Сделано на берегах Балтики",
+      socialUrl: "https://vk.com/vues3",
+      socialIcon: "fa-brands:vk"
+    }
+  }
+});
 
 const { id } = defineProps(["id"]),
     pages = inject("pages"),
@@ -127,10 +145,9 @@ const { id } = defineProps(["id"]),
         icon: "fa-brands:github",
         href: "https://github.com/vues3"
     }, {
-        icon: "fa-brands:vk",
-        href: "https://vk.com/vues3"
-    }],
-    madeof = "Сделано на берегах Балтики";
+        icon: t("socialIcon"),
+        href: t("socialUrl")
+    }];
 
 onMounted(() => {
     let timeoutID;

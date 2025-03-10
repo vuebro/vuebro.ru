@@ -5,19 +5,19 @@
             <h2 class="text-4xl my-5 font-['Caveat']">{{ the.title }}</h2>
             <el-text size="large">{{ the.description }}</el-text>
         </div>
-        <el-text>Сайт проекта: <a href="https://quasar.dev" target="_blank">https://quasar.dev</a></el-text>
+        <el-text>{{ t("site") }}: <a href="https://quasar.dev" target="_blank">https://quasar.dev</a></el-text>
         <h3 class="mt-8 mb-3 !font-semibold !text-2xl">Importmap</h3>
-        <dl class="grid grid-cols-[repeat(2,auto)] gap-x-4">
+        <dl class="grid grid-cols-[repeat(2,auto)] gap-x-4 w-fit">
             <template v-for="{ key, value } in params">
                 <dt class="font-bold text-slate-700">{{ key }}</dt>
                 <dd class="text-slate-500 overflow-hidden text-ellipsis">{{ value }}</dd>
             </template>
         </dl>
-        <h3 class="mt-8 mb-3 !font-semibold !text-2xl">Код для подключения библиотеки</h3>
+        <h3 class="mt-8 mb-3 !font-semibold !text-2xl">{{ t("code") }}</h3>
         <highlightjs language="js" :code="js" class="not-prose"></highlightjs>
-        <h3 class="mt-8 mb-3 !font-semibold !text-2xl">Пример использования</h3>
+        <h3 class="mt-8 mb-3 !font-semibold !text-2xl">{{ t("example") }}</h3>
         <el-tabs class="not-prose 2xl:row-start-auto">
-            <el-tab-pane label="Результат">
+            <el-tab-pane :label="t('result')">
                 <q-card class="ma-4 max-w-96" flat bordered>
                     <q-img src="https://cdn.quasar.dev/img/parallax2.jpg" />
                     <q-card-section>
@@ -48,19 +48,35 @@
 <script setup>
 import { inject } from "vue";
 import { QCard, QImg, QCardSection, QCardActions, QBtn } from "quasar";
+import { useI18n } from "vue-i18n";
 
-const { id } = defineProps(["id"]);
-const the = inject("pages")[id];
-
-const params = [{
-    key: "quasar",
-    value: "https://cdn.jsdelivr.net/npm/quasar/dist/quasar.client.js"
-}];
-const js = `import "https://cdn.jsdelivr.net/npm/quasar/dist/quasar.prod.css";
+const { t } = useI18n({
+    messages: {
+        en: {
+            site: "The project website",
+            example: "An example of usage",
+            result: "Result",
+            code: "The code for connecting a library"
+        },
+        ru: {
+            site: "Сайт проекта",
+            example: "Пример использования",
+            result: "Результат",
+            code: "Код для подключения библиотеки"
+        }
+    }
+}),
+    { id } = defineProps(["id"]),
+    the = inject("pages")[id],
+    params = [{
+        key: "quasar",
+        value: "https://cdn.jsdelivr.net/npm/quasar/dist/quasar.client.js"
+    }],
+    js = `import "https://cdn.jsdelivr.net/npm/quasar/dist/quasar.prod.css";
 import { Quasar } from "quasar";
 
-window.app.use(Quasar);`;
-const html = `<q-card class="ma-4 max-w-96" flat bordered>
+window.app.use(Quasar);`,
+    html = `<q-card class="ma-4 max-w-96" flat bordered>
     <q-img src="https://cdn.quasar.dev/img/parallax2.jpg" />
     <q-card-section>
         <div class="text-overline text-orange-9">Overline</div>

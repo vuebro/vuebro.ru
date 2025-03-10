@@ -5,7 +5,7 @@
             <div class="text-center !lg:text-left text-xs sm:text-sm md:text-base">
                 <h3 class="text-4xl lg:text-5xl mb-6 font-['Kelly_Slab']">{{
                     visible
-                }}<span
+                    }}<span
                         class="blink underline decoration-slate-700 decoration-3 lg:decoration-4 text-transparent">{{
                             typewriter[length]
                         }}</span><span class="invisible">{{ invisible }}</span>
@@ -43,9 +43,7 @@
                 </el-button>
             </span>
         </div>
-        <div class="flex justify-center text-center my-6 px-6"><el-text type="info">👍 Поддержите проект звездой на
-                github, подпиской, лайками и комментариями!<br>Ваша поддержка важна для дальнейшего развития
-                проекта!</el-text></div>
+        <div class="flex justify-center text-center my-6 px-6"><el-text type="info">👍 {{ t("support1") }} <br> {{ t("support2") }}</el-text></div>
     </div>
     <div class="absolute -z-10 inset-0 m-auto max-w-xs h-[357px] blur-[118px] sm:max-w-md md:max-w-lg bg-gradient"
         un-cloak>
@@ -55,10 +53,36 @@
 <script setup>
 import { inject, ref, computed } from "vue";
 import { ArrowRight } from "@element-plus/icons-vue";
+import { useI18n } from "vue-i18n";
+
+const { t } = useI18n({
+    messages: {
+        en: {
+            support1: "Support the project by starring it on GitHub, subscribing, liking, and commenting!",
+            support2: "Your support is crucial for the project's continued growth and development!",
+            documentation: "documentation",
+            appUrl: "https://vues3.github.io/vues3",
+            githubText: "vueS3 on github",
+            socialUrl: "https://facebook.com/vues3",
+            socialIcon: "fa6-brands:facebook",
+            socialText: "vueS3 on facebook"
+        },
+        ru: {
+            support1: "Поддержите проект звездой на github, подпиской, лайками и комментариями!",
+            support2: "Ваша поддержка важна для дальнейшего развития проекта!",
+            documentation: "документация",
+            appUrl: "https://run.vues3.ru",
+            githubText: "vueS3 на github",
+            socialUrl: "https://vk.com/vues3",
+            socialIcon: "fa6-brands:vk",
+            socialText: "vueS3 вконтакте"
+        }
+    }
+});
 
 const { id } = defineProps(["id"]),
     the = inject("pages")[id],
-    { $children: [{ title, to, icon: startIcon } = {}] = [] } = Object.values(inject("pages")).find(({ name }) => name === "документация") ?? {};
+    { $children: [{ title, to, icon: startIcon } = {}] = [] } = Object.values(inject("pages")).find(({ name }) => name === t("documentation")) ?? {};
 
 const typewriter = `${the.title}_`,
     index = ref(0),
@@ -72,7 +96,7 @@ const typewriter = `${the.title}_`,
 const btns = [{
     name: "www",
     title: "Open web app",
-    href: "https://run.vues3.ru",
+    href: t("appUrl"),
     icn: "mdi:web"
 }, {
     name: "Windows",
@@ -97,7 +121,7 @@ const btns = [{
 }],
     social = [
         { brandIcon: "fa6-brands:github", text: "vueS3 на github", link: "https://github.com/vues3" },
-        { brandIcon: "fa6-brands:vk", text: "vueS3 вконтакте", link: "https://vk.com/vues3" }
+        { brandIcon: t("socialIcon"), text: t("socialText"), link: t("socialUrl") }
     ];
 
 setInterval(() => { index.value += 1; }, 200);
