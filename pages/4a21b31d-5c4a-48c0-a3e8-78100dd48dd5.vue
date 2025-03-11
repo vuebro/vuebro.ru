@@ -32,7 +32,7 @@
                 <dt class="font-bold text-slate-700"><el-tag class="w-full !justify-start" type="success">{{ key
                 }}</el-tag>
                 </dt>
-                <dd class="text-slate-500">{{ value }}</dd>
+                <dd class="text-slate-500 text-ellipsis overflow-hidden">{{ value }}</dd>
             </template>
         </dl>
     </div>

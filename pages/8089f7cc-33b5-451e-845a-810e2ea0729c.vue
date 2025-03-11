@@ -22,10 +22,10 @@
                             icon="ion:open-outline">
                         </icon>
                     </a>
-                    <div class="ml-14 grid gap-8 grid-cols-1 md:grid-cols-2 w-96 items-center"><el-image
+                    <div class="ml-13 mt-4 mb-8 grid gap-8 grid-cols-1 md:grid-cols-2 max-w-192 items-center" v-if="images?.length"><el-image
                             fit="scale-down" v-for="(src, index) in images" :src="src" :preview-src-list="images"
                             :initial-index="index"
-                            class="h-36 my-12 shadow-md rounded-lg border border-black/10"></el-image></div>
+                            class="h-36 shadow-md rounded-lg border border-black/10 max-w-96"></el-image></div>
                 </li>
             </ul>
         </div>
@@ -36,7 +36,7 @@
                 <dt class="font-bold text-slate-700"><el-tag class="w-full !justify-start" type="success">{{ key
                 }}</el-tag>
                 </dt>
-                <dd class="text-slate-500">{{ value }}</dd>
+                <dd class="text-slate-500 text-ellipsis overflow-hidden">{{ value }}</dd>
             </template>
         </dl>
     </div>
