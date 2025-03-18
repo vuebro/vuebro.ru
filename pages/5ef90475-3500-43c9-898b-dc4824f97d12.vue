@@ -34,15 +34,14 @@
                         <h4 class="text-center text-base text-slate-700 font-medium">{{ t("madeof") }}</h4>
                     </div>
                     <nav class="col-span-2 md:col-span-4 lg:col-span-2" v-for="{ name, children, icon } in views">
-                        <h3 class="mb-6 text-base text-slate-700 font-medium">
-                            <icon :icon="icon" class="mr-2 size-8 inline"></icon><span>{{ name }}</span>
+                        <h3 class="mb-6 text-base text-slate-700 font-medium whitespace-nowrap">
+                            <icon :icon="icon" class="mr-2 size-8 inline"></icon>{{ name }}
                         </h3>
                         <ul>
                             <li v-for="child in children" class="mb-2 leading-6">
                                 <router-link :to="child.to" v-if="child?.enabled"
                                     class="transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600">
-                                    <icon :icon="child.icon" class="mr-2 size-6 inline"></icon><span>{{ child.name
-                                        }}</span>
+                                    <icon :icon="child.icon" class="mr-2 size-6 inline"></icon>{{ child.name }}
                                 </router-link>
                             </li>
                         </ul>
@@ -118,18 +117,18 @@ window.app.use(Quasar);
 window.app.use(hljsVuePlugin.default);
 
 const { t } = useI18n({
-  messages: {
-    en: {
-      madeof: "Made on the shores of the Baltic Sea",
-      socialUrl: "https://facebook.com/vues3",
-      socialIcon: "fa-brands:facebook"
-    },
-    ru: {
-      madeof: "Сделано на берегах Балтики",
-      socialUrl: "https://vk.com/vues3",
-      socialIcon: "fa-brands:vk"
+    messages: {
+        en: {
+            madeof: "Made on the shores of the Baltic Sea",
+            socialUrl: "https://facebook.com/vues3",
+            socialIcon: "fa-brands:facebook"
+        },
+        ru: {
+            madeof: "Сделано на берегах Балтики",
+            socialUrl: "https://vk.com/vues3",
+            socialIcon: "fa-brands:vk"
+        }
     }
-  }
 });
 
 const { id } = defineProps(["id"]),
