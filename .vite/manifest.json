@@ -109,7 +109,7 @@
     "name": "vueuse"
   },
   "index.html": {
-    "file": "assets/index-BMbwmOZV.js",
+    "file": "assets/index-D2xpEa53.js",
     "name": "index",
     "src": "index.html",
     "isEntry": true,
@@ -155,7 +155,7 @@
     ]
   },
   "src/views/MultiView.vue": {
-    "file": "assets/MultiView-DA7wC2Qf.js",
+    "file": "assets/MultiView-mMmz36xK.js",
     "name": "MultiView",
     "src": "src/views/MultiView.vue",
     "isDynamicEntry": true,
@@ -183,7 +183,7 @@
     ]
   },
   "src/views/NotFoundView.vue": {
-    "file": "assets/NotFoundView-CkFBv5w1.js",
+    "file": "assets/NotFoundView-D0LBj9mz.js",
     "name": "NotFoundView",
     "src": "src/views/NotFoundView.vue",
     "isDynamicEntry": true,
@@ -211,7 +211,7 @@
     ]
   },
   "src/views/SingleView.vue": {
-    "file": "assets/SingleView-DkZmyLOL.js",
+    "file": "assets/SingleView-gxxkWJQC.js",
     "name": "SingleView",
     "src": "src/views/SingleView.vue",
     "isDynamicEntry": true,
