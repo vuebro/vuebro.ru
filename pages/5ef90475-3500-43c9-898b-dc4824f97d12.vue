@@ -2,10 +2,10 @@
     <div class="min-h-dvh" un-cloak>
         <div class="sticky top-0 z-50 pa-4 border-b bg-neutral-50 opacity-0 md:hover:opacity-100 transition-opacity duration-1000"
             :class="{ 'opacity-100': !ready }" ref="pageHeader">
-            <el-page-header icon="" :content="current.title">
+            <el-page-header icon="" :content="pages[route.name].title">
                 <template #breadcrumb>
                     <el-breadcrumb separator="/">
-                        <el-breadcrumb-item v-for="item in current.branch" :to="item.to">
+                        <el-breadcrumb-item v-for="item in pages[route.name].branch" :to="item.to">
                             {{ item.name }}
                         </el-breadcrumb-item>
                     </el-breadcrumb>
@@ -85,15 +85,14 @@
     </div>
     <el-backtop></el-backtop>
 </template>
-
 <script setup>
 import "./node_modules/@highlightjs/cdn-assets/styles/stackoverflow-light.min.css";
 import "./node_modules/element-plus/dist/index.css";
 import "./node_modules/animate.css/animate.min.css";
-
 import { createVuetify, components, directives } from "vuetify";
 import { Quasar } from "quasar";
 import { computed, ref, inject, useTemplateRef, onMounted } from "vue";
+import { useRoute } from "vue-router";
 import { get, set } from "@vueuse/core";
 import { createI18n, useI18n } from "vue-i18n";
 import ElementPlus from "element-plus";
@@ -103,19 +102,15 @@ import javascript from "highlight.js/lib/languages/javascript";
 import css from "highlight.js/lib/languages/css";
 import xml from "highlight.js/lib/languages/xml";
 import hljsVuePlugin from "@highlightjs/vue-plugin";
-
 hljs.default.registerLanguage("javascript", javascript.default);
 hljs.default.registerLanguage("css", css.default);
 hljs.default.registerLanguage("xml", xml.default);
-
-
 window.app.use(createVuetify({ components, directives }));
 window.app.component("Icon", Icon);
 window.app.use(createI18n({ legacy: false, locale: "ru", fallbackLocale: "en" }))
 window.app.use(ElementPlus);
 window.app.use(Quasar);
 window.app.use(hljsVuePlugin.default);
-
 const { t } = useI18n({
     messages: {
         en: {
@@ -130,13 +125,11 @@ const { t } = useI18n({
         }
     }
 });
-
 const { id } = defineProps(["id"]),
     pages = inject("pages"),
     the = pages[id],
     views = computed(() => the.$children.filter(({ $children }) => $children.length)),
-    currentId = inject("id"),
-    current = computed(() => pages[get(currentId)]),
+    route = useRoute(),
     ready = ref(true),
     pageHeaderRef = useTemplateRef("pageHeader"),
     drawer = ref(false),
@@ -147,7 +140,6 @@ const { id } = defineProps(["id"]),
         icon: t("socialIcon"),
         href: t("socialUrl")
     }];
-
 onMounted(() => {
     let timeoutID;
     const scroll = () => {
@@ -161,7 +153,6 @@ onMounted(() => {
     scroll();
 });
 </script>
-
 <style scoped>
 .el-drawer .el-menu {
     border-right: none;

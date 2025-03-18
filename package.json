@@ -8,7 +8,7 @@
     "@vueuse/components": "^13.0.0",
     "@vueuse/shared": "^13.0.0",
     "element-plus": "^2.9.6",
-    "vuetify": "^3.7.15",
+    "vuetify": "^3.7.17",
     "quasar": "^2.18.1",
     "animate.css": "^4.1.1",
     "vue-i18n": "^11.1.2"
