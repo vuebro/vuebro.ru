@@ -120,7 +120,7 @@ const btns = [{
     icn: "vscode-icons:file-type-snapcraft"
 }],
     social = [
-        { brandIcon: "fa6-brands:github", text: "vueS3 на github", link: "https://github.com/vues3" },
+        { brandIcon: "fa6-brands:github", text: t("githubText"), link: "https://github.com/vues3" },
         { brandIcon: t("socialIcon"), text: t("socialText"), link: t("socialUrl") }
     ];
 
