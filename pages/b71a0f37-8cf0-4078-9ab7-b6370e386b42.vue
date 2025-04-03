@@ -1,78 +1,95 @@
 <template>
-<div class="container mx-auto px-4">
-  <div class="flex flex-col text-center not-prose">
-    <icon :icon="the.icon" class="size-20 mx-auto"></icon>
-    <h2 class="text-4xl my-5 font-['Caveat']">{{ the.title }}</h2>
-    <el-text size="large">{{ the.description }}</el-text>
-  </div>
-    <h3>Структура файлов по-умолчанию</h3>
-    <p>Такой набор папок и файлов вы увидите в корзине после запуска VueS3:</p>
-    <ul class="not-prose pl-5 list-none list-inside mb-12">
-        <li><el-text tag="b"><el-icon>
-                    <Folder />
-                </el-icon> /</el-text><el-text> - корневая директория бакета</el-text>
-            <ul class="list-none list-inside ml-4">
-                <li><el-text tag="b"><el-icon>
-                            <Folder />
-                        </el-icon> .vite</el-text><el-text> - папка для хранения манифеста vite</el-text>
-                    <ul class="list-none list-inside ml-8">
-                        <li><el-text tag="b"><el-icon>
-                                    <Document />
-                                </el-icon> manifest.json</el-text><el-text> - файл манифеста, предназначенный для
-                                синхронизации системных модулей</el-text></li>
-                    </ul>
-                </li>
-                <li><el-text tag="b"><el-icon>
-                            <Folder />
-                        </el-icon> assets</el-text><el-text> - системные модули, обеспечивающие работоспособность
-                        сайта</el-text></li>
-                <li><el-text tag="b"><el-icon>
-                            <Folder />
-                        </el-icon> images</el-text><el-text> - загруженные изображения</el-text></li>
-                <li><el-text tag="b"><el-icon>
-                            <Folder />
-                        </el-icon> pages</el-text><el-text> - sfc компоненты в формате json для каждой
-                        страницы</el-text></li>
-                <li><el-text tag="b"><el-icon>
-                            <Document />
-                        </el-icon> index.html</el-text><el-text> - загрузочный файл</el-text></li>
-                <li><el-text tag="b"><el-icon>
-                            <Document />
-                        </el-icon> index.json</el-text><el-text> - иерархическая структура семантических атрибутов всех
-                        страниц сайта</el-text></li>
-                <li><el-text tag="b"><el-icon>
-                            <Document />
-                        </el-icon> index.importmap</el-text><el-text> - список импортируемых модулей</el-text></li>
-                <li><el-text tag="b"><el-icon>
-                            <Document />
-                        </el-icon> robots.txt</el-text><el-text> - рекомендации для поисковиков</el-text></li>
-                <li><el-text tag="b"><el-icon>
-                            <Document />
-                        </el-icon> sitemap.xml</el-text><el-text> - карта сайта для поисковиков</el-text></li>
-                <li><el-text tag="b"><el-icon>
-                            <Document />
-                        </el-icon> favicon.ico</el-text><el-text> - фавиконка</el-text></li>
-            </ul>
-        </li>
-    </ul>
-    <el-alert title="Внимание!!!" type="error"
-        description="VueS3 никогда не удаляет ни папки ни файлы. Так сделано из соображений безопасности." show-icon
-        :closable="false" class="not-prose" />
-    <h3>Динамическая структура папок</h3>
-    <p>По мере создания рубрик в древовидной структуре VueS3, создаются папки соответствующие роутам.
-        В созданные папки помещается файл index.html, идентичный тому, что находится в корне.
-        Процесс создания папок и обновления файлов index.html полностью автоматический и предназначен для обеспечения
-        SEO.</p>
-</div>
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col text-center not-prose mb-24">
+            <icon :icon="the.icon" class="size-20 mx-auto"></icon>
+            <h2 class="text-4xl my-5 font-['Caveat']">{{ the.title }}</h2>
+            <el-text size="large">{{ the.description }}</el-text>
+        </div>
+        <h4>{{ t("h4") }}</h4>
+        <ul class="not-prose list-none list-inside">
+            <li v-for="leaf in tree"><el-text tag="b"><el-icon>
+                        <Folder v-if="leaf.icon === 'folder'"></Folder>
+                        <Document v-else></Document>
+                    </el-icon> {{ leaf.name }}</el-text><el-text> - {{ leaf.description }}</el-text>
+                <ul class="list-none list-inside ml-8" v-if="leaf.children">
+                    <li>
+                        <el-text tag="b">
+                            <el-icon>
+                                <Document></Document>
+                            </el-icon> {{ leaf.children[0].name }}</el-text><el-text> - {{ leaf.children[0].description
+                            }}</el-text>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h3>{{ t("h3") }}</h3>
+        <p>{{ t("p") }}</p>
+    </div>
 </template>
 
 <script setup>
 import { Folder, Document } from "@element-plus/icons-vue";
-import { inject } from "vue";
-const { id } = defineProps(["id"]);
-const pages = inject("pages");
-const the = pages[id];
-
+import { useI18n } from "vue-i18n";
+import { inject, reactive } from "vue";
+const { t } = useI18n({
+    messages: {
+        en: {
+            "h4": "This is the set of folders and files you will see after launching vueS3",
+            "h3": "Dynamic Folder Structure",
+            "p": "As you create categories in the tree structure of vueS3, folders corresponding to routes are created. An index.html file identical to the one in the root is placed into these folders, but with attributes corresponding to the route. The process of creating folders and updating index.html files is fully automatic and is intended to ensure SEO.",
+            "dsc1": "Folder for storing the Vite manifest",
+            "dsc1_1": "Manifest file used for synchronizing system modules",
+            "dsc2": "System modules that ensure the website’s functionality",
+            "dsc3": "Uploaded images",
+            "dsc4": "SFC components for each page",
+            "dsc5": "Boot file",
+            "dsc6": "Hierarchical structure of semantic attributes for all site pages",
+            "dsc7": "List of imported modules",
+            "dsc8": "Recommendations for search engines",
+            "dsc9": "Sitemap for search engines",
+            "dsc10": "Favicon",
+            "dsc11": "List of loaded fonts",
+            "dsc12": "Domain"
+        },
+        ru: {
+            h4: "Такой набор папок и файлов вы увидите после запуска vueS3",
+            h3: "Динамическая структура папок",
+            p: "По мере создания рубрик в древовидной структуре vueS3, создаются папки соответствующие роутам. В созданные папки помещается файл index.html, идентичный тому, что находится в корне но с аттрибутами, соответствующими роуту. Процесс создания папок и обновления файлов index.html полностью автоматический и предназначен для обеспечения SEO.",
+            dsc1: "папка для хранения манифеста vite",
+            dsc1_1: "файл манифеста, предназначенный для синхронизации системных модулей",
+            dsc2: "системные модули, обеспечивающие работоспособность сайта",
+            dsc3: "загруженные изображения",
+            dsc4: "sfc компоненты для каждой страницы",
+            dsc5: "загрузочный файл",
+            dsc6: "иерархическая структура семантических атрибутов всех страниц сайта",
+            dsc7: "список импортируемых модулей",
+            dsc8: "рекомендации для поисковиков",
+            dsc9: "карта сайта для поисковиков",
+            dsc10: "фавиконка",
+            dsc11: "список подгружаемых шрифтов",
+            dsc12: "домен",
+        }
+    }
+});
+const { id } = defineProps(["id"]),
+    pages = inject("pages"),
+    the = pages[id],
+    tree = reactive([
+        {
+            icon: "folder", name: ".vite", description: t("dsc1"), children: [
+                { name: "manifest.json", description: t("dsc1_1") },
+            ]
+        },
+        { icon: "folder", name: "assets", description: t("dsc2") },
+        { icon: "folder", name: "images", description: t("dsc3") },
+        { icon: "folder", name: "pages", description: t("dsc4") },
+        { icon: "document", name: "index.html", description: t("dsc5") },
+        { icon: "document", name: "index.json ", description: t("dsc6") },
+        { icon: "document", name: "index.importmap", description: t("dsc7") },
+        { icon: "document", name: "robots.txt", description: t("dsc8") },
+        { icon: "document", name: "sitemap.xml", description: t("dsc9") },
+        { icon: "document", name: "favicon.ico", description: t("dsc10") },
+        { icon: "document", name: "fonts.json", description: t("dsc11") },
+        { icon: "document", name: "CNAME", description: t("dsc12") },
+    ]);
 </script>
-
-
