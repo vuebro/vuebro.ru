@@ -2,10 +2,10 @@
     <div class="min-h-dvh" un-cloak>
         <div class="sticky top-0 z-50 pa-4 border-b bg-neutral-50 opacity-0 md:hover:opacity-100 transition-opacity duration-1000"
             :class="{ 'opacity-100': !ready }" ref="pageHeader">
-            <el-page-header icon="" :content="pages[route.name].title">
+            <el-page-header icon="" :content="pages[$route.name].title">
                 <template #breadcrumb>
                     <el-breadcrumb separator="/">
-                        <el-breadcrumb-item v-for="item in pages[route.name].branch" :to="item.to">
+                        <el-breadcrumb-item v-for="item in pages[$route.name].branch" :to="item.to">
                             {{ item.name }}
                         </el-breadcrumb-item>
                     </el-breadcrumb>
@@ -92,7 +92,6 @@ import "./node_modules/animate.css/animate.min.css";
 import { createVuetify, components, directives } from "vuetify";
 import { Quasar } from "quasar";
 import { computed, ref, inject, useTemplateRef, onMounted } from "vue";
-import { useRoute } from "vue-router";
 import { get, set } from "@vueuse/core";
 import { createI18n, useI18n } from "vue-i18n";
 import ElementPlus from "element-plus";
@@ -129,7 +128,6 @@ const { id } = defineProps(["id"]),
     pages = inject("pages"),
     the = pages[id],
     views = computed(() => the.$children.filter(({ $children }) => $children.length)),
-    route = useRoute(),
     ready = ref(true),
     pageHeaderRef = useTemplateRef("pageHeader"),
     drawer = ref(false),

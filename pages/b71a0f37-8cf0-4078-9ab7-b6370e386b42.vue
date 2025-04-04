@@ -34,22 +34,22 @@ import { inject, reactive } from "vue";
 const { t } = useI18n({
     messages: {
         en: {
-            "h4": "This is the set of folders and files you will see after launching vueS3",
-            "h3": "Dynamic Folder Structure",
-            "p": "As you create categories in the tree structure of vueS3, folders corresponding to routes are created. An index.html file identical to the one in the root is placed into these folders, but with attributes corresponding to the route. The process of creating folders and updating index.html files is fully automatic and is intended to ensure SEO.",
-            "dsc1": "Folder for storing the Vite manifest",
-            "dsc1_1": "Manifest file used for synchronizing system modules",
-            "dsc2": "System modules that ensure the website’s functionality",
-            "dsc3": "Uploaded images",
-            "dsc4": "SFC components for each page",
-            "dsc5": "Boot file",
-            "dsc6": "Hierarchical structure of semantic attributes for all site pages",
-            "dsc7": "List of imported modules",
-            "dsc8": "Recommendations for search engines",
-            "dsc9": "Sitemap for search engines",
-            "dsc10": "Favicon",
-            "dsc11": "List of loaded fonts",
-            "dsc12": "Domain"
+            h4: "This is the set of folders and files you will see after launching vueS3",
+            h3: "Dynamic Folder Structure",
+            p: "As you create categories in the tree structure of vueS3, folders corresponding to routes are created. An index.html file identical to the one in the root is placed into these folders, but with attributes corresponding to the route. The process of creating folders and updating index.html files is fully automatic and is intended to ensure SEO.",
+            dsc1: "Folder for storing the Vite manifest",
+            dsc1_1: "Manifest file used for synchronizing system modules",
+            dsc2: "System modules that ensure the website’s functionality",
+            dsc3: "Uploaded images",
+            dsc4: "SFC components for each page",
+            dsc5: "Boot file",
+            dsc6: "Hierarchical structure of semantic attributes for all site pages",
+            dsc7: "List of imported modules",
+            dsc8: "Recommendations for search engines",
+            dsc9: "Sitemap for search engines",
+            dsc10: "Favicon",
+            dsc11: "List of loaded fonts",
+            dsc12: "Domain"
         },
         ru: {
             h4: "Такой набор папок и файлов вы увидите после запуска vueS3",
