@@ -5,7 +5,7 @@
             <h2 class="text-4xl my-5 font-['Caveat']">{{ the.title }}</h2>
             <el-text size="large">{{ the.description }}</el-text>
         </div>
-        <div class="grid grid-cols-1 2xl:grid-cols-2 gap-4 mx-4" un-cloak>
+        <div class="grid grid-cols-1 2xl:grid-cols-2 gap-4 mx-4">
             <div class="text-center flex flex-col 2xl:row-start-auto"
                 v-for="({ title, description, icon }, index) in first" :class="{ 'row-start-5': index }">
                 <icon class="size-24 mx-auto" :icon="icon"></icon>
@@ -54,10 +54,20 @@
                 class="2xl:row-start-auto">
                 <ul>
                     <li v-for="{ subtitle, href } in links"><el-link :href="href" target="_blank">{{ subtitle
-                    }}</el-link>
+                            }}</el-link>
                     </li>
                 </ul>
             </el-alert>
+        </div>
+        <div class="not-prose flex mt-48">
+            <el-button-group class="mx-auto">
+                <el-button type="primary" :icon="ArrowLeft" :to="the.$prev.to" v-if="the.$prev" tag="router-link">{{
+                    the.$prev.header }}</el-button>
+                <el-button type="primary" v-if="the.$next" :to="the.$next.to" tag="router-link">{{ the.$next.header
+                }}<el-icon class="el-icon--right">
+                        <ArrowRight></ArrowRight>
+                    </el-icon></el-button>
+            </el-button-group>
         </div>
     </div>
 </template>
@@ -65,6 +75,8 @@
 <script setup>
 import { useI18n } from "vue-i18n";
 import { ref, computed, inject, reactive } from "vue";
+import { ArrowLeft, ArrowRight } from "@element-plus/icons-vue";
+
 const props = defineProps(["id"]);
 const pages = inject("pages");
 const the = pages[props.id];

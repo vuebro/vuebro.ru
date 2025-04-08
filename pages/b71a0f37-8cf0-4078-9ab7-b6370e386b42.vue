@@ -24,6 +24,16 @@
         </ul>
         <h3>{{ t("h3") }}</h3>
         <p>{{ t("p") }}</p>
+        <div class="not-prose flex mt-48">
+            <el-button-group class="mx-auto">
+                <el-button type="primary" :icon="ArrowLeft" :to="the.$prev.to" v-if="the.$prev" tag="router-link">{{
+                    the.$prev.header }}</el-button>
+                <el-button type="primary" v-if="the.$next" :to="the.$next.to" tag="router-link">{{ the.$next.header
+                }}<el-icon class="el-icon--right">
+                        <ArrowRight></ArrowRight>
+                    </el-icon></el-button>
+            </el-button-group>
+        </div>
     </div>
 </template>
 
@@ -31,6 +41,8 @@
 import { Folder, Document } from "@element-plus/icons-vue";
 import { useI18n } from "vue-i18n";
 import { inject, reactive } from "vue";
+import { ArrowLeft, ArrowRight } from "@element-plus/icons-vue";
+
 const { t } = useI18n({
     messages: {
         en: {

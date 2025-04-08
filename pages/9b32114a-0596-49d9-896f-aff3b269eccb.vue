@@ -24,12 +24,24 @@
         <highlightjs class="not-prose" language="js" :code="t('inj')"></highlightjs>
         <p class="text-justify">{{ t("p_6") }}: <router-link :to="`/${t('link_5')}/`">{{ t("link_5") }}</router-link>.
         </p>
+        <div class="not-prose flex mt-48">
+            <el-button-group class="mx-auto">
+                <el-button type="primary" :icon="ArrowLeft" :to="the.$prev.to" v-if="the.$prev" tag="router-link">{{
+                    the.$prev.header }}</el-button>
+                <el-button type="primary" v-if="the.$next" :to="the.$next.to" tag="router-link">{{ the.$next.header
+                }}<el-icon class="el-icon--right">
+                        <ArrowRight></ArrowRight>
+                    </el-icon></el-button>
+            </el-button-group>
+        </div>
     </div>
 </template>
 
 <script setup>
 import { inject } from "vue";
 import { useI18n } from "vue-i18n";
+import { ArrowLeft, ArrowRight } from "@element-plus/icons-vue";
+
 const { id } = defineProps(["id"]),
     pages = inject("pages"),
     the = pages[id];
@@ -62,7 +74,7 @@ import {'{'} useRoute {'}'} from "vue-router";
 /** Get the ID of the current page */
 const {'{'} id {'}'} = defineProps(["id"]);
 /** Get the object of the selected route */
-const route = useRoute(),
+const route = useRoute();
 /** Inject the array of semantic objects for the site's pages */
 const pages = inject("pages");
 /**  Get the semantic object of the current page */
@@ -97,7 +109,7 @@ import {'{'} useRoute {'}'} from "vue-router";
 /** Получаем id данной страницы */
 const {'{'} id {'}'} = defineProps(["id"]);
 /** Получаем объект выбранного роута */
-const route = useRoute(),
+const route = useRoute();
 /** Инжектируем массив семантических объектов страниц сайта */
 const pages = inject("pages");
 /** Получаем семантический объект данной станицы */

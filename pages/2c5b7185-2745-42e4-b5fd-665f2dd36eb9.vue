@@ -26,17 +26,29 @@
               <highlightjs :code="code" v-if="code" class="my-6"></highlightjs>
             </div>
             <div class="col-span-1 lg:col-span-3" v-if="src"><el-image :src="src" :preview-src-list="[src]" v-if="src"
-                class="w-full h-auto" :class="{ border: index === times.length-1 }" />
+                class="w-full h-auto" :class="{ border: index === times.length - 1 }" />
             </div>
           </div>
         </el-card>
       </el-timeline-item>
     </el-timeline>
+    <div class="not-prose flex mt-48">
+      <el-button-group class="mx-auto">
+        <el-button type="primary" :icon="ArrowLeft" :to="the.$prev.to" v-if="the.$prev" tag="router-link">{{
+          the.$prev.header }}</el-button>
+        <el-button type="primary" v-if="the.$next" :to="the.$next.to" tag="router-link">{{ the.$next.header
+        }}<el-icon class="el-icon--right">
+            <ArrowRight></ArrowRight>
+          </el-icon></el-button>
+      </el-button-group>
+    </div>
   </div>
 </template>
 <script setup>
 import { inject, reactive } from "vue";
 import { useI18n } from "vue-i18n";
+import { ArrowLeft, ArrowRight } from "@element-plus/icons-vue";
+
 const { id } = defineProps(["id"]),
   pages = inject("pages"),
   the = pages[id],
@@ -134,7 +146,7 @@ const {'{'} id {'}'} = defineProps(["id"]),
         header1: "Настройка GitHub Pages",
         description1: 'Следуя указаниям инструкции <a href="https://pages.github.com" class="text-color-blue-500 hover:underline" target="_blank">https://pages.github.com</a>, создайте репозиторий и настройте GitHub Pages.',
         header2: "Начало работы с приложением vueS3",
-        description2: 'Откройте <a href="https://run.vues3.ru" class="text-color-blue-500 hover:underline" target="_blank">https://run.vues3.ru</a> в любом браузере на базе хрома, они умеют работать с файловой системой, либо загрузите приложение для вашей оперционной системы. Нажмите на кнопку "ОТКРЫТЬ..." и выберите директорию, в которую ранее был склонирован репозиторий.',
+        description2: 'Откройте <a href="https://run.vues3.ru" class="text-color-blue-500 hover:underline" target="_blank">https://run.vues3.ru</a> в любом браузере на базе хрома, они умеют работать с файловой системой, либо загрузите приложение для вашей операционной системы. Нажмите на кнопку "ОТКРЫТЬ..." и выберите директорию, в которую ранее был склонирован репозиторий.',
         link2: "загрузка",
         header3: "Подключение внешних модулей",
         description3: `В правом верхнем углу нажмите на пиктограмму меню и выберите пункт "Import Map". В открывшемся окне добавьте внешние модули, которые будут использованы для работы сайта:
