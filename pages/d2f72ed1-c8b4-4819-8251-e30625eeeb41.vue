@@ -96,7 +96,6 @@ const the = pages[id];
 /** Compute the semantic object of the selected page */
 const that = computed(() => pages[route.name]);`,
         nav: {
-            root: "Root page",
             $children: "Child pages of the current page, considering the 'enabled' attribute",
             $index: "Index of the current page in the $siblings array",
             $next: "Next page relative to the current page in the $siblings array",
@@ -108,8 +107,6 @@ const that = computed(() => pages[route.name]);`,
             index: "Index of the current page in the siblings array",
             children: "Child pages of the current page",
             siblings: "Array of sibling pages including the current page",
-            pages: "Array of all pages",
-            current: "Selected page from the router",
             path: "Relative path to the current page",
             branch: "Array of pages from the root to the current page",
             to: "URL of the page for use in router-link, considering the 'loc' attribute"
@@ -124,18 +121,15 @@ const that = computed(() => pages[route.name]);`,
             priority: "Priority (for sitemap)",
             lastmod: "Last modified date (for sitemap)",
             icon: "Favicon URL",
-            image: "Array of objects {url, alt}, where: url - image URL, alt - image description",
+            images: "Array of objects {'{'}url, alt{'}'}, where: url - image URL, alt - image description",
             title: "Value of the 'header' attribute if set; otherwise, the value of the 'name' attribute"
         },
         settings: {
             id: "Unique identifier for the current page (the)",
-            sfc: "Object containing the page's content with attributes: template, script, style",
-            along: "Joint or separate display of child pages of the current page (the)",
+            flat: "Joint or separate display of child pages of the current page (the)",
             class: "Array of CSS classes for the current page (the)",
             enabled: "Toggle for the availability of the current page (the)",
             name: "Short name of the current page (the), used to form the 'path' attribute",
-            scoped: "Setting the 'scoped' attribute for the 'style' attribute",
-            setup: "Setting the 'setup' attribute for the 'script' attribute",
             i: "The 'icon' attribute with the 'i-' prefix"
         }
 
@@ -165,7 +159,6 @@ const the = pages[id];
 /** Вычисляем семантический объект выбранной страницы */
 const that = computed(() => pages[route.name]);`,
         nav: {
-            root: "Корневая страница",
             $children: "Дочерние страницы the с учетом атрибута enabled",
             $index: "Индекс страницы the в массиве $siblings",
             $next: "Следующая страница от the в массиве $siblings",
@@ -177,9 +170,7 @@ const that = computed(() => pages[route.name]);`,
             index: "Индекс страницы the в массиве siblings",
             children: "Дочерние страницы the",
             siblings: "Массив одноуровневых страниц со страницей the",
-            pages: "Массив всех страниц",
-            current: "Выбранная страница роутера",
-            path: "относительный путь до страницы the",
+            path: "Относительный путь до страницы the",
             branch: "Массив страниц от корневой до страницы the",
             to: "Урл страницы для подстановки в router-link с учетом атрибута loc"
         },
@@ -193,18 +184,15 @@ const that = computed(() => pages[route.name]);`,
             priority: "Приоритет",
             lastmod: "Дата последнего изменения",
             icon: "Фавиконка",
-            image: "Массив объектов {url, alt}, где: url - адрес картинки, alt - описание картинки",
+            images: "Массив объектов {'{'}url, alt{'}'}, где: url - адрес картинки, alt - описание картинки",
             title: "Значение атрибута header, если задан, иначе значение атрибута name"
         },
         settings: {
             id: "Уникальный идентификатор страницы the",
-            sfc: "Объект содержимого страницы the с атрибутами: template, script, style",
-            along: "Совместное или раздельное представление дочерних страниц the",
+            flat: "Совместное или раздельное представление дочерних страниц the",
             class: "Массив классов страницы the",
             enabled: "Переключатель доступности страницы the",
             name: "Короткое имя страницы the, используется для формирования атрибута path",
-            scoped: "Установка атрибута scoped для атрибута style",
-            setup: "Установка атрибута setup для атрибута script",
             i: "Атрибут icon с префиксом i-"
         }
     }
@@ -215,4 +203,7 @@ const html = `<h3>{{ the.parent.title }}</h3>
 <ul>
     <li v-for=\"{title} in the.$siblings\">{{ title }}</li>
 </ul>`;
+
+console.log(the);
+
 </script>
