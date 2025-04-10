@@ -64,8 +64,8 @@
       "_hookable-B7_1qfUG.js"
     ]
   },
-  "_unhead-vue-C2LkYYVz.js": {
-    "file": "assets/unhead-vue-C2LkYYVz.js",
+  "_unhead-vue-DODUQR-r.js": {
+    "file": "assets/unhead-vue-DODUQR-r.js",
     "name": "unhead-vue",
     "imports": [
       "_unhead-Cc5VaV_e.js"
@@ -185,8 +185,8 @@
       "_uuid-C_lTrkZC.js"
     ]
   },
-  "_vues3-vue3-sfc-loader-iPy9I_fn.js": {
-    "file": "assets/vues3-vue3-sfc-loader-iPy9I_fn.js",
+  "_vues3-vue3-sfc-loader-BbhCwdX9.js": {
+    "file": "assets/vues3-vue3-sfc-loader-BbhCwdX9.js",
     "name": "vues3-vue3-sfc-loader"
   },
   "_vueuse-core-oETn3pEl.js": {
@@ -201,13 +201,13 @@
     "name": "vueuse-shared"
   },
   "index.html": {
-    "file": "assets/index-CX2-q_8p.js",
+    "file": "assets/index-CNOp2qSA.js",
     "name": "index",
     "src": "index.html",
     "isEntry": true,
     "imports": [
       "_unocss-preset-web-fonts-B9GE9DkF.js",
-      "_unhead-vue-C2LkYYVz.js",
+      "_unhead-vue-DODUQR-r.js",
       "_unocss-runtime-DcS1hwRb.js",
       "_vues3-shared-CG0rzS_C.js",
       "_unocss-preset-attributify-B43C78ya.js",
@@ -216,7 +216,7 @@
       "_unocss-preset-typography-DM_u03oK.js",
       "_unocss-preset-wind3-nvR3uG2n.js",
       "_iconify-vue-C320287R.js",
-      "_vues3-vue3-sfc-loader-iPy9I_fn.js",
+      "_vues3-vue3-sfc-loader-BbhCwdX9.js",
       "_vueuse-core-oETn3pEl.js",
       "_uuid-C_lTrkZC.js",
       "_unocss-core-D551XE6q.js",
@@ -261,7 +261,7 @@
     ]
   },
   "src/views/MultiView.vue": {
-    "file": "assets/MultiView-Bb77-sa8.js",
+    "file": "assets/MultiView-Dk5Ic_xX.js",
     "name": "MultiView",
     "src": "src/views/MultiView.vue",
     "isDynamicEntry": true,
@@ -277,7 +277,7 @@
       "_fast-uri-J6I7s6O_.js",
       "_unocss-preset-web-fonts-B9GE9DkF.js",
       "_unocss-core-D551XE6q.js",
-      "_unhead-vue-C2LkYYVz.js",
+      "_unhead-vue-DODUQR-r.js",
       "_unhead-Cc5VaV_e.js",
       "_hookable-B7_1qfUG.js",
       "_unocss-runtime-DcS1hwRb.js",
@@ -298,19 +298,19 @@
       "_unocss-preset-mini-BuCoYosa.js",
       "_unocss-extractor-arbitrary-variants-BEoR-_Vl.js",
       "_iconify-vue-C320287R.js",
-      "_vues3-vue3-sfc-loader-iPy9I_fn.js"
+      "_vues3-vue3-sfc-loader-BbhCwdX9.js"
     ],
     "css": [
       "assets/unocss-reset-DeJTMLhw.css"
     ]
   },
   "src/views/NotFoundView.vue": {
-    "file": "assets/NotFoundView-CCKmVSqh.js",
+    "file": "assets/NotFoundView-DPtONHbE.js",
     "name": "NotFoundView",
     "src": "src/views/NotFoundView.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_unhead-vue-C2LkYYVz.js",
+      "_unhead-vue-DODUQR-r.js",
       "index.html",
       "_unhead-Cc5VaV_e.js",
       "_hookable-B7_1qfUG.js",
@@ -341,7 +341,7 @@
       "_unocss-preset-mini-BuCoYosa.js",
       "_unocss-extractor-arbitrary-variants-BEoR-_Vl.js",
       "_iconify-vue-C320287R.js",
-      "_vues3-vue3-sfc-loader-iPy9I_fn.js",
+      "_vues3-vue3-sfc-loader-BbhCwdX9.js",
       "_vueuse-core-oETn3pEl.js"
     ],
     "css": [
@@ -349,7 +349,7 @@
     ]
   },
   "src/views/SingleView.vue": {
-    "file": "assets/SingleView-Dk7-3vgT.js",
+    "file": "assets/SingleView--RvMeWC0.js",
     "name": "SingleView",
     "src": "src/views/SingleView.vue",
     "isDynamicEntry": true,
@@ -364,7 +364,7 @@
       "_fast-uri-J6I7s6O_.js",
       "_unocss-preset-web-fonts-B9GE9DkF.js",
       "_unocss-core-D551XE6q.js",
-      "_unhead-vue-C2LkYYVz.js",
+      "_unhead-vue-DODUQR-r.js",
       "_unhead-Cc5VaV_e.js",
       "_hookable-B7_1qfUG.js",
       "_unocss-runtime-DcS1hwRb.js",
@@ -385,7 +385,7 @@
       "_unocss-preset-mini-BuCoYosa.js",
       "_unocss-extractor-arbitrary-variants-BEoR-_Vl.js",
       "_iconify-vue-C320287R.js",
-      "_vues3-vue3-sfc-loader-iPy9I_fn.js",
+      "_vues3-vue3-sfc-loader-BbhCwdX9.js",
       "_vueuse-core-oETn3pEl.js"
     ],
     "css": [
