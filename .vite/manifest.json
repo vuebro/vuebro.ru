@@ -185,8 +185,8 @@
       "_uuid-C_lTrkZC.js"
     ]
   },
-  "_vues3-vue3-sfc-loader-BbhCwdX9.js": {
-    "file": "assets/vues3-vue3-sfc-loader-BbhCwdX9.js",
+  "_vues3-vue3-sfc-loader-CUyMkKBN.js": {
+    "file": "assets/vues3-vue3-sfc-loader-CUyMkKBN.js",
     "name": "vues3-vue3-sfc-loader"
   },
   "_vueuse-core-oETn3pEl.js": {
@@ -201,7 +201,7 @@
     "name": "vueuse-shared"
   },
   "index.html": {
-    "file": "assets/index-BXVVXOqD.js",
+    "file": "assets/index-BfmR6HQ7.js",
     "name": "index",
     "src": "index.html",
     "isEntry": true,
@@ -216,7 +216,7 @@
       "_unocss-preset-typography-DM_u03oK.js",
       "_unocss-preset-wind3-nvR3uG2n.js",
       "_iconify-vue-C320287R.js",
-      "_vues3-vue3-sfc-loader-BbhCwdX9.js",
+      "_vues3-vue3-sfc-loader-CUyMkKBN.js",
       "_vueuse-core-oETn3pEl.js",
       "_uuid-C_lTrkZC.js",
       "_unocss-core-D551XE6q.js",
@@ -261,7 +261,7 @@
     ]
   },
   "src/views/MultiView.vue": {
-    "file": "assets/MultiView-D5bqMUMp.js",
+    "file": "assets/MultiView-WE-qAhXy.js",
     "name": "MultiView",
     "src": "src/views/MultiView.vue",
     "isDynamicEntry": true,
@@ -298,14 +298,14 @@
       "_unocss-preset-mini-BuCoYosa.js",
       "_unocss-extractor-arbitrary-variants-BEoR-_Vl.js",
       "_iconify-vue-C320287R.js",
-      "_vues3-vue3-sfc-loader-BbhCwdX9.js"
+      "_vues3-vue3-sfc-loader-CUyMkKBN.js"
     ],
     "css": [
       "assets/unocss-reset-DeJTMLhw.css"
     ]
   },
   "src/views/NotFoundView.vue": {
-    "file": "assets/NotFoundView-h6kS4Vss.js",
+    "file": "assets/NotFoundView-zIxKqp1q.js",
     "name": "NotFoundView",
     "src": "src/views/NotFoundView.vue",
     "isDynamicEntry": true,
@@ -341,7 +341,7 @@
       "_unocss-preset-mini-BuCoYosa.js",
       "_unocss-extractor-arbitrary-variants-BEoR-_Vl.js",
       "_iconify-vue-C320287R.js",
-      "_vues3-vue3-sfc-loader-BbhCwdX9.js",
+      "_vues3-vue3-sfc-loader-CUyMkKBN.js",
       "_vueuse-core-oETn3pEl.js"
     ],
     "css": [
@@ -349,7 +349,7 @@
     ]
   },
   "src/views/SingleView.vue": {
-    "file": "assets/SingleView-DQ7qy1mQ.js",
+    "file": "assets/SingleView-Bq25LA1Y.js",
     "name": "SingleView",
     "src": "src/views/SingleView.vue",
     "isDynamicEntry": true,
@@ -385,7 +385,7 @@
       "_unocss-preset-mini-BuCoYosa.js",
       "_unocss-extractor-arbitrary-variants-BEoR-_Vl.js",
       "_iconify-vue-C320287R.js",
-      "_vues3-vue3-sfc-loader-BbhCwdX9.js",
+      "_vues3-vue3-sfc-loader-CUyMkKBN.js",
       "_vueuse-core-oETn3pEl.js"
     ],
     "css": [
