@@ -90,8 +90,9 @@ import "./node_modules/@highlightjs/cdn-assets/styles/stackoverflow-light.min.cs
 import "./node_modules/element-plus/dist/index.css";
 import "./node_modules/animate.css/animate.min.css";
 import { createVuetify, components, directives } from "vuetify";
+import { useRoute } from "vue-router";
 import { Quasar } from "quasar";
-import { computed, ref, inject, useTemplateRef, onMounted } from "vue";
+import { computed, ref, inject, useTemplateRef, onMounted, watch } from "vue";
 import { get, set } from "@vueuse/core";
 import { createI18n, useI18n } from "vue-i18n";
 import ElementPlus from "element-plus";
@@ -131,6 +132,7 @@ const { id } = defineProps(["id"]),
     ready = ref(true),
     pageHeaderRef = useTemplateRef("pageHeader"),
     drawer = ref(false),
+    route = useRoute(),
     social = [{
         icon: "fa-brands:github",
         href: "https://github.com/vues3"
@@ -150,6 +152,7 @@ onMounted(() => {
     document.addEventListener("scroll", scroll);
     scroll();
 });
+watch(() => route.name, () => { drawer.value = false });
 </script>
 <style scoped>
 .el-drawer .el-menu {
