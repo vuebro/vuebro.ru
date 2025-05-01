@@ -1,0 +1,1 @@
+import{r as s}from"./babel-types-CE9sEDWp.js";var t={},n;function c(){if(n)return t;n=1,Object.defineProperty(t,"__esModule",{value:!0}),t.default=_;var o=s();const{addComment:u}=o,i="#__PURE__",a=({leadingComments:e})=>!!e&&e.some(r=>/[@#]__PURE__/.test(r.value));function _(e){const r=e.node||e;a(r)||u(r,"leading",i)}return t}export{c as r};

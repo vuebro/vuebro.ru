@@ -203,7 +203,4 @@ const html = `<h3>{{ the.parent.title }}</h3>
 <ul>
     <li v-for=\"{title} in the.$siblings\">{{ title }}</li>
 </ul>`;
-
-console.log(the);
-
 </script>

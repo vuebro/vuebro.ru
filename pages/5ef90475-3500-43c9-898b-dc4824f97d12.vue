@@ -86,9 +86,6 @@
     <el-backtop></el-backtop>
 </template>
 <script setup>
-import "./node_modules/@highlightjs/cdn-assets/styles/stackoverflow-light.min.css";
-import "./node_modules/element-plus/dist/index.css";
-import "./node_modules/animate.css/animate.min.css";
 import { createVuetify, components, directives } from "vuetify";
 import { useRoute } from "vue-router";
 import { Quasar } from "quasar";
@@ -155,6 +152,10 @@ onMounted(() => {
 watch(() => route.name, () => { drawer.value = false });
 </script>
 <style scoped>
+@import "./node_modules/@highlightjs/cdn-assets/styles/stackoverflow-light.min.css";
+@import "./node_modules/element-plus/dist/index.css";
+@import "./node_modules/animate.css/animate.min.css";
+
 .el-drawer .el-menu {
     border-right: none;
 }
