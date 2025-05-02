@@ -99,15 +99,15 @@ import javascript from "highlight.js/lib/languages/javascript";
 import css from "highlight.js/lib/languages/css";
 import xml from "highlight.js/lib/languages/xml";
 import hljsVuePlugin from "@highlightjs/vue-plugin";
-hljs.default.registerLanguage("javascript", javascript.default);
-hljs.default.registerLanguage("css", css.default);
-hljs.default.registerLanguage("xml", xml.default);
+hljs.registerLanguage("javascript", javascript);
+hljs.registerLanguage("css", css);
+hljs.registerLanguage("xml", xml);
 window.app.use(createVuetify({ components, directives }));
 window.app.component("Icon", Icon);
 window.app.use(createI18n({ legacy: false, locale: "ru", fallbackLocale: "en" }))
 window.app.use(ElementPlus);
 window.app.use(Quasar);
-window.app.use(hljsVuePlugin.default);
+window.app.use(hljsVuePlugin);
 const { t } = useI18n({
     messages: {
         en: {
