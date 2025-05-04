@@ -17,7 +17,7 @@
     </div>
 </template>
 
-<script setup>
+<script setup vapor>
 import { inject, ref } from "vue";
 import { vIntersectionObserver } from "@vueuse/components";
 const { id } = defineProps(["id"]),

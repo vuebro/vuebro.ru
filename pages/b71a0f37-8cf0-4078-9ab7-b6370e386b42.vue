@@ -37,7 +37,7 @@
     </div>
 </template>
 
-<script setup>
+<script setup vapor>
 import { Folder, Document } from "@element-plus/icons-vue";
 import { useI18n } from "vue-i18n";
 import { inject, reactive } from "vue";

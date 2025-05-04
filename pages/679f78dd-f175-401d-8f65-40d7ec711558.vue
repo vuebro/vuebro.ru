@@ -32,7 +32,7 @@
     </div>
 </template>
 
-<script setup>
+<script setup vapor>
 import { ElImage } from "element-plus";
 import { inject } from "vue";
 import { useI18n } from "vue-i18n";

@@ -50,7 +50,7 @@
     </div>
 </template>
 
-<script setup>
+<script setup vapor>
 import { inject, ref, computed } from "vue";
 import { ArrowRight } from "@element-plus/icons-vue";
 import { useI18n } from "vue-i18n";

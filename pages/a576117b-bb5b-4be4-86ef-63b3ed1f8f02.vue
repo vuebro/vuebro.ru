@@ -72,7 +72,7 @@
     </div>
 </template>
 
-<script setup>
+<script setup vapor>
 import { useI18n } from "vue-i18n";
 import { ref, computed, inject, reactive } from "vue";
 import { ArrowLeft, ArrowRight } from "@element-plus/icons-vue";

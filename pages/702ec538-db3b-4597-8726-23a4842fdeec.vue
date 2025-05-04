@@ -24,7 +24,7 @@
     </ul>
 </template>
 
-<script setup>
+<script setup vapor>
 import { ref } from "vue";
 import { vIntersectionObserver } from "@vueuse/components";
 import { useI18n } from "vue-i18n";

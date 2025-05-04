@@ -85,7 +85,7 @@
     </div>
     <el-backtop></el-backtop>
 </template>
-<script setup>
+<script setup vapor>
 import { createVuetify, components, directives } from "vuetify";
 import { useRoute } from "vue-router";
 import { Quasar } from "quasar";

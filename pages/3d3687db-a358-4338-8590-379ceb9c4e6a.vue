@@ -45,7 +45,7 @@
     </div>
 </template>
 
-<script setup>
+<script setup vapor>
 import { inject } from "vue";
 import { QCard, QImg, QCardSection, QCardActions, QBtn } from "quasar";
 import { useI18n } from "vue-i18n";

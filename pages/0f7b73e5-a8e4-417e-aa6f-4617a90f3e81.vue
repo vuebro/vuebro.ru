@@ -7,7 +7,7 @@
         @close="showPreview = false"></el-image-viewer>
 </template>
 
-<script setup>
+<script setup vapor>
 import { ref, watch } from "vue";
 import { useRoute } from "vue-router";
 import { vElementSize } from "@vueuse/components";
