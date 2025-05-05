@@ -72,10 +72,16 @@ const { t } = useI18n({
         key: "quasar",
         value: "https://cdn.jsdelivr.net/npm/quasar/dist/quasar.client.js"
     }],
-    js = `import "https://cdn.jsdelivr.net/npm/quasar/dist/quasar.prod.css";
+    js = `<script setup>
+import { getCurrentInstance } from "vue";
 import { Quasar } from "quasar";
+const { appContext: { app } } = getCurrentInstance();
+app.use(Quasar);
+<\/script>
 
-window.app.use(Quasar);`,
+<style>
+@import "https://cdn.jsdelivr.net/npm/quasar/dist/quasar.prod.css";
+</style>`,
     html = `<q-card class="ma-4 max-w-96" flat bordered>
     <q-img src="https://cdn.quasar.dev/img/parallax2.jpg" />
     <q-card-section>

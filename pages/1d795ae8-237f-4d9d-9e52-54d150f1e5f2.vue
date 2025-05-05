@@ -44,9 +44,6 @@
                 <dd class="text-slate-500">{{ t(`ex2dl.${key}`) }}</dd>
             </template>
         </dl>
-        <p>{{ t("p7") }}:</p>
-        <highlightjs code='import from "url"' language="js" class="not-prose my-6"></highlightjs>
-        <p>{{ t("p8") }}</p>
         <div class="not-prose flex mt-48">
             <el-button-group class="mx-auto">
                 <el-button type="primary" :icon="ArrowLeft" :to="the.$prev.to" v-if="the.$prev" tag="router-link">{{
@@ -96,8 +93,6 @@ const messages = {
             "layer-name": "Is the name of a cascade layer into which the contents of the linked resource are imported.",
             "supports-condition": "Indicates the feature(s) that the browser must support in order for the stylesheet to be imported. If the browser does not conform to the conditions specified in the supports-condition, it may not fetch the linked stylesheet, and even if downloaded through some other path, will not load it.",
         },
-        p7: "Styles can be imported from the `script` section using a simple `import` directive.",
-        p8: "Styles can only be imported via a URL to a .css file; it is not possible to use names, and styles cannot be specified in the `importmap`.",
     },
     ru: {
         h_1: "Импортирование модулей",
@@ -125,8 +120,6 @@ const messages = {
             "layer-name": "Имя каскадного слоя, в который импортируется содержимое связанного ресурса.",
             "supports-condition": "Указывает функцию(и), которую(ые) должен(ы) поддерживать браузер, чтобы таблица стилей была импортирована. Если браузер не соответствует условиям, указанным в supports-condition, он может не получить связанную таблицу стилей, и даже если она будет загружена по другому пути, не загрузит ее.",
         },
-        p7: "Из раздела script стили импортируются с помощью простой директивы import",
-        p8: "Стили импортируются только по URL к .css файлу, невозможно использовать названия и нельзя прописывать стили в importmap.",
     }
 },
     { t } = useI18n({ messages });

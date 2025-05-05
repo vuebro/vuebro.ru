@@ -59,10 +59,16 @@ const { t } = useI18n({
         key: "element-plus",
         value: "https://cdn.jsdelivr.net/npm/element-plus/dist/index.full.min.mjs"
     }],
-    js = `import "https://cdn.jsdelivr.net/npm/element-plus/dist/index.css";
+    js = `<script setup>
+import { getCurrentInstance } from "vue";
 import ElementPlus from "element-plus";
+const { appContext: { app } } = getCurrentInstance();
+app.use(ElementPlus);
+<\/script>
 
-window.app.use(ElementPlus.default);`,
+<style>
+@import "https://cdn.jsdelivr.net/npm/element-plus/dist/index.css";
+</style>`,
     html = `<el-card class="ma-4 max-w-96">
     <template #header>Yummy hamburger</template>
     <el-image

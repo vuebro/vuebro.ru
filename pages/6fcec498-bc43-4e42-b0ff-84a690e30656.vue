@@ -67,10 +67,16 @@ const { t } = useI18n({
         key: "vuetify",
         value: "https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.esm.js"
     }],
-    js = `import "https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css";
-import { createVuetify, components, directives } from "vuetify";
+    js = `<script setup>
+import { getCurrentInstance } from "vue";
+import { createVuetify } from "vuetify";
+const { appContext: { app } } = getCurrentInstance();
+app.use(createVuetify());
+<\/script>
 
-window.app.use(createVuetify({ components, directives }));`,
+<style>
+@import "https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css";
+</style>`,
     html = `<v-card class="ma-4 max-w-96">
     <v-img class="align-end text-white h-52" src="https://cdn.vuetifyjs.com/images/cards/docks.jpg" cover>
         <v-card-title>Top 10 Australian beaches</v-card-title>
