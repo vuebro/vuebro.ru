@@ -86,10 +86,10 @@
     <el-backtop></el-backtop>
 </template>
 <script setup vapor>
-import { createVuetify, components, directives } from "vuetify";
+import { createVuetify } from "vuetify";
 import { useRoute } from "vue-router";
 import { Quasar } from "quasar";
-import { computed, ref, inject, useTemplateRef, onMounted, watch } from "vue";
+import { computed, ref, inject, useTemplateRef, onMounted, watch, getCurrentInstance } from "vue";
 import { get, set } from "@vueuse/core";
 import { createI18n, useI18n } from "vue-i18n";
 import ElementPlus from "element-plus";
@@ -102,12 +102,13 @@ import hljsVuePlugin from "@highlightjs/vue-plugin";
 hljs.registerLanguage("javascript", javascript);
 hljs.registerLanguage("css", css);
 hljs.registerLanguage("xml", xml);
-window.app.use(createVuetify({ components, directives }));
-window.app.component("Icon", Icon);
-window.app.use(createI18n({ legacy: false, locale: "ru", fallbackLocale: "en" }))
-window.app.use(ElementPlus);
-window.app.use(Quasar);
-window.app.use(hljsVuePlugin);
+const { appContext: { app } } = getCurrentInstance();
+app.use(createVuetify());
+app.component("Icon", Icon);
+app.use(createI18n({ legacy: false, locale: "ru", fallbackLocale: "en" }))
+app.use(ElementPlus);
+app.use(Quasar);
+app.use(hljsVuePlugin);
 const { t } = useI18n({
     messages: {
         en: {
