@@ -1,6 +1,6 @@
 <template>
     <div class="min-h-dvh" un-cloak>
-        <div class="sticky top-0 z-50 pa-4 border-b bg-neutral-50 opacity-0 md:hover:opacity-100 transition-opacity duration-1000"
+        <div class="sticky top-0 z-50 pa-4 border-b bg-neutral-50 border-slate-200 opacity-0 md:hover:opacity-100 transition-opacity duration-1000"
             :class="{ 'opacity-100': !ready }" ref="pageHeader">
             <el-page-header icon="" :content="pages[$route.name].title">
                 <template #breadcrumb>
