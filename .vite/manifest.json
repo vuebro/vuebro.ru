@@ -1,6 +1,6 @@
 {
-  "_compiler-sfc-BQpO9ep4.js": {
-    "file": "assets/compiler-sfc-BQpO9ep4.js",
+  "_compiler-sfc-BpcYqFg-.js": {
+    "file": "assets/compiler-sfc-BpcYqFg-.js",
     "name": "compiler-sfc"
   },
   "_sucrase-DTaNgZ3p.js": {
@@ -8,13 +8,13 @@
     "name": "sucrase"
   },
   "index.html": {
-    "file": "assets/index-CQ5DLxkf.js",
+    "file": "assets/index-BrJ5L6Gq.js",
     "name": "index",
     "src": "index.html",
     "isEntry": true,
     "imports": [
       "_sucrase-DTaNgZ3p.js",
-      "_compiler-sfc-BQpO9ep4.js"
+      "_compiler-sfc-BpcYqFg-.js"
     ],
     "dynamicImports": [
       "src/views/MultiView.vue",
@@ -27,36 +27,36 @@
     ]
   },
   "src/views/MultiView.vue": {
-    "file": "assets/MultiView-QwdZYmbv.js",
+    "file": "assets/MultiView-CWW8A1VY.js",
     "name": "MultiView",
     "src": "src/views/MultiView.vue",
     "isDynamicEntry": true,
     "imports": [
       "index.html",
       "_sucrase-DTaNgZ3p.js",
-      "_compiler-sfc-BQpO9ep4.js"
+      "_compiler-sfc-BpcYqFg-.js"
     ]
   },
   "src/views/NotFoundView.vue": {
-    "file": "assets/NotFoundView-CU_n632T.js",
+    "file": "assets/NotFoundView-n-HOEGBc.js",
     "name": "NotFoundView",
     "src": "src/views/NotFoundView.vue",
     "isDynamicEntry": true,
     "imports": [
       "index.html",
       "_sucrase-DTaNgZ3p.js",
-      "_compiler-sfc-BQpO9ep4.js"
+      "_compiler-sfc-BpcYqFg-.js"
     ]
   },
   "src/views/SingleView.vue": {
-    "file": "assets/SingleView-8rUGCtbv.js",
+    "file": "assets/SingleView-BNyr4v_0.js",
     "name": "SingleView",
     "src": "src/views/SingleView.vue",
     "isDynamicEntry": true,
     "imports": [
       "index.html",
       "_sucrase-DTaNgZ3p.js",
-      "_compiler-sfc-BQpO9ep4.js"
+      "_compiler-sfc-BpcYqFg-.js"
     ]
   }
 }
