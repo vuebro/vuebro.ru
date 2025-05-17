@@ -53,7 +53,7 @@
                 v-for="({ title, links }, index) in fourth" :class="{ 'row-start-8': index }"
                 class="2xl:row-start-auto">
                 <ul>
-                    <li v-for="{ subtitle, href } in links"><el-link :href="href" target="_blank">{{ subtitle
+                    <li v-for="{ subtitle, href } in links"><el-link class="hover:no-underline" :href="href" target="_blank">{{ subtitle
                             }}</el-link>
                     </li>
                 </ul>
@@ -105,7 +105,7 @@ const { t } = useI18n({
             href12: "https://vuejs.org/guide/introduction.html",
             subtitle21: "UnoCSS Interactive Docs",
             subtitle22: "Tailwind CSS Documentation",
-            href22: "https://v3.tailwindcss.com/docs/utility-first",
+            href22: "https://tailwindcss.com/docs/styling-with-utility-classes",
         },
         ru: {
             title11: "vueS3 полностью поддерживает однофайловые компоненты Vue (SFC)",

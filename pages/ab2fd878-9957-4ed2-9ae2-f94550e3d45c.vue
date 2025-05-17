@@ -34,8 +34,8 @@
     <div class="mb-10"><el-alert type="info" :closable="false" :title="t('title4')" effect="dark"><img src="images/fonts.png"></el-alert></div>
     <el-alert :title="t('title32')" type="success" :closable="false" show-icon>
       <ul>
-        <li><el-link href="https://unocss.dev/interactive" target="_blank">{{ t("subtitle21") }}</el-link></li>
-        <li><el-link :href="t('href22')" target="_blank">{{ t("subtitle22") }}</el-link></li>
+        <li><el-link class="hover:no-underline" href="https://unocss.dev/interactive" target="_blank">{{ t("subtitle21") }}</el-link></li>
+        <li><el-link class="hover:no-underline" :href="t('href22')" target="_blank">{{ t("subtitle22") }}</el-link></li>
       </ul>
     </el-alert>
     <div class="not-prose flex mt-48">
@@ -72,12 +72,12 @@ const messages = {
     details: "For more details, see",
     subtitle21: "UnoCSS Interactive Docs",
     subtitle22: "Tailwind CSS Documentation",
-    href22: "https://v3.tailwindcss.com/docs/utility-first",
+    href22: "https://tailwindcss.com/docs/styling-with-utility-classes",
     presets: [{
-      title: "Wind3 preset",
+      title: "Wind4 preset",
       prose: false,
-      description: "<a href='https://v3.tailwindcss.com' target='_blank' rel='noopener noreferrer' class='text-color-blue-500 hover:underline'>Tailwind CSS</a> is available for use without any additional configuration.",
-      link: "https://unocss.dev/presets/wind3",
+      description: "<a href='https://tailwindcss.com' target='_blank' rel='noopener noreferrer' class='text-color-blue-500 hover:underline'>Tailwind CSS</a> is available for use without any additional configuration.",
+      link: "https://unocss.dev/presets/wind4",
       body: `<div class="mx-6 mb-6 p-6 max-w-sm bg-white rounded-xl shadow-lg flex items-center space-x-4">
     <div class="shrink-0">
         <div class="i-token-branded:chat size-12"></div>
@@ -103,7 +103,7 @@ const messages = {
     }, {
       title: "Typography preset",
       prose: true,
-      description: "Beautiful typographic settings for HTML using <a href='https://v3.tailwindcss.com/docs/typography-plugin' target='_blank' rel='noopener noreferrer' class='text-color-blue-500 hover:underline'>prose</a>.",
+      description: "Beautiful typographic settings for HTML using <a href='https://tailwindcss.com/docs/typography-plugin' target='_blank' rel='noopener noreferrer' class='text-color-blue-500 hover:underline'>prose</a>.",
       link: "https://unocss.dev/presets/typography",
       body: `<article class="prose-pink lg:text-xl">
   <h1>Garlic bread with cheese: What the science tells us</h1>
@@ -144,10 +144,10 @@ const messages = {
     subtitle22: "Документация Tailwind CSS",
     href22: "https://tailwindcss.ru/docs/utility-first",
     presets: [{
-      title: "Wind3 preset",
+      title: "Wind4 preset",
       prose: false,
       description: "<a href='https://tailwindcss.ru' target='_blank' rel='noopener noreferrer' class='text-color-blue-500 hover:underline'>Tailwind CSS</a> доступна для использования без каких-либо дополнительных настроек.",
-      link: "https://unocss.dev/presets/wind3",
+      link: "https://unocss.dev/presets/wind4",
       body: `<div class="mx-6 mb-6 p-6 max-w-sm bg-white rounded-xl shadow-lg flex items-center space-x-4">
     <div class="shrink-0">
         <div class="i-token-branded:chat size-12"></div>

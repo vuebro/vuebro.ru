@@ -30,9 +30,9 @@
             </template>
         </dl>
         <h3>{{ t("h_4") }}</h3>
-        <el-link href="https://ogp.me" target="_blank">The Open Graph protocol</el-link>
+        <el-link class="hover:no-underline" href="https://ogp.me" target="_blank">The Open Graph protocol</el-link>
         <el-divider direction="vertical" />
-        <el-link :href="t('href')" target="_blank">The Sitemap</el-link>
+        <el-link  class="hover:no-underline" :href="t('href')" target="_blank">The Sitemap</el-link>
         <el-divider border-style="dashed"></el-divider>
         <dl class="grid grid-cols-[repeat(2,auto)] gap-x-4 w-fit">
             <template v-for="(,key) in messages.en.seo">
@@ -122,7 +122,8 @@ const that = computed(() => pages[route.name]);`,
             lastmod: "Last modified date (for sitemap)",
             icon: "Favicon URL",
             images: "Array of objects {'{'}url, alt{'}'}, where: url - image URL, alt - image description",
-            title: "Value of the 'header' attribute if set; otherwise, the value of the 'name' attribute"
+            title: "Value of the 'header' attribute if set; otherwise, the value of the 'name' attribute",
+            jsonld: "The JSON-LD object of the current page. Use `await` to retrieve it, as the data is loaded from external files."
         },
         settings: {
             id: "Unique identifier for the current page (the)",
@@ -185,7 +186,8 @@ const that = computed(() => pages[route.name]);`,
             lastmod: "Дата последнего изменения",
             icon: "Фавиконка",
             images: "Массив объектов {'{'}url, alt{'}'}, где: url - адрес картинки, alt - описание картинки",
-            title: "Значение атрибута header, если задан, иначе значение атрибута name"
+            title: "Значение атрибута header, если задан, иначе значение атрибута name",
+            jsonld: "Объект jsonld текущей страницы. Для получения используйте await, т.к. данные загружаются из внешних файлов"
         },
         settings: {
             id: "Уникальный идентификатор страницы the",

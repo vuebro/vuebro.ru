@@ -234,7 +234,7 @@ const {'{'} id {'}'} = defineProps(["id"]),
     {
       header: t("header3"),
       text: t("description3"), code: "", src: "images/qstart/2.png",
-      to: [t("link31")/*, t("link32")*/],
+      to: [t("link31"), t("link32")],
     },
     {
       header: t("header4"),
@@ -266,7 +266,7 @@ app.use(ElementPlus);
 @import "https://cdn.jsdelivr.net/npm/element-plus@^2/dist/index.css";
 </style>`,
       src: "images/qstart/3.png",
-      to: [/*t("link42"), t("link43"), t("link44"), t("link45")*/],
+      to: [t("link42"), t("link43"), t("link44"), t("link45")],
     },
     {
       header: t("header5"),
@@ -287,14 +287,14 @@ const { id } = defineProps(["id"]),
   { i, title, description } = pages[id];
 <\/script>`,
       src: "images/qstart/4.png",
-      to: [/*t("link42"), t("link43"), t("link44"), t("link45")*/],
+      to: [t("link42"), t("link43"), t("link44"), t("link45")],
     },
     {
       header: t("header6"),
       text: t("description6"),
       code: t("code6"),
       src: "images/qstart/5.png",
-      to: [/*t("link42"), t("link43"), t("link44"), t("link45")*/],
+      to: [t("link42"), t("link43"), t("link44"), t("link45")],
     },
     {
       header: t("header7"),
@@ -315,7 +315,7 @@ const { id } = defineProps(["id"]),
   text = Array(12).fill().map(() => getParagraph());
 <\/script>`,
       src: "images/qstart/6.png",
-      to: [/*t("link42"), t("link43"), t("link44"), t("link45")*/],
+      to: [t("link42"), t("link43"), t("link44"), t("link45")],
     },
     {
       header: t("header8"),

@@ -1,0 +1,14 @@
+{
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "headline": "Title of a News Article",
+      "author": [{
+          "@type": "Person",
+          "name": "Jerry Bruwes",
+          "email": "jbruwes@gmail.com"
+        },{
+          "@type": "Organization",
+          "name": "vueS3",
+          "url": "https://github.com/vues3"
+      }]
+    }
