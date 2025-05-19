@@ -18,23 +18,25 @@
         rel="noopener noreferrer">Tailwind
         compat</el-button>
     </el-alert>
-    <el-card shadow="hover" v-for="(, i) in messages.en.presets" class="my-10">
+    <el-card shadow="hover" v-for="({ prose }, i) in messages.en.presets" class="my-10">
       <template #header>
-        <el-text><span v-html="t(`presets[${i}].description`)"></span> {{ t("details") }}:</el-text> <el-button :href="t(`presets[${i}].link`)"
-          target="_blank" tag="a" rel="noopener noreferrer">{{
+        <el-text><span v-html="t(`presets[${i}].description`)"></span> {{ t("details") }}:</el-text> <el-button
+          :href="t(`presets[${i}].link`)" target="_blank" tag="a" rel="noopener noreferrer">{{
             t(`presets[${i}].title`) }}</el-button>
       </template>
       <el-tabs tab-position="left">
         <el-tab-pane label="Template">
           <highlightjs language="html" :code="t(`presets[${i}].body`)"></highlightjs>
         </el-tab-pane>
-        <el-tab-pane :label="t('result')" v-html="t(`presets[${i}].body`)" :class="{ 'prose': messages.en.presets[i].prose }"></el-tab-pane>
+        <el-tab-pane :label="t('result')" v-html="t(`presets[${i}].body`)" :class="{ 'prose': prose }"></el-tab-pane>
       </el-tabs>
     </el-card>
-    <div class="mb-10"><el-alert type="info" :closable="false" :title="t('title4')" effect="dark"><img src="images/fonts.png"></el-alert></div>
+    <div class="mb-10"><el-alert type="info" :closable="false" :title="t('title4')" effect="dark"><img
+          src="images/fonts.png"></el-alert></div>
     <el-alert :title="t('title32')" type="success" :closable="false" show-icon>
       <ul>
-        <li><el-link class="hover:no-underline" href="https://unocss.dev/interactive" target="_blank">{{ t("subtitle21") }}</el-link></li>
+        <li><el-link class="hover:no-underline" href="https://unocss.dev/interactive" target="_blank">{{ t("subtitle21")
+            }}</el-link></li>
         <li><el-link class="hover:no-underline" :href="t('href22')" target="_blank">{{ t("subtitle22") }}</el-link></li>
       </ul>
     </el-alert>
@@ -43,7 +45,7 @@
         <el-button type="primary" :icon="ArrowLeft" :to="the.$prev.to" v-if="the.$prev" tag="router-link">{{
           the.$prev.header }}</el-button>
         <el-button type="primary" v-if="the.$next" :to="the.$next.to" tag="router-link">{{ the.$next.header
-        }}<el-icon class="el-icon--right">
+          }}<el-icon class="el-icon--right">
             <ArrowRight></ArrowRight>
           </el-icon></el-button>
       </el-button-group>
