@@ -5,7 +5,7 @@
             <h2 class="text-4xl my-5 font-['Caveat']">{{ the.title }}</h2>
             <el-text size="large">{{ the.description }}</el-text>
         </div>
-        <div class="grid grid-cols-1 2xl:grid-cols-2 gap-4 mx-4">
+        <div class="grid grid-cols-1 2xl:grid-cols-2 gap-4">
             <div class="text-center flex flex-col 2xl:row-start-auto"
                 v-for="({ title, description, icon }, index) in first" :class="{ 'row-start-5': index }">
                 <icon class="size-24 mx-auto" :icon="icon"></icon>
@@ -53,7 +53,9 @@
                 v-for="({ title, links }, index) in fourth" :class="{ 'row-start-8': index }"
                 class="2xl:row-start-auto">
                 <ul>
-                    <li v-for="{ subtitle, href } in links"><el-link class="hover:no-underline" :href="href" target="_blank">{{ subtitle
+                    <li v-for="{ subtitle, href } in links"><el-link class="hover:no-underline" :href="href"
+                            target="_blank">{{
+                                subtitle
                             }}</el-link>
                     </li>
                 </ul>

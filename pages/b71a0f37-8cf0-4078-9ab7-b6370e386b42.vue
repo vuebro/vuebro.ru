@@ -1,5 +1,5 @@
 <template>
-    <div class="container mx-auto px-4">
+    <div class="container mx-auto px-4" un-cloak>
         <div class="flex flex-col text-center not-prose mb-24">
             <icon :icon="the.icon" class="size-20 mx-auto"></icon>
             <h2 class="text-4xl my-5 font-['Caveat']">{{ the.title }}</h2>

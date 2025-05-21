@@ -37,7 +37,7 @@
         <el-button type="primary" :icon="ArrowLeft" :to="the.$prev.to" v-if="the.$prev" tag="router-link">{{
           the.$prev.header }}</el-button>
         <el-button type="primary" v-if="the.$next" :to="the.$next.to" tag="router-link">{{ the.$next.header
-        }}<el-icon class="el-icon--right">
+          }}<el-icon class="el-icon--right">
             <ArrowRight></ArrowRight>
           </el-icon></el-button>
       </el-button-group>

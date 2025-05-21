@@ -32,6 +32,9 @@
                         <img class="-mt-16 w-full md:w-60 max-md:max-w-60 mx-auto" src="images/drakkar.svg"
                             decoding="async">
                         <h4 class="text-center text-base text-slate-700 font-medium">{{ t("madeof") }}</h4>
+                        <div class="text-center mt-8"><a aria-label="Chat on WhatsApp"
+                                href="https://wa.me/+79260429028"><img class="inline" alt="Chat on WhatsApp"
+                                    src="images/WhatsAppButtonGreenSmall.svg" /></a></div>
                     </div>
                     <nav class="col-span-2 md:col-span-4 lg:col-span-2" v-for="{ name, children, icon } in views">
                         <h3 class="mb-6 text-base text-slate-700 font-medium whitespace-nowrap">
