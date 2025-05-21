@@ -7,7 +7,7 @@
     </div>
     <h3>{{ t("h3[0]") }}</h3>
     <p><span v-html="t('p[0]')"></span> <router-link :to="`/${t('routerlink[0]')}/`">{{ t("routerlink[0]")
-    }}</router-link>.</p>
+        }}</router-link>.</p>
     <h3>{{ t("h3[1]") }}</h3>
     <p v-html="t('p[1]')"></p>
     <h3>Sitemap.xml</h3>
@@ -23,7 +23,7 @@
       <dd class="text-slate-500">{{ t("dd[3]") }}</dd>
     </dl>
     <p><span v-html="t('p[3]')"></span> <router-link :to="`/${t('routerlink[0]')}/`">{{ t("routerlink[0]")
-    }}</router-link>.</p>
+        }}</router-link>.</p>
     <h3>{{ t("h3[2]") }}</h3>
     <div class="my-10"><el-alert type="info" :closable="false" :title="t('title[0]')" effect="dark"><img
           :src="the.images[1].url"></el-alert></div>
@@ -40,7 +40,7 @@
     <div class="my-10"><el-alert type="info" :closable="false" :title="t('title[3]')" effect="dark"><img
           :src="the.images[4].url"></el-alert></div>
     <p><span v-html="t('p[7]')"></span> <router-link :to="`/${t('routerlink[0]')}/`">{{ t("routerlink[0]")
-    }}</router-link>.</p>
+        }}</router-link>.</p>
     <h3>Open Graph</h3>
     <p>{{ t("p[8]") }}</p>
     <br>
@@ -67,12 +67,13 @@
     <p>{{ t("p[11]") }}</p>
     <highlightjs class="not-prose" :code="code2"></highlightjs>
     <p><span v-html="t('p[12]')"></span> <router-link :to="`/${t('routerlink[0]')}/`">{{ t("routerlink[0]")
-    }}</router-link>.</p>
+        }}</router-link>.</p>
     <div class="not-prose flex mt-48">
-      <el-button-group class="mx-auto">
-        <el-button type="primary" :icon="ArrowLeft" :to="the.$prev.to" v-if="the.$prev" tag="router-link">{{
-          the.$prev.header }}</el-button>
-        <el-button type="primary" v-if="the.$next" :to="the.$next.to" tag="router-link">{{ the.$next.header
+      <el-button-group class="mx-auto" size="large">
+        <el-button class="my-1" type="primary" :icon="ArrowLeft" :to="the.$prev.to" v-if="the.$prev"
+          tag="router-link">{{
+            the.$prev.header }}</el-button>
+        <el-button class="my-1" type="primary" v-if="the.$next" :to="the.$next.to" tag="router-link">{{ the.$next.header
         }}<el-icon class="el-icon--right">
             <ArrowRight></ArrowRight>
           </el-icon></el-button>

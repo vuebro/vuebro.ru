@@ -25,10 +25,10 @@
         <h3>{{ t("h3") }}</h3>
         <p>{{ t("p") }}</p>
         <div class="not-prose flex mt-48">
-            <el-button-group class="mx-auto">
-                <el-button type="primary" :icon="ArrowLeft" :to="the.$prev.to" v-if="the.$prev" tag="router-link">{{
+            <el-button-group class="mx-auto" size="large">
+                <el-button class="my-1" type="primary" :icon="ArrowLeft" :to="the.$prev.to" v-if="the.$prev" tag="router-link">{{
                     the.$prev.header }}</el-button>
-                <el-button type="primary" v-if="the.$next" :to="the.$next.to" tag="router-link">{{ the.$next.header
+                <el-button  class="my-1" type="primary" v-if="the.$next" :to="the.$next.to" tag="router-link">{{ the.$next.header
                 }}<el-icon class="el-icon--right">
                         <ArrowRight></ArrowRight>
                     </el-icon></el-button>

@@ -36,16 +36,17 @@
     <el-alert :title="t('title32')" type="success" :closable="false" show-icon>
       <ul>
         <li><el-link class="hover:no-underline" href="https://unocss.dev/interactive" target="_blank">{{ t("subtitle21")
-            }}</el-link></li>
+        }}</el-link></li>
         <li><el-link class="hover:no-underline" :href="t('href22')" target="_blank">{{ t("subtitle22") }}</el-link></li>
       </ul>
     </el-alert>
     <div class="not-prose flex mt-48">
-      <el-button-group class="mx-auto">
-        <el-button type="primary" :icon="ArrowLeft" :to="the.$prev.to" v-if="the.$prev" tag="router-link">{{
-          the.$prev.header }}</el-button>
-        <el-button type="primary" v-if="the.$next" :to="the.$next.to" tag="router-link">{{ the.$next.header
-          }}<el-icon class="el-icon--right">
+      <el-button-group class="mx-auto" size="large">
+        <el-button class="my-1" type="primary" :icon="ArrowLeft" :to="the.$prev.to" v-if="the.$prev"
+          tag="router-link">{{
+            the.$prev.header }}</el-button>
+        <el-button class="my-1" type="primary" v-if="the.$next" :to="the.$next.to" tag="router-link">{{ the.$next.header
+        }}<el-icon class="el-icon--right">
             <ArrowRight></ArrowRight>
           </el-icon></el-button>
       </el-button-group>
