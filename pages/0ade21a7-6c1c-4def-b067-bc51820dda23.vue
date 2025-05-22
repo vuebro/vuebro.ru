@@ -1,7 +1,7 @@
 <template>
     <div class="container mx-auto" un-cloak>
         <div class="gap-4 flex items-center justify-around w-full flex-col lg:flex-row-reverse pa-6 text-slate-700">
-            <img src="images/vues3.svg" class="w-36 lg:w-48 rounded-full ma-10 drop-shadow-2xl" decoding="async">
+            <img src="images/vuebro.svg" class="w-36 lg:w-48 rounded-full ma-10 drop-shadow-2xl" decoding="async">
             <div class="text-center !lg:text-left text-xs sm:text-sm md:text-base">
                 <h3 class="text-4xl lg:text-5xl mb-6 font-['Kelly_Slab']">{{
                     visible
@@ -61,21 +61,21 @@ const { t } = useI18n({
             support1: "Support the project by starring it on GitHub, subscribing, liking, and commenting!",
             support2: "Your support is crucial for the project's continued growth and development!",
             documentation: "documentation",
-            appUrl: "https://vues3.github.io/vues3",
-            githubText: "vueS3 on github",
-            socialUrl: "https://facebook.com/vues3",
+            appUrl: "https://vuebro.github.io/vuebro",
+            githubText: "VueBro on github",
+            socialUrl: "https://facebook.com/vuebro",
             socialIcon: "fa6-brands:facebook",
-            socialText: "vueS3 on facebook"
+            socialText: "VueBro on facebook"
         },
         ru: {
             support1: "Поддержите проект звездой на github, подпиской, лайками и комментариями!",
             support2: "Ваша поддержка важна для дальнейшего развития проекта!",
             documentation: "документация",
-            appUrl: "https://run.vues3.ru",
-            githubText: "vueS3 на github",
-            socialUrl: "https://vk.com/vues3",
+            appUrl: "https://run.vuebro.ru",
+            githubText: "VueBro на github",
+            socialUrl: "https://vk.com/vuebro",
             socialIcon: "fa6-brands:vk",
-            socialText: "vueS3 вконтакте"
+            socialText: "VueBro вконтакте"
         }
     }
 });
@@ -101,26 +101,26 @@ const btns = [{
 }, {
     name: "Windows",
     title: "Get exe for",
-    href: "https://github.com/vues3/vues3/releases/latest",
+    href: "https://github.com/vuebro/vuebro/releases/latest",
     icn: "logos:microsoft-windows-icon"
 }, {
     name: "macOS",
     title: "Get dmg for",
-    href: "https://github.com/vues3/vues3/releases/latest",
+    href: "https://github.com/vuebro/vuebro/releases/latest",
     icn: "logos:apple"
 }, {
     name: "Linux",
     title: "Get AppImage for",
-    href: "https://github.com/vues3/vues3/releases/latest",
+    href: "https://github.com/vuebro/vuebro/releases/latest",
     icn: "logos:linux-tux"
 }, {
     name: "Linux",
     title: "Get snap for",
-    href: "https://snapcraft.io/vues3",
+    href: "https://snapcraft.io/vuebro",
     icn: "vscode-icons:file-type-snapcraft"
 }],
     social = [
-        { brandIcon: "fa6-brands:github", text: t("githubText"), link: "https://github.com/vues3" },
+        { brandIcon: "fa6-brands:github", text: t("githubText"), link: "https://github.com/vuebro" },
         { brandIcon: t("socialIcon"), text: t("socialText"), link: t("socialUrl") }
     ];
 

@@ -112,13 +112,13 @@ const { id } = defineProps(["id"]),
           "Images"
         ],
         p: [
-          `Pages in vueS3 are organized in a tree-like structure, and each page has an attached semantic object containing a set of attributes. Together, these form the **semantic core** of the website. 
+          `Pages in VueBro are organized in a tree-like structure, and each page has an attached semantic object containing a set of attributes. Together, these form the **semantic core** of the website. 
 The key attribute in each set is <b>name</b>, which stores the page title. These names are used to generate the paths leading to each page based on their position within the tree structure. The resulting paths are stored in the <b>path</b> attribute.
 For more details on the full list of attributes, see the section:`,
-          `In vueS3, special attention is given to search engine optimization. Flawless accessibility for search engines is ensured by generating a set of pages corresponding to the site’s routes. These pages are technically identical to the main page and serve exclusively to load the site's modules, differing only in the set of search meta tags specific to each individual page. As a result, even search engine crawlers that evaluate only static website content receive correct search semantics.
+          `In VueBro, special attention is given to search engine optimization. Flawless accessibility for search engines is ensured by generating a set of pages corresponding to the site’s routes. These pages are technically identical to the main page and serve exclusively to load the site's modules, differing only in the set of search meta tags specific to each individual page. As a result, even search engine crawlers that evaluate only static website content receive correct search semantics.
 For modern search engine crawlers capable of analyzing dynamic websites, the system includes dynamic SEO data updates through the use of the <a href="https://unhead.unjs.io"
         target="_blank" rel="noopener noreferrer">unhead</a> library.`,
-          `To provide information about the structure of pages, vueS3 generates a <a href="https://www.sitemaps.org"
+          `To provide information about the structure of pages, VueBro generates a <a href="https://www.sitemaps.org"
         target="_blank" rel="noopener noreferrer">sitemap.xml</a> file. This file is automatically created based on the site's page tree.  
 On each page, you can specify additional attributes that will also be included in the sitemap.xml file for the corresponding pages.`,
           "Access to the attributes is available through the page's semantic object. For details, see the section:",
@@ -161,13 +161,13 @@ On each page, you can specify additional attributes that will also be included i
           "Картинки"
         ],
         p: [
-          `Страницы в vueS3 организованы в виде древовидной структуры, при этом к каждой из страниц прикреплен
+          `Страницы в VueBro организованы в виде древовидной структуры, при этом к каждой из страниц прикреплен
       семантический объект с набором атрибутов, что в совокупности образует семантическое ядро сайта. Ключевой атрибут в
       каждом из наборов носит имя <b>name</b> и отвечает за хранение названий
       страниц, из которых формируются пути до любой из страниц сайта относительно нахождения страницы в древовидной
       структуре. Пути, в свою очередь, хранятся в атрибутах <b>path</b>. Подробнее о составе
       атрибутов см. в разделе`,
-          `В vueS3 особое внимание уделено поисковой оптимизации. Безукоризненная
+          `В VueBro особое внимание уделено поисковой оптимизации. Безукоризненная
       доступность для поисковых машин обеспечивается созданием набора
       страниц, соответствующих
       роутам сайта. Технически они идентичны главной странице сайта и служат исключительно загрузке программных
@@ -179,7 +179,7 @@ On each page, you can specify additional attributes that will also be included i
       современных поисковых роботов, умеющих анализировать динамические сайты, в сайт встроено динамическое
       обновление данных для seo посредством задействования библиотеки <a href="https://unhead.unjs.io"
         target="_blank" rel="noopener noreferrer">unhead</a>.`,
-          `Для передачи информации о составе страниц vueS3 создает файл <a href="https://www.sitemaps.org/ru"
+          `Для передачи информации о составе страниц VueBro создает файл <a href="https://www.sitemaps.org/ru"
         target="_blank" rel="noopener noreferrer">sitemap.xml</a>. Файл формируется в автоматическом режиме на основе
       дерева
       страниц сайта. На каждой странице возможно указать дополнительные атрибуты, которые также будут добавлены в файл

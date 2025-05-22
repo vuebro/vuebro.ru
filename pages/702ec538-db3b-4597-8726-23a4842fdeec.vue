@@ -47,7 +47,7 @@ const { t } = useI18n({
             "globe-with-meridians": "To run your website, you'll only need any basic <a href='https://en.wikipedia.org/wiki/Web_server' target='_blank' class='underline hover:text-blue-800'>web server</a> capable of serving static pages. In the case of S3, you don't even need that, as this functionality is usually built into the storage itself",
             github: "By the way, <a href='https://docs.github.com/en/pages' target='_blank' class='underline hover:text-blue-800'>GitHub Pages</a> is also a great option for hosting your website—it works like a charm",
             "magnifying-glass-tilted-right": "Special attention is given to <a href='https://en.wikipedia.org/wiki/Search_engine_optimization' target='_blank' class='underline hover:text-blue-800'>search engine optimization</a> (SEO) mechanisms, which ensure that search bots can effectively index the site",
-            "smiling-face-with-open-hands": "vueS3 is a non-commercial, <a href='https://en.wikipedia.org/wiki/Open-source_software' target='_blank' class='underline hover:text-blue-800'>open-source</a> project – feel free to explore and use it!",
+            "smiling-face-with-open-hands": "VueBro is a non-commercial, <a href='https://en.wikipedia.org/wiki/Open-source_software' target='_blank' class='underline hover:text-blue-800'>open-source</a> project – feel free to explore and use it!",
         },
         ru: {
             doesnt: "Не делай по-старому",
@@ -65,7 +65,7 @@ const { t } = useI18n({
             "globe-with-meridians": "Для работы твоего сайта понадобится лишь любой простой <a href='https://ru.wikipedia.org/wiki/веб-сервер' target='_blank' class='underline hover:text-blue-800'>веб-сервер</a>, способный отдавать статические страницы, а в случае с S3 даже он не нужен, потому что эта возможность обычно встроена в само хранилище",
             github: "Кстати, <a href='https://docs.github.com/ru/pages' target='_blank' class='underline hover:text-blue-800'>GitHub Pages</a> тоже хороший вариант для размещения сайта, работает как часы",
             "magnifying-glass-tilted-right": "Особое внимание уделено механизмам для <a href='https://ru.wikipedia.org/wiki/поисковая_оптимизация' target='_blank' class='underline hover:text-blue-800'>поисковой оптимизации</a> (SEO), благодаря этому поисковые роботы отлично видят сайт",
-            "smiling-face-with-open-hands": "vueS3 это некоммерческий проект с <a href='https://ru.wikipedia.org/wiki/Открытое_программное_обеспечение' target='_blank' class='underline hover:text-blue-800'>открытым исходным кодом</a> - открывай и пользуйся!",
+            "smiling-face-with-open-hands": "VueBro это некоммерческий проект с <a href='https://ru.wikipedia.org/wiki/Открытое_программное_обеспечение' target='_blank' class='underline hover:text-blue-800'>открытым исходным кодом</a> - открывай и пользуйся!",
         }
     }
 }), features = [

@@ -52,8 +52,8 @@ const { t, locale } = useI18n({
             account: "Create a service account.",
             acl: 'Grant the service account created in the previous step "READ & WRITE" permissions for the bucket where the static hosting files are stored.',
             keysTitle: "Keys",
-            keys: "Create static access keys and save them. They will be useful for logging in to vueS3.",
-            does: "After completing all the steps, these parameters will be useful for connecting vueS3 to the storage.",
+            keys: "Create static access keys and save them. They will be useful for logging in to VueBro.",
+            does: "After completing all the steps, these parameters will be useful for connecting VueBro to the storage.",
             bucket: "bucket name, matching the domain",
             accesskey: "static access key ID",
             secretaccesskey: "static access key"
@@ -66,8 +66,8 @@ const { t, locale } = useI18n({
             account: "Создайте сервисный аккаунт.",
             acl: 'Выдайте созданному в пердыдущем шаге сервисному аккаунту разрешения "READ & WRITE" для бакета, в котором хранятся файлы статического хостинга.',
             keysTitle: "Ключи",
-            keys: "Создайте статические ключи доступа и сохраните их. Они пригодятся для входа через vueS3",
-            does: "После выполнения всех шагов эти параметры пригодятся для подключения vueS3 к хранилищу",
+            keys: "Создайте статические ключи доступа и сохраните их. Они пригодятся для входа через VueBro",
+            does: "После выполнения всех шагов эти параметры пригодятся для подключения VueBro к хранилищу",
             bucket: "название бакета, совпадающее с доменом",
             accesskey: "id статического ключа доступа",
             secretaccesskey: "статический ключ доступа"

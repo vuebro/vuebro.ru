@@ -85,9 +85,9 @@ const the = pages[props.id];
 const { t } = useI18n({
     messages: {
         en: {
-            title11: "vueS3 fully supports Vue Single File Components (SFC)",
+            title11: "VueBro fully supports Vue Single File Components (SFC)",
             description11: "Vue (pronounced /vjuː/, like view) is a JavaScript framework for building user interfaces. It builds on top of standard HTML, CSS, and JavaScript and provides a declarative, component-based programming model that helps you efficiently develop user interfaces of any complexity.",
-            title12: "UnoCSS is already integrated into vueS3 and operates in runtime mode",
+            title12: "UnoCSS is already integrated into VueBro and operates in runtime mode",
             description12: "UnoCSS - the instant atomic CSS engine with maximum performance and flexibility.",
             title21: "Example of Using Vue.js",
             description21: "Below is an example from the interactive Vue.js tutorial. To view the execution result, click on the \"Result\" tab.",
@@ -110,9 +110,9 @@ const { t } = useI18n({
             href22: "https://tailwindcss.com/docs/styling-with-utility-classes",
         },
         ru: {
-            title11: "vueS3 полностью поддерживает однофайловые компоненты Vue (SFC)",
+            title11: "VueBro полностью поддерживает однофайловые компоненты Vue (SFC)",
             description11: "Vue (произносится /vjuː/, примерно как view) — JavaScript фреймворк для создания пользовательских интерфейсов. Он создан на стандартах HTML, CSS и JavaScript и предоставляет декларативную и компонентную модель программирования, которая помогает эффективно разрабатывать пользовательские интерфейсы любой сложности.",
-            title12: "UnoCSS уже подключен в vueS3 и работает в рантайм режиме",
+            title12: "UnoCSS уже подключен в VueBro и работает в рантайм режиме",
             description12: "UnoCSS — мгновенный (instant) атомарный CSS‑движок с максимальной производительностью и гибкостью.",
             title21: "Пример использования Vue.js",
             description21: "Ниже приведен пример из интерактивного учебника по Vue.js. Для просмотра результата выполнения кликните на закладку \"Результат\".",

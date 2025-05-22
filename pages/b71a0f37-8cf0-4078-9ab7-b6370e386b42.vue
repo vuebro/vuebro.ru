@@ -46,9 +46,9 @@ import { ArrowLeft, ArrowRight } from "@element-plus/icons-vue";
 const { t } = useI18n({
     messages: {
         en: {
-            h4: "This is the set of folders and files you will see after launching vueS3",
+            h4: "This is the set of folders and files you will see after launching VueBro",
             h3: "Dynamic Folder Structure",
-            p: "As you create categories in the tree structure of vueS3, folders corresponding to routes are created. An index.html file identical to the one in the root is placed into these folders, but with attributes corresponding to the route. The process of creating folders and updating index.html files is fully automatic and is intended to ensure SEO.",
+            p: "As you create categories in the tree structure of VueBro, folders corresponding to routes are created. An index.html file identical to the one in the root is placed into these folders, but with attributes corresponding to the route. The process of creating folders and updating index.html files is fully automatic and is intended to ensure SEO.",
             dsc1: "Folder for storing the Vite manifest",
             dsc1_1: "Manifest file used for synchronizing system modules",
             dsc2: "System modules that ensure the website’s functionality",
@@ -64,9 +64,9 @@ const { t } = useI18n({
             dsc12: "Domain"
         },
         ru: {
-            h4: "Такой набор папок и файлов вы увидите после запуска vueS3",
+            h4: "Такой набор папок и файлов вы увидите после запуска VueBro",
             h3: "Динамическая структура папок",
-            p: "По мере создания рубрик в древовидной структуре vueS3, создаются папки соответствующие роутам. В созданные папки помещается файл index.html, идентичный тому, что находится в корне но с аттрибутами, соответствующими роуту. Процесс создания папок и обновления файлов index.html полностью автоматический и предназначен для обеспечения SEO.",
+            p: "По мере создания рубрик в древовидной структуре VueBro, создаются папки соответствующие роутам. В созданные папки помещается файл index.html, идентичный тому, что находится в корне но с аттрибутами, соответствующими роуту. Процесс создания папок и обновления файлов index.html полностью автоматический и предназначен для обеспечения SEO.",
             dsc1: "папка для хранения манифеста vite",
             dsc1_1: "файл манифеста, предназначенный для синхронизации системных модулей",
             dsc2: "системные модули, обеспечивающие работоспособность сайта",

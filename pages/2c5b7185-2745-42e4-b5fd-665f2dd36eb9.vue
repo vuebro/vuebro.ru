@@ -59,14 +59,14 @@ const { id } = defineProps(["id"]),
       en: {
         links: "Related Links",
         step: "Step",
-        header: "Tutorial for Creating a Simple Website in vueS3",
-        info: 'The example repository is available at <a href="https://github.com/vues3/example" class="text-color-blue-500 hover:underline" target="_blank">https://github.com/vues3/example</a>, and the live example can be viewed at <a href="https://vues3.github.com/example" class="text-color-blue-500 hover:underline" target="_blank">https://vues3.github.com/example</a>',
+        header: "Tutorial for Creating a Simple Website in VueBro",
+        info: 'The example repository is available at <a href="https://github.com/vuebro/example" class="text-color-blue-500 hover:underline" target="_blank">https://github.com/vuebro/example</a>, and the live example can be viewed at <a href="https://vuebro.github.com/example" class="text-color-blue-500 hover:underline" target="_blank">https://vuebro.github.com/example</a>',
         warningHeader: "Debugging",
-        warning: "vueS3 is a serverless system and the website build process takes place in the user's browser. Therefore, the main debugging tool is the browser’s developer console, which can be opened by pressing ",
+        warning: "VueBro is a serverless system and the website build process takes place in the user's browser. Therefore, the main debugging tool is the browser’s developer console, which can be opened by pressing ",
         header1: "Setting Up GitHub Pages",
         description1: 'Follow the instructions at <a href="https://pages.github.com" class="text-color-blue-500 hover:underline" target="_blank">https://pages.github.com</a>, to create a repository and set up GitHub Pages.',
-        header2: "Getting Started with the vueS3 Application",
-        description2: 'Open <a href="https://vues3.github.io/vues3" class="text-color-blue-500 hover:underline" target="_blank">https://vues3.github.io/vues3</a> in any Chrome-based browser, as they are capable of working with the file system, or download the application for your operating system. Click the "OPEN..." button and select the directory where the repository was previously cloned.',
+        header2: "Getting Started with the VueBro Application",
+        description2: 'Open <a href="https://vuebro.github.io/vuebro" class="text-color-blue-500 hover:underline" target="_blank">https://vuebro.github.io/vuebro</a> in any Chrome-based browser, as they are capable of working with the file system, or download the application for your operating system. Click the "OPEN..." button and select the directory where the repository was previously cloned.',
         link2: "download",
         header3: "Connecting External Modules",
         description3: `In the upper right corner, click on the menu icon and select 'Import Map'. In the window that appears, add the external modules that will be used for the website.
@@ -117,11 +117,11 @@ const {'{'} id {'}'} = defineProps(["id"]),
   features = [
     {'{'}
       name: "The Simplest Website",
-      text: "We create the simplest website using vueS3",
+      text: "We create the simplest website using VueBro",
     {'}'},
     {'{'}
       name: "The Fastest Website",
-      text: "We build websites on vueS3 very quickly",
+      text: "We build websites on VueBro very quickly",
     {'}'},
     {'{'}
       name: "The Most Technologically Advanced Website",
@@ -135,19 +135,19 @@ const {'{'} id {'}'} = defineProps(["id"]),
         description8: `The final step is to perform a <strong>commit && push</strong>, after which the live website will be accessible on GitHub Pages.
 <br><br>HTML was originally designed as a simple and intuitive tool that required no additional configuration or compilation. In just 8 easy steps, you have created a website without any extra setup or compilation, while now harnessing the full reactive power of Vue.
 <br><br>History repeats itself, doesn't it?
-<br><br>P.S. The source code for the example is available at <a href="https://github.com/vues3/example" class="text-color-blue-500 hover:underline" target="_blank">https://github.com/vues3/example</a>, and the live example can be viewed at <a href="https://vues3.github.io/example" class="text-color-blue-500 hover:underline" target="_blank">https://vues3.github.io/example</a>`,
+<br><br>P.S. The source code for the example is available at <a href="https://github.com/vuebro/example" class="text-color-blue-500 hover:underline" target="_blank">https://github.com/vuebro/example</a>, and the live example can be viewed at <a href="https://vuebro.github.io/example" class="text-color-blue-500 hover:underline" target="_blank">https://vuebro.github.io/example</a>`,
       },
       ru: {
         links: "Ссылки по теме",
         step: "Шаг",
-        header: "Туториал по созданию простого сайта в vueS3",
-        info: 'Репозиторий примера находится по адресу <a href="https://github.com/vues3/example.ru" class="text-color-blue-500 hover:underline" target="_blank">https://github.com/vues3/example.ru</a>, работающий пример: <a href="https://vues3.github.io/example.ru" class="text-color-blue-500 hover:underline" target="_blank">https://vues3.github.io/example.ru</a>',
+        header: "Туториал по созданию простого сайта в VueBro",
+        info: 'Репозиторий примера находится по адресу <a href="https://github.com/vuebro/example.ru" class="text-color-blue-500 hover:underline" target="_blank">https://github.com/vuebro/example.ru</a>, работающий пример: <a href="https://vuebro.github.io/example.ru" class="text-color-blue-500 hover:underline" target="_blank">https://vuebro.github.io/example.ru</a>',
         warningHeader: "Отладка",
-        warning: "vueS3 это безсерверная система и сборка сайта происходит в браузере пользователя. Поэтому основной инструмент отладки - консоль разработчика в браузере, которая вызывается по нажатию ",
+        warning: "VueBro это безсерверная система и сборка сайта происходит в браузере пользователя. Поэтому основной инструмент отладки - консоль разработчика в браузере, которая вызывается по нажатию ",
         header1: "Настройка GitHub Pages",
         description1: 'Следуя указаниям инструкции <a href="https://pages.github.com" class="text-color-blue-500 hover:underline" target="_blank">https://pages.github.com</a>, создайте репозиторий и настройте GitHub Pages.',
-        header2: "Начало работы с приложением vueS3",
-        description2: 'Откройте <a href="https://run.vues3.ru" class="text-color-blue-500 hover:underline" target="_blank">https://run.vues3.ru</a> в любом браузере на базе хрома, они умеют работать с файловой системой, либо загрузите приложение для вашей операционной системы. Нажмите на кнопку "ОТКРЫТЬ..." и выберите директорию, в которую ранее был склонирован репозиторий.',
+        header2: "Начало работы с приложением VueBro",
+        description2: 'Откройте <a href="https://run.vuebro.ru" class="text-color-blue-500 hover:underline" target="_blank">https://run.vuebro.ru</a> в любом браузере на базе хрома, они умеют работать с файловой системой, либо загрузите приложение для вашей операционной системы. Нажмите на кнопку "ОТКРЫТЬ..." и выберите директорию, в которую ранее был склонирован репозиторий.',
         link2: "загрузка",
         header3: "Подключение внешних модулей",
         description3: `В правом верхнем углу нажмите на пиктограмму меню и выберите пункт "Import Map". В открывшемся окне добавьте внешние модули, которые будут использованы для работы сайта:
@@ -198,11 +198,11 @@ const {'{'} id {'}'} = defineProps(["id"]),
   features = [
     {'{'}
       name: "Самый простой сайт",
-      text: "Мы делаем самый простой сайт на vueS3",
+      text: "Мы делаем самый простой сайт на VueBro",
     {'}'},
     {'{'}
       name: "Самый быстрый сайт",
-      text: "Мы делаем сайт на vueS3 очень быстро",
+      text: "Мы делаем сайт на VueBro очень быстро",
     {'}'},
     {'{'}
       name: "Самый технологичный сайт",
@@ -217,7 +217,7 @@ const {'{'} id {'}'} = defineProps(["id"]),
         <br><br>Html был задуман простым и понятным инструментом, который не требовал дополнительных настроек и компиляции.
         За 8 простых шагов вы создали сайт, без дополнительных настроек и компиляции, только теперь используя всю рективную мощь Vue.
         <br><br>История повторяется, не правда ли? 
-        <br><br>P.S. Исходники примера находятся по адресу <a href="https://github.com/vues3/example.ru" class="text-color-blue-500 hover:underline" target="_blank">https://github.com/vues3/example.ru</a>, а работающий пример на <a href="https://vues3.github.io/example.ru" class="text-color-blue-500 hover:underline" target="_blank">https://vues3.github.io/example.ru</a>`,
+        <br><br>P.S. Исходники примера находятся по адресу <a href="https://github.com/vuebro/example.ru" class="text-color-blue-500 hover:underline" target="_blank">https://github.com/vuebro/example.ru</a>, а работающий пример на <a href="https://vuebro.github.io/example.ru" class="text-color-blue-500 hover:underline" target="_blank">https://vuebro.github.io/example.ru</a>`,
       }
     }
   }),

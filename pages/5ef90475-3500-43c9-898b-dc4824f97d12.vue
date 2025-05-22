@@ -12,7 +12,7 @@
                 </template>
                 <template #title>
                     <router-link to="/" class="whitespace-nowrap flex items-center max-sm:hidden">
-                        <el-avatar src="images/vues3.svg" size="small"></el-avatar>
+                        <el-avatar src="images/vuebro.svg" size="small"></el-avatar>
                     </router-link>
                 </template>
                 <template #extra>
@@ -56,7 +56,7 @@
             <div class="container px-6 mx-auto">
                 <div class="flex flex-col md:flex-row w-full gap-4 justify-between">
                     <div class="flex items-center col-span-1 gap-4 text-base font-medium leading-6"><img
-                            class="size-6 shrink-0" src="images/vues3.svg">{{ the.description }}
+                            class="size-6 shrink-0" src="images/vuebro.svg">{{ the.description }}
                     </div>
                     <nav class="text-right col-span-2 md:col-span-4 lg:col-span-6">
                         <ul class="flex items-center justify-end gap-4">
@@ -116,12 +116,12 @@ const { t } = useI18n({
     messages: {
         en: {
             madeof: "Made on the shores of the Baltic Sea",
-            socialUrl: "https://facebook.com/vues3",
+            socialUrl: "https://facebook.com/vuebro",
             socialIcon: "fa-brands:facebook"
         },
         ru: {
             madeof: "Сделано на берегах Балтики",
-            socialUrl: "https://vk.com/vues3",
+            socialUrl: "https://vk.com/vuebro",
             socialIcon: "fa-brands:vk"
         }
     }
@@ -136,7 +136,7 @@ const { id } = defineProps(["id"]),
     route = useRoute(),
     social = [{
         icon: "fa-brands:github",
-        href: "https://github.com/vues3"
+        href: "https://github.com/vuebro"
     }, {
         icon: t("socialIcon"),
         href: t("socialUrl")
