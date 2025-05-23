@@ -49,7 +49,7 @@ const { t } = useI18n({
     messages: {
         en: {
             h_1: "Category Tree",
-            p_1: 'Pages in the veuS3 web editor are organized in a tree structure, which can be managed directly in the editor. You can create, delete, rename, and modify the semantics and content of pages. The only immutable part of this structure is the root of the tree, the "root page." This page is present in every site created with VueBro and cannot be deleted. It plays a key role in building the site template and navigation. Additionally, it is a good idea to connect third-party modules and frameworks to the root page if they are used across most pages of your site. For more details, see',
+            p_1: 'Pages in the VueBro web editor are organized in a tree structure, which can be managed directly in the editor. You can create, delete, rename, and modify the semantics and content of pages. The only immutable part of this structure is the root of the tree, the "root page." This page is present in every site created with VueBro and cannot be deleted. It plays a key role in building the site template and navigation. Additionally, it is a good idea to connect third-party modules and frameworks to the root page if they are used across most pages of your site. For more details, see',
             link_1: "documentation/modules",
             p_2_1: "For site navigation, VueBro uses",
             link_2: "https://router.vuejs.org",
@@ -84,9 +84,9 @@ const that = computed(() => pages[route.name]);`,
         },
         ru: {
             h_1: "Дерево рубрик",
-            p_1: 'Страницы в веб-редакторе veuS3 организованы в виде дерева, которым можно управлять напрямую в редакторе. Можно создавать страницы, удалять, переименовывать, изменять их семантику и наполнение. Неизменным остается лишь корень дерева, "корневая страница". Она присутствует в любом сайте, сделанном на VueBro и её нельзя удалить. Эта страница имеет ключевую роль в построении шаблона сайта и навигации по сайту. Также, хорошей идеей является подключение сторонних модулей и фреймворков именно к корневой странице, если таковые используются на большинстве страниц вашего сайта, подробности',
+            p_1: 'Страницы в веб-редакторе VueBro организованы в виде дерева, которым можно управлять напрямую в редакторе. Можно создавать страницы, удалять, переименовывать, изменять их семантику и наполнение. Неизменным остается лишь корень дерева, "корневая страница". Она присутствует в любом сайте, сделанном на VueBro и её нельзя удалить. Эта страница имеет ключевую роль в построении шаблона сайта и навигации по сайту. Также, хорошей идеей является подключение сторонних модулей и фреймворков именно к корневой странице, если таковые используются на большинстве страниц вашего сайта, подробности',
             link_1: "документация/модули",
-            p_2_1: "Для навигации по сайту в veuS3 используется",
+            p_2_1: "Для навигации по сайту в VueBro используется",
             link_2: "https://vue-router-ru.netlify.app",
             p_2_2: "именно он управляет тем, какая страница сайта отображается. Таким образом, чтобы обеспечить отображение текущей страницы, надо на корневую страницу, в шаблон добавить таг <router-view ></router-view >",
             p_3: "В итоге, мы получаем корневую страницу, где, в точку определенную вами, монтируется дерево рубрик. На большинстве сайтов используются также следующие элементы:",
