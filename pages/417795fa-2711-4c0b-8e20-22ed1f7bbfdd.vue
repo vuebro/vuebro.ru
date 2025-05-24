@@ -52,10 +52,10 @@ const { t } = useI18n({
  { id } = defineProps(["id"]),
     the = inject("pages")[id], params = [{
         key: "@vueuse/core",
-        value: "https://cdn.jsdelivr.net/npm/@vueuse/core/index.mjs"
+        value: "https://cdn.jsdelivr.net/npm/@vueuse/core@13/index.mjs"
     }, {
         key: "@vueuse/shared",
-        value: "https://cdn.jsdelivr.net/npm/@vueuse/shared/index.mjs"
+        value: "https://cdn.jsdelivr.net/npm/@vueuse/shared@13/index.mjs"
     }],
     js = `import { useNow } from '@vueuse/core';
 

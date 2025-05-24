@@ -89,9 +89,7 @@
     <el-backtop></el-backtop>
 </template>
 <script setup vapor>
-import { createVuetify } from "vuetify";
 import { useRoute } from "vue-router";
-import { Quasar } from "quasar";
 import { computed, ref, inject, useTemplateRef, onMounted, watch, getCurrentInstance } from "vue";
 import { get, set } from "@vueuse/core";
 import { createI18n, useI18n } from "vue-i18n";
@@ -106,11 +104,9 @@ hljs.registerLanguage("javascript", javascript);
 hljs.registerLanguage("css", css);
 hljs.registerLanguage("xml", xml);
 const { appContext: { app } } = getCurrentInstance();
-app.use(createVuetify());
 app.component("Icon", Icon);
 app.use(createI18n({ legacy: false, locale: "ru", fallbackLocale: "en" }))
 app.use(ElementPlus);
-app.use(Quasar);
 app.use(hljsVuePlugin);
 const { t } = useI18n({
     messages: {

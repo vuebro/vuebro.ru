@@ -42,30 +42,32 @@
 </template>
 
 <script setup vapor>
-import { inject } from "vue";
+import { inject, getCurrentInstance } from "vue";
 import { useI18n } from "vue-i18n";
+import { createVuetify } from "https://cdn.jsdelivr.net/npm/vuetify@3/dist/vuetify.esm.js";
 
-const { t } = useI18n({
-    messages: {
-        en: {
-            site: "The project website",
-            example: "An example of usage",
-            result: "Result",
-            code: "The code for connecting a library"
-        },
-        ru: {
-            site: "Сайт проекта",
-            example: "Пример использования",
-            result: "Результат",
-            code: "Код для подключения библиотеки"
+const { appContext: { app } } = getCurrentInstance(),
+    { t } = useI18n({
+        messages: {
+            en: {
+                site: "The project website",
+                example: "An example of usage",
+                result: "Result",
+                code: "The code for connecting a library"
+            },
+            ru: {
+                site: "Сайт проекта",
+                example: "Пример использования",
+                result: "Результат",
+                code: "Код для подключения библиотеки"
+            }
         }
-    }
-}),
+    }),
     { id } = defineProps(["id"]),
     the = inject("pages")[id],
     params = [{
         key: "vuetify",
-        value: "https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.esm.js"
+        value: "https://cdn.jsdelivr.net/npm/vuetify@3/dist/vuetify.esm.js"
     }],
     js = `<script setup>
 import { getCurrentInstance } from "vue";
@@ -75,7 +77,7 @@ app.use(createVuetify());
 <\/script>
 
 <style>
-@import "https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css";
+@import "https://cdn.jsdelivr.net/npm/vuetify@3/dist/vuetify.min.css";
 </style>`,
     html = `<v-card class="ma-4 max-w-96">
     <v-img class="align-end text-white h-52" src="https://cdn.vuetifyjs.com/images/cards/docks.jpg" cover>
@@ -91,6 +93,9 @@ app.use(createVuetify());
         <v-btn color="orange" text="Explore"></v-btn>
     </v-card-actions>
 </v-card>`;
+
+app.use(createVuetify());
+
 </script>
 
-<style scoped src="./node_modules/vuetify/dist/vuetify.min.css"></style>
+<style scoped src="https://cdn.jsdelivr.net/npm/vuetify@3/dist/vuetify.min.css"></style>

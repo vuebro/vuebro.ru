@@ -46,31 +46,32 @@
 </template>
 
 <script setup vapor>
-import { inject } from "vue";
-import { QCard, QImg, QCardSection, QCardActions, QBtn } from "quasar";
+import { inject, getCurrentInstance } from "vue";
+import { Quasar, QCard, QImg, QCardSection, QCardActions, QBtn } from "https://cdn.jsdelivr.net/npm/quasar@2/dist/quasar.client.js";
 import { useI18n } from "vue-i18n";
 
-const { t } = useI18n({
-    messages: {
-        en: {
-            site: "The project website",
-            example: "An example of usage",
-            result: "Result",
-            code: "The code for connecting a library"
-        },
-        ru: {
-            site: "Сайт проекта",
-            example: "Пример использования",
-            result: "Результат",
-            code: "Код для подключения библиотеки"
+const { appContext: { app } } = getCurrentInstance(),
+    { t } = useI18n({
+        messages: {
+            en: {
+                site: "The project website",
+                example: "An example of usage",
+                result: "Result",
+                code: "The code for connecting a library"
+            },
+            ru: {
+                site: "Сайт проекта",
+                example: "Пример использования",
+                result: "Результат",
+                code: "Код для подключения библиотеки"
+            }
         }
-    }
-}),
+    }),
     { id } = defineProps(["id"]),
     the = inject("pages")[id],
     params = [{
         key: "quasar",
-        value: "https://cdn.jsdelivr.net/npm/quasar/dist/quasar.client.js"
+        value: "https://cdn.jsdelivr.net/npm/quasar@2/dist/quasar.client.js"
     }],
     js = `<script setup>
 import { getCurrentInstance } from "vue";
@@ -80,7 +81,7 @@ app.use(Quasar);
 <\/script>
 
 <style>
-@import "https://cdn.jsdelivr.net/npm/quasar/dist/quasar.prod.css";
+@import "https://cdn.jsdelivr.net/npm/quasar@2/dist/quasar.prod.css";
 </style>`,
     html = `<q-card class="ma-4 max-w-96" flat bordered>
     <q-img src="https://cdn.quasar.dev/img/parallax2.jpg" />
@@ -97,9 +98,11 @@ app.use(Quasar);
     </q-card-actions>
 </q-card>`,
     script = `import { QCard, QImg, QCardSection, QCardActions, QBtn } from "quasar";`;
+
+    app.use(Quasar);
 </script>
 
-<style scoped src="./node_modules/quasar/dist/quasar.prod.css"></style>
+<style scoped src="https://cdn.jsdelivr.net/npm/quasar@2/dist/quasar.prod.css"></style>
 
 <style>
 .absolute-full {

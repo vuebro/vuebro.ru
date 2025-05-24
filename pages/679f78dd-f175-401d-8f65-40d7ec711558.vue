@@ -57,7 +57,7 @@ const { t } = useI18n({
     the = inject("pages")[id],
     params = [{
         key: "element-plus",
-        value: "https://cdn.jsdelivr.net/npm/element-plus/dist/index.full.min.mjs"
+        value: "https://cdn.jsdelivr.net/npm/element-plus@2/dist/index.full.min.mjs"
     }],
     js = `<script setup>
 import { getCurrentInstance } from "vue";
@@ -67,7 +67,7 @@ app.use(ElementPlus);
 <\/script>
 
 <style>
-@import "https://cdn.jsdelivr.net/npm/element-plus/dist/index.css";
+@import "https://cdn.jsdelivr.net/npm/element-plus@2/dist/index.css";
 </style>`,
     html = `<el-card class="ma-4 max-w-96">
     <template #header>Yummy hamburger</template>
