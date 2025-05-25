@@ -73,15 +73,15 @@ const { id } = defineProps(["id"]),
 <br><br><table class="border-collapse border border-slate-400">
     <tr class="*:border *:border-slate-300 *:pa-1">
         <td>element-plus</td>
-        <td>https://cdn.jsdelivr.net/npm/element-plus{'@'}^2/dist/index.full.min.mjs</td>
+        <td>https://cdn.jsdelivr.net/npm/element-plus{'@'}2/dist/index.full.min.mjs</td>
     </tr>
     <tr class="*:border *:border-slate-300 *:pa-1">
         <td>{'@'}element-plus/icons-vue</td>
-        <td>https://cdn.jsdelivr.net/npm/{'@'}element-plus/icons-vue{'@'}^2/dist/index.min.js</td>
+        <td>https://cdn.jsdelivr.net/npm/{'@'}element-plus/icons-vue{'@'}2/dist/index.min.js</td>
     </tr>
     <tr class="*:border *:border-slate-300 *:pa-1">    
         <td>speech-code</td>
-        <td>https://cdn.jsdelivr.net/npm/speech-code{'@'}^2/index.js</td>
+        <td>https://cdn.jsdelivr.net/npm/speech-code{'@'}2/index.js</td>
     </tr>
 </table>`,
         link31: "modules",
@@ -154,15 +154,15 @@ const {'{'} id {'}'} = defineProps(["id"]),
 <br><br><table class="border-collapse border border-slate-400">
     <tr class="*:border *:border-slate-300 *:pa-1">
         <td>element-plus</td>
-        <td>https://cdn.jsdelivr.net/npm/element-plus{'@'}^2/dist/index.full.min.mjs</td>
+        <td>https://cdn.jsdelivr.net/npm/element-plus{'@'}2/dist/index.full.min.mjs</td>
     </tr>
     <tr class="*:border *:border-slate-300 *:pa-1">
         <td>{'@'}element-plus/icons-vue</td>
-        <td>https://cdn.jsdelivr.net/npm/{'@'}element-plus/icons-vue{'@'}^2/dist/index.min.js</td>
+        <td>https://cdn.jsdelivr.net/npm/{'@'}element-plus/icons-vue{'@'}2/dist/index.min.js</td>
     </tr>
     <tr class="*:border *:border-slate-300 *:pa-1">    
         <td>speech-code</td>
-        <td>https://cdn.jsdelivr.net/npm/speech-code{'@'}^2/index.js</td>
+        <td>https://cdn.jsdelivr.net/npm/speech-code{'@'}2/index.js</td>
     </tr>
 </table>`,
         link31: "модули",
@@ -264,7 +264,7 @@ const { appContext: { app } } = getCurrentInstance(),
 app.use(ElementPlus);
 <\/script>
 <style>
-@import "https://cdn.jsdelivr.net/npm/element-plus@^2/dist/index.css";
+@import "https://cdn.jsdelivr.net/npm/element-plus@2/dist/index.css";
 </style>`,
       src: "images/qstart/3.png",
       to: [t("link42"), t("link43"), t("link44"), t("link45")],
