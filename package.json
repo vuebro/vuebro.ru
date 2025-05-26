@@ -9,6 +9,7 @@
     "@vueuse/shared": "^13.2.0",
     "element-plus": "^2.9.11",
     "animate.css": "^4.1.1",
-    "vue-i18n": "^11.1.4"
+    "vue-i18n": "^11.1.4",
+    "three": "^0.176.0"
   }
 }
