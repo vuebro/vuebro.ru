@@ -8,7 +8,7 @@
     "name": "sucrase"
   },
   "index.html": {
-    "file": "assets/index-CsSG6qRG.js",
+    "file": "assets/index-CjgWyjbH.js",
     "name": "index",
     "src": "index.html",
     "isEntry": true,
@@ -17,28 +17,16 @@
       "_compiler-sfc-DUpFnHsr.js"
     ],
     "dynamicImports": [
-      "src/views/MultiView.vue",
-      "src/views/SingleView.vue",
-      "src/views/SingleView.vue",
+      "src/views/PageView.vue",
+      "src/views/RootView.vue",
       "src/views/NotFoundView.vue"
     ],
     "css": [
       "assets/index-vGiKZPT9.css"
     ]
   },
-  "src/views/MultiView.vue": {
-    "file": "assets/MultiView-CrQwUZom.js",
-    "name": "MultiView",
-    "src": "src/views/MultiView.vue",
-    "isDynamicEntry": true,
-    "imports": [
-      "index.html",
-      "_sucrase-DTaNgZ3p.js",
-      "_compiler-sfc-DUpFnHsr.js"
-    ]
-  },
   "src/views/NotFoundView.vue": {
-    "file": "assets/NotFoundView-KQlKede3.js",
+    "file": "assets/NotFoundView-BFf3R-4M.js",
     "name": "NotFoundView",
     "src": "src/views/NotFoundView.vue",
     "isDynamicEntry": true,
@@ -48,10 +36,21 @@
       "_compiler-sfc-DUpFnHsr.js"
     ]
   },
-  "src/views/SingleView.vue": {
-    "file": "assets/SingleView-DpoibTSx.js",
-    "name": "SingleView",
-    "src": "src/views/SingleView.vue",
+  "src/views/PageView.vue": {
+    "file": "assets/PageView-x-6eI8cU.js",
+    "name": "PageView",
+    "src": "src/views/PageView.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_sucrase-DTaNgZ3p.js",
+      "_compiler-sfc-DUpFnHsr.js"
+    ]
+  },
+  "src/views/RootView.vue": {
+    "file": "assets/RootView-CZPb8TLr.js",
+    "name": "RootView",
+    "src": "src/views/RootView.vue",
     "isDynamicEntry": true,
     "imports": [
       "index.html",

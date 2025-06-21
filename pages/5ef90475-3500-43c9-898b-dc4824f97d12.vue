@@ -94,7 +94,7 @@ import { computed, ref, inject, useTemplateRef, onMounted, watch, getCurrentInst
 import { get, set } from "@vueuse/core";
 import { createI18n, useI18n } from "vue-i18n";
 import ElementPlus from "element-plus";
-import { Icon } from '@iconify/vue';
+import { Icon } from "@iconify/vue";
 import hljs from "highlight.js/lib/core";
 import javascript from "highlight.js/lib/languages/javascript";
 import css from "highlight.js/lib/languages/css";

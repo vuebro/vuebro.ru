@@ -61,7 +61,7 @@ const { t, locale } = useI18n({
         ru: {
             hosingTitle: "Хостинг",
             hosting: "Создайте хостинг статических сайтов по инструкции.",
-            cors: 'Сконфигурируйте CORS. Установите "Allowed Origins" в "*", "Allowed Methods" в "*" и "Allowed Headers" в "*, Authorization".',
+            cors: 'Сконфигурируйте CORS. Установите "Allowed Origins" в "*", "Allowed Methods" в "GET, PUT, HEAD, DELETE" и "Allowed Headers" в "*, Authorization".',
             accountTitle: "Аккаунт",
             account: "Создайте сервисный аккаунт.",
             acl: 'Выдайте созданному в пердыдущем шаге сервисному аккаунту разрешения "READ & WRITE" для бакета, в котором хранятся файлы статического хостинга.',
