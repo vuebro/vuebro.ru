@@ -2,9 +2,16 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Веб редактор VueBro</title>
   <id>https://vuebro.ru/feed.xml</id>
-  <updated>2025-07-11T15:14:59.050Z</updated>
+  <updated>2025-07-12T13:37:08.330Z</updated>
   <link rel="self" type="application/atom+xml" href="https://vuebro.ru/feed.xml"/>
   <link rel="alternate" type="application/json" href="https://vuebro.ru/feed.json"/>
   <link rel="alternate" type="text/html" href="https://vuebro.ru"/>
   <generator uri="https://github.com/bcomnes/jsonfeed-to-atom#readme" version="1.2.5">jsonfeed-to-atom</generator>
+  <entry>
+    <id>13a29053-44c9-4d04-b7ec-ffbe3062c7f5</id>
+    <title>test1</title>
+    <updated>2025-07-12T13:37:08.330Z</updated>
+    <published>2025-07-12T13:37:08.330Z</published>
+    <content type="html"><![CDATA[test1]]></content>
+  </entry>
 </feed>
