@@ -6,16 +6,16 @@
     <link>https://vuebro.ru</link>
     <language>en-us</language>
     <copyright>© 2025 </copyright>
-    <pubDate>Mon, 14 Jul 2025 16:36:12 GMT</pubDate>
+    <pubDate>Mon, 14 Jul 2025 18:13:51 GMT</pubDate>
     <generator>jsonfeed-to-rss 3.0.8 (https://github.com/bcomnes/jsonfeed-to-rss#readme)</generator>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <item>
-      <title>VueBro ver.: 3.40.3</title>
+      <title>VueBro ver.: 3.40.4</title>
       <link>https://vuebro.ru/загрузка/</link>
       <description>Добавил инструмент по созданию ленты RSS. Вы скажете - что за бред RSS в 2025 году. Зачем нужен этот анахронизм? Я тоже так думал, пока не понял, что это отличный инструмент для кросспостинга в социальные сети. Вконтакте имеет встроенный функционал по импорту RSS, а для телеги и всякой социальной запрещенки есть сервисы по типу IFTTT, которые прекрасно парят RSS ленту и закидывают посты в социальные сети. Кроме того, я предусмотрел формат JSON Feed, а это значит что новостную ленту легко распарсить и показывать её напрямую на сайте.</description>
       <content:encoded><![CDATA[Добавил инструмент по созданию ленты RSS. Вы скажете - что за бред RSS в 2025 году. Зачем нужен этот анахронизм? Я тоже так думал, пока не понял, что это отличный инструмент для кросспостинга в социальные сети. Вконтакте имеет встроенный функционал по импорту RSS, а для телеги и всякой социальной запрещенки есть сервисы по типу IFTTT, которые прекрасно парят RSS ленту и закидывают посты в социальные сети. Кроме того, я предусмотрел формат JSON Feed, а это значит что новостную ленту легко распарсить и показывать её напрямую на сайте.]]></content:encoded>
-      <guid isPermaLink="false">740eac66-a393-4e41-8f88-0c6540b8a2a9</guid>
-      <pubDate>Mon, 14 Jul 2025 16:36:12 GMT</pubDate>
+      <guid isPermaLink="false">4426e87a-2161-49ec-8b13-e0e45f80c3a7</guid>
+      <pubDate>Mon, 14 Jul 2025 18:13:51 GMT</pubDate>
       <enclosure type="image/png" url="https://vuebro.ru/images/vuebro.b4b2g08y7wk.png"/>
     </item>
   </channel>
