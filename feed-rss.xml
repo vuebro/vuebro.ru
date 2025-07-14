@@ -6,8 +6,17 @@
     <link>https://vuebro.ru</link>
     <language>en-us</language>
     <copyright>© 2025 </copyright>
-    <pubDate>Sat, 12 Jul 2025 14:12:58 GMT</pubDate>
+    <pubDate>Mon, 14 Jul 2025 13:36:03 GMT</pubDate>
     <generator>jsonfeed-to-rss 3.0.8 (https://github.com/bcomnes/jsonfeed-to-rss#readme)</generator>
     <docs>http://www.rssboard.org/rss-specification</docs>
+    <item>
+      <title>VueBro ver.: 3.40.3</title>
+      <link>https://vuebro.ru/загрузка/</link>
+      <description>Добавил инструмент по созданию ленты RSS. Вы скажете - что за бред RSS в 2025 году. Зачем нужен этот анахронизм? Я тоже так думал, пока не понял, что это отличный инструмент для кросспостинга в социальные сети.</description>
+      <content:encoded><![CDATA[Добавил инструмент по созданию ленты RSS. Вы скажете - что за бред RSS в 2025 году. Зачем нужен этот анахронизм? Я тоже так думал, пока не понял, что это отличный инструмент для кросспостинга в социальные сети.]]></content:encoded>
+      <guid isPermaLink="false">78432d5e-cfff-41ed-8c83-9d7edccd6857</guid>
+      <pubDate>Mon, 14 Jul 2025 13:36:03 GMT</pubDate>
+      <enclosure type="image/png" url="https://vuebro.ru/images/Screenshot 2025-07-14 at 15.38.59.2ph16wad1j6.png"/>
+    </item>
   </channel>
 </rss>
