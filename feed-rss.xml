@@ -6,7 +6,7 @@
     <link>https://vuebro.ru</link>
     <language>en-us</language>
     <copyright>© 2025 </copyright>
-    <pubDate>Wed, 16 Jul 2025 12:13:15 GMT</pubDate>
+    <pubDate>Wed, 16 Jul 2025 15:09:13 GMT</pubDate>
     <generator>jsonfeed-to-rss 3.0.8 (https://github.com/bcomnes/jsonfeed-to-rss#readme)</generator>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <item>
@@ -26,6 +26,14 @@
       <guid isPermaLink="false">e6f9d916-8762-45df-8dd6-d1e2416637f1</guid>
       <pubDate>Wed, 16 Jul 2025 12:13:15 GMT</pubDate>
       <enclosure type="image/jpeg" url="https://vuebro.ru/images/intricate-explorer-7AEFNoZDy6Q-unsplash.15z6byu7ni7.jpg"/>
+    </item>
+    <item>
+      <title>Карточки новостей</title>
+      <description>Смотрите как выглядят карточки новостей для RSS ленты. Заголовок и контент обязательны, ссылка на материал и картинка не обязательны, но очень желательны. Новости хранятся в формате JSON Feed, одновременно создаются ленты ATOM и RSS.</description>
+      <content:encoded><![CDATA[Смотрите как выглядят карточки новостей для RSS ленты. Заголовок и контент обязательны, ссылка на материал и картинка не обязательны, но очень желательны. Новости хранятся в формате JSON Feed, одновременно создаются ленты ATOM и RSS.]]></content:encoded>
+      <guid isPermaLink="false">9828d48d-cdd8-4280-b007-cb1eb8c1b81e</guid>
+      <pubDate>Wed, 16 Jul 2025 15:09:13 GMT</pubDate>
+      <enclosure type="image/jpeg" url="https://vuebro.ru/images/vuebro.riyakho9czc.jpg"/>
     </item>
   </channel>
 </rss>

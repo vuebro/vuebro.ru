@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Веб редактор VueBro</title>
   <id>https://vuebro.ru/feed.xml</id>
-  <updated>2025-07-16T12:13:15.648Z</updated>
+  <updated>2025-07-16T15:09:13.135Z</updated>
   <link rel="self" type="application/atom+xml" href="https://vuebro.ru/feed.xml"/>
   <link rel="alternate" type="application/json" href="https://vuebro.ru/feed.json"/>
   <link rel="alternate" type="text/html" href="https://vuebro.ru"/>
@@ -24,5 +24,13 @@
     <content type="html"><![CDATA[На фотографии талисмане версии 3.40.4 запечатлена библиотека и музей Моргана (Morgan Library &amp; Museum; до 2005 года — Pierpont Morgan Library) — научная и исследовательская библиотека, расположенная в районе Манхэттен, Нью-Йорка, учрежденная в 1906 году известная прежде всего своей коллекцией рукописей, папирусов, инкунабул, ранних изданий, редких иллюстрированных книг, оригинальных партитур и графических работ.]]></content>
     <link rel="alternate" href="https://ru.wikipedia.org/wiki/Библиотека_и_музей_Моргана"/>
     <link rel="enclosure" type="image/jpeg" href="https://vuebro.ru/images/intricate-explorer-7AEFNoZDy6Q-unsplash.15z6byu7ni7.jpg"/>
+  </entry>
+  <entry>
+    <id>9828d48d-cdd8-4280-b007-cb1eb8c1b81e</id>
+    <title>Карточки новостей</title>
+    <updated>2025-07-16T15:09:13.135Z</updated>
+    <published>2025-07-16T15:09:13.135Z</published>
+    <content type="html"><![CDATA[Смотрите как выглядят карточки новостей для RSS ленты. Заголовок и контент обязательны, ссылка на материал и картинка не обязательны, но очень желательны. Новости хранятся в формате JSON Feed, одновременно создаются ленты ATOM и RSS.]]></content>
+    <link rel="enclosure" type="image/jpeg" href="https://vuebro.ru/images/vuebro.riyakho9czc.jpg"/>
   </entry>
 </feed>
