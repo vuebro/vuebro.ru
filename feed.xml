@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Веб редактор VueBro</title>
   <id>https://vuebro.ru/feed.xml</id>
-  <updated>2025-07-16T15:09:13.135Z</updated>
+  <updated>2025-07-19T13:53:24.149Z</updated>
   <link rel="self" type="application/atom+xml" href="https://vuebro.ru/feed.xml"/>
   <link rel="alternate" type="application/json" href="https://vuebro.ru/feed.json"/>
   <link rel="alternate" type="text/html" href="https://vuebro.ru"/>
@@ -32,5 +32,14 @@
     <published>2025-07-16T15:09:13.135Z</published>
     <content type="html"><![CDATA[Смотрите как выглядят карточки новостей для RSS ленты. Заголовок и контент обязательны, ссылка на материал и картинка не обязательны, но очень желательны. Новости хранятся в формате JSON Feed, одновременно создаются ленты ATOM и RSS.]]></content>
     <link rel="enclosure" type="image/jpeg" href="https://vuebro.ru/images/vuebro.riyakho9czc.jpg"/>
+  </entry>
+  <entry>
+    <id>5dc56678-d9c4-4d73-8da2-ba36678de1e1</id>
+    <title>VueBro ver.: 3.40.5</title>
+    <updated>2025-07-19T13:53:24.149Z</updated>
+    <published>2025-07-19T13:53:24.149Z</published>
+    <content type="html"><![CDATA[Небольшое обновление&nbsp;VueBro ver.: 3.40.5 позволяет использовать top level await в блоках кода &lt;script setup&gt;.]]></content>
+    <link rel="alternate" href="https://vuebro.ru"/>
+    <link rel="enclosure" type="image/jpeg" href="https://vuebro.ru/images/toplevelawait.bil8hm0cq5c.jpg"/>
   </entry>
 </feed>
