@@ -1,15 +1,15 @@
 {
   "dependencies": {
-    "@element-plus/icons-vue": "^2.3.1",
+    "@element-plus/icons-vue": "^2.3.2",
     "@highlightjs/cdn-assets": "^11.11.1",
     "@highlightjs/vue-plugin": "^2.1.0",
     "@iconify/vue": "^5.0.0",
-    "@vueuse/core": "^13.2.0",
-    "@vueuse/components": "^13.2.0",
-    "@vueuse/shared": "^13.2.0",
-    "element-plus": "^2.9.11",
+    "@vueuse/core": "^13.6.0",
+    "@vueuse/components": "^13.6.0",
+    "@vueuse/shared": "^13.6.0",
+    "element-plus": "^2.10.5",
     "animate.css": "^4.1.1",
-    "vue-i18n": "^11.1.4",
-    "three": "^0.176.0"
+    "vue-i18n": "^11.1.11",
+    "three": "^0.179.1"
   }
 }
