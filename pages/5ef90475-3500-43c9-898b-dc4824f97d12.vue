@@ -79,7 +79,7 @@
                     <template #title>
                         <icon :icon="icon" class="icon"></icon><span>{{ name }}</span>
                     </template>
-                    <el-menu-item v-for="(child, index2) in $children" :route="{ name: child.id }" :index="index2">
+                    <el-menu-item v-for="child in $children" :route="{ name: child.id }" :index="child.id">
                         <icon :icon="child.icon" class="icon"></icon><span>{{ child.name }}</span>
                     </el-menu-item>
                 </el-sub-menu>
@@ -122,9 +122,9 @@ const { t } = useI18n({
         }
     }
 });
-const { id } = defineProps(["id"]),
+const { pid } = defineProps(["pid"]),
     pages = inject("pages"),
-    the = pages[id],
+    the = pages[pid],
     views = computed(() => the.$children.filter(({ $children }) => $children.length)),
     ready = ref(true),
     pageHeaderRef = useTemplateRef("pageHeader"),

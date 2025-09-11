@@ -80,8 +80,8 @@ const { t } = useI18n({
     }
 });
 
-const { id } = defineProps(["id"]),
-    the = inject("pages")[id],
+const { pid } = defineProps(["pid"]),
+    the = inject("pages")[pid],
     { $children: [{ title, to, icon: startIcon } = {}] = [] } = Object.values(inject("pages")).find(({ name }) => name === t("documentation")) ?? {};
 
 const typewriter = `${the.title}_`,

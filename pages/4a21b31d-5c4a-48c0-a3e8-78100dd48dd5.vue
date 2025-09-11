@@ -27,7 +27,7 @@
         </div>
         <el-divider>⭐</el-divider>
         <h4 class="mt-28">{{ t("does") }}</h4>
-        <dl class="grid grid-cols-[repeat(2,auto)] gap-x-4 w-fit mt-12">
+        <dl class="grid grid-cols-[repeat(2,auto)] gap-x-4 w-fit mt-12 not-prose">
             <template v-for="{ key, value } in params">
                 <dt class="font-bold text-slate-700"><el-tag class="w-full !justify-start" type="success">{{ key
                 }}</el-tag>
@@ -74,8 +74,8 @@ const { t, locale } = useI18n({
         }
     }
 }),
-    { id } = defineProps(["id"]),
-    the = inject("pages")[id],
+    { pid } = defineProps(["pid"]),
+    the = inject("pages")[pid],
     links = reactive([{
         icon: "ph:number-circle-one-duotone",
         title: t("hosingTitle"),

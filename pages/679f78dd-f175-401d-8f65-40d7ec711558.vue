@@ -5,9 +5,10 @@
             <h2 class="text-4xl my-5 font-['Caveat']">{{ the.title }}</h2>
             <el-text size="large">{{ the.description }}</el-text>
         </div>
-        <el-text>{{ t("site") }}: <a href="https://element-plus.org" target="_blank">https://element-plus.org</a></el-text>
+        <el-text>{{ t("site") }}: <a href="https://element-plus.org"
+                target="_blank">https://element-plus.org</a></el-text>
         <h3 class="mt-8 mb-3 !font-semibold !text-2xl">Importmap</h3>
-        <dl class="grid grid-cols-[repeat(2,auto)] gap-x-4 w-fit">
+        <dl class="grid grid-cols-[repeat(2,auto)] gap-x-4 w-fit not-prose">
             <template v-for="{ key, value } in params">
                 <dt class="font-bold text-slate-700">{{ key }}</dt>
                 <dd class="text-slate-500 overflow-hidden text-ellipsis">{{ value }}</dd>
@@ -53,8 +54,8 @@ const { t } = useI18n({
         }
     }
 }),
-    { id } = defineProps(["id"]),
-    the = inject("pages")[id],
+    { pid } = defineProps(["pid"]),
+    the = inject("pages")[pid],
     params = [{
         key: "element-plus",
         value: "https://cdn.jsdelivr.net/npm/element-plus@2/dist/index.full.min.mjs"

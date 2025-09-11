@@ -23,7 +23,7 @@
         <h2>{{ t("h_6") }}</h2>
         <h3>{{ t("h_3") }}</h3>
         <el-divider border-style="dashed"></el-divider>
-        <dl class="grid grid-cols-[repeat(2,auto)] gap-x-4 w-fit">
+        <dl class="grid grid-cols-[repeat(2,auto)] gap-x-4 w-fit not-prose">
             <template v-for="(,key) in messages.en.nav">
                 <dt class="font-bold text-slate-700">{{ key }}:</dt>
                 <dd class="text-slate-500">{{ t(`nav.${key}`) }}</dd>
@@ -34,7 +34,7 @@
         <el-divider direction="vertical" />
         <el-link  class="hover:no-underline" :href="t('href')" target="_blank">The Sitemap</el-link>
         <el-divider border-style="dashed"></el-divider>
-        <dl class="grid grid-cols-[repeat(2,auto)] gap-x-4 w-fit">
+        <dl class="grid grid-cols-[repeat(2,auto)] gap-x-4 w-fit not-prose">
             <template v-for="(,key) in messages.en.seo">
                 <dt class="font-bold text-slate-700">{{ key }}:</dt>
                 <dd class="text-slate-500">{{ t(`seo.${key}`) }}</dd>
@@ -42,7 +42,7 @@
         </dl>
         <h3>{{ t("h_5") }}</h3>
         <el-divider border-style="dashed"></el-divider>
-        <dl class="grid grid-cols-[repeat(2,auto)] gap-x-4 w-fit">
+        <dl class="grid grid-cols-[repeat(2,auto)] gap-x-4 w-fit not-prose">
             <template v-for="(,key) in messages.en.settings">
                 <dt class="font-bold text-slate-700">{{ key }}:</dt>
                 <dd class="text-slate-500">{{ t(`settings.${key}`) }}</dd>
@@ -66,14 +66,14 @@ import { inject } from "vue";
 import { useI18n } from "vue-i18n";
 import { ArrowLeft, ArrowRight } from "@element-plus/icons-vue";
 
-const { id } = defineProps(["id"]);
+const { pid } = defineProps(["pid"]);
 const pages = inject("pages");
-const the = pages[id];
+const the = pages[pid];
 
 const messages = {
     en: {
         href: "https://www.sitemaps.org",
-        desc: "Each page receives a prop `id` with a unique identification number. Additionally, it is possible to inject an associative array of all semantic objects of the pages and retrieve the identification number of the currently selected page from the router object.",
+        desc: "Each page receives a prop id with a unique identification number. Additionally, it is possible to inject an associative array of all semantic objects of the pages and retrieve the identification number of the currently selected page from the router object.",
         result: "Result",
         h_1: "Connection",
         h_2: "Usage Example",
@@ -85,14 +85,14 @@ const messages = {
 import {'{'} computed, inject {'}'} from "vue";
 /** Import the composable for the selected route */
 import {'{'} useRoute {'}'} from "vue-router";
-/** Get the ID of the current page */
-const {'{'} id {'}'} = defineProps(["id"]);
+/** Get the id of the current page */
+const {'{'} pid {'}'} = defineProps(["pid"]);
 /** Get the object of the selected route */
 const route = useRoute();
 /** Inject the array of semantic objects for the site's pages */
 const pages = inject("pages");
 /**  Get the semantic object of the current page */
-const the = pages[id];
+const the = pages[pid];
 /** Compute the semantic object of the selected page */
 const that = computed(() => pages[route.name]);`,
         nav: {
@@ -150,13 +150,13 @@ import {'{'} computed, inject {'}'} from "vue";
 /** Импортируем композабл выбранного роута */
 import {'{'} useRoute {'}'} from "vue-router";
 /** Получаем id данной страницы */
-const {'{'} id {'}'} = defineProps(["id"]);
+const {'{'} pid {'}'} = defineProps(["pid"]);
 /** Получаем объект выбранного роута */
 const route = useRoute();
 /** Инжектируем массив семантических объектов страниц сайта */
 const pages = inject("pages");
 /** Получаем семантический объект данной станицы */
-const the = pages[id];
+const the = pages[pid];
 /** Вычисляем семантический объект выбранной страницы */
 const that = computed(() => pages[route.name]);`,
         nav: {

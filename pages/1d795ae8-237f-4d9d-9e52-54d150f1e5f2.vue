@@ -8,7 +8,7 @@
         <h2>{{ t("h_1") }}</h2>
         <p>{{ t("p_1") }}</p>
         <highlightjs :code="ex1" language="js" class="not-prose my-6"></highlightjs>
-        <dl class="mb-6">
+        <dl class="mb-6 not-prose">
             <template v-for="(,key) in messages.en.ex1dl">
                 <dt class="font-bold text-slate-700">{{ key }}</dt>
                 <dd class="text-slate-500">{{ t(`ex1dl.${key}`) }}</dd>
@@ -38,7 +38,7 @@
         <h2>{{ t("h4") }}</h2>
         <p>{{ t("p6") }}:</p>
         <highlightjs :code="ex2" language="css" class="not-prose my-6"></highlightjs>
-        <dl class="mb-6">
+        <dl class="mb-6 not-prose">
             <template v-for="(,key) in messages.en.ex2dl">
                 <dt class="font-bold text-slate-700">{{ key }}</dt>
                 <dd class="text-slate-500">{{ t(`ex2dl.${key}`) }}</dd>
@@ -62,9 +62,9 @@ import { inject } from "vue";
 import { useI18n } from "vue-i18n";
 import { ArrowLeft, ArrowRight } from "@element-plus/icons-vue";
 
-const { id } = defineProps(["id"]);
+const { pid } = defineProps(["pid"]);
 const pages = inject("pages");
-const the = pages[id];
+const the = pages[pid];
 
 const messages = {
     en: {

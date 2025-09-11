@@ -50,9 +50,9 @@ import { inject, reactive } from "vue";
 import { useI18n } from "vue-i18n";
 import { ArrowLeft, ArrowRight } from "@element-plus/icons-vue";
 
-const { id } = defineProps(["id"]),
+const { pid } = defineProps(["pid"]),
   pages = inject("pages"),
-  the = pages[id],
+  the = pages[pid],
   type = ['primary', 'success', 'info', 'warning', 'danger'],
   { t } = useI18n({
     messages: {
@@ -93,27 +93,27 @@ const { id } = defineProps(["id"]),
         link45: "documentation/seo",
         description4: "The root page serves as a template common to all pages of the website. Pay attention to the <strong>&lt;router-view&gt;&lt;/router-view&gt;</strong> tag, which indicates the mounting point for the site's child pages. For more details, visit <a href='https://router.vuejs.org' class='text-color-blue-500 hover:underline' target='_blank'>https://router.vuejs.org</a>. Also, pay attention to the <strong>flat</strong> parameter in the page settings palette, which determines whether child pages will be displayed individually or all together in a flat view.",
         header5: "Adding Page 1",
-        description5: "Let’s place the website banner on the first page. Note the mechanism for obtaining the ID of the current page: <strong>const {'{'} id {'}'} = defineProps([\"id\"]), pages = inject(\"pages\"), {'{'} i, title, description {'}'} = pages[id];</strong> Using this, we ultimately retrieve the title, description, and icon of the current page from the semantic array of pages.",
+        description5: "Let’s place the website banner on the first page. Note the mechanism for obtaining the id of the current page: <strong>const {'{'} pid {'}'} = defineProps([\"pid\"]), pages = inject(\"pages\"), {'{'} i, title, description {'}'} = pages[pid];</strong> Using this, we ultimately retrieve the title, description, and icon of the current page from the semantic array of pages.",
         header6: "Adding Page 2",
         description6: "On the second page, we will place a block with three headings and descriptions taken from the <strong>features</strong> object.",
         code6: `<template>
   <div class="container mx-auto px-4 py-24 text-center" un-cloak>
-    <h3>{{ title }}</h3>
-    <p class="mb-24">{{ description }}</p>
+    <h3>{'{{'} title {'}}'}</h3>
+    <p class="mb-24">{'{{'} description {'}}'}</p>
     <div class="grid grid-cols-4 gap-6 gap-y-12 lg:grid-cols-12 not-prose">
-      <div class="col-span-4 flex flex-col items-center text-center" v-for="({ name, text }, index) in features">
-        <div class="size-6 text-emerald-500" :class="\`i-mdi:numeric-\${index + 1}-circle-outline\`"></div>
-        <h3 class="my-4 text-lg leading-6 text-slate-700">{{ name }}</h3>
-        <p class="text-slate-500">{{ text }}</p>
+      <div class="col-span-4 flex flex-col items-center text-center" v-for="({'{'} name, text {'}'}, index) in features">
+        <div class="size-6 text-emerald-500" :class="\`i-mdi:numeric-\${'{'}index + 1{'}'},-circle-outline\`"></div>
+        <h3 class="my-4 text-lg leading-6 text-slate-700">{'{{'} name {'}}'}</h3>
+        <p class="text-slate-500">{'{{'} text {'}}'}</p>
       </div>
     </div>
   </div>
 </template>
 <script setup>
 import {'{'} inject {'}'} from "vue";
-const {'{'} id {'}'} = defineProps(["id"]),
+const {'{'} pid {'}'} = defineProps(["pid"]),
   pages = inject("pages"),
-  {'{'} title, description {'}'} = pages[id],
+  {'{'} title, description {'}'} = pages[pid],
   features = [
     {'{'}
       name: "The Simplest Website",
@@ -174,27 +174,27 @@ const {'{'} id {'}'} = defineProps(["id"]),
         link44: "документация/unocss",
         link45: "документация/seo",
         header5: "Добавление страницы 1",
-        description5: "Разместим на первой странице банер сайта. Обратите внимание на механизм получения id текущей страницы <strong>const {'{'} id {'}'} = defineProps([\"id\"]), pages = inject(\"pages\"), {'{'} i, title, description {'}'} = pages[id];</strong> с помощью которого в итоге получаем заголовок, описание и иконку текущей страницы из семантического массива страниц.",
+        description5: "Разместим на первой странице банер сайта. Обратите внимание на механизм получения id текущей страницы <strong>const {'{'} pid {'}'} = defineProps([\"pid\"]), pages = inject(\"pages\"), {'{'} i, title, description {'}'} = pages[pid];</strong> с помощью которого в итоге получаем заголовок, описание и иконку текущей страницы из семантического массива страниц.",
         header6: "Добавление страницы 2",
         description6: "На второй странице разместим блок с тремя заголовками и описаниями, взятыми из объекта <strong>features</strong>.",
         code6: `<template>
   <div class="container mx-auto px-4 py-24 text-center" un-cloak>
-    <h3>{{ title }}</h3>
-    <p class="mb-24">{{ description }}</p>
+    <h3>{'{{'} title {'}}'}</h3>
+    <p class="mb-24">{'{{'} description {'}}'}</p>
     <div class="grid grid-cols-4 gap-6 gap-y-12 lg:grid-cols-12 not-prose">
-      <div class="col-span-4 flex flex-col items-center text-center" v-for="({ name, text }, index) in features">
-        <div class="size-6 text-emerald-500" :class="\`i-mdi:numeric-\${index + 1}-circle-outline\`"></div>
-        <h3 class="my-4 text-lg leading-6 text-slate-700">{{ name }}</h3>
-        <p class="text-slate-500">{{ text }}</p>
+      <div class="col-span-4 flex flex-col items-center text-center" v-for="({'{'} name, text {'}'}, index) in features">
+        <div class="size-6 text-emerald-500" :class="\`i-mdi:numeric-\${'{'}index + 1{'}'},-circle-outline\`"></div>
+        <h3 class="my-4 text-lg leading-6 text-slate-700">{'{{'} name {'}}'}</h3>
+        <p class="text-slate-500">{'{{'} text {'}}'}</p>
       </div>
     </div>
   </div>
 </template>
 <script setup>
 import {'{'} inject {'}'} from "vue";
-const {'{'} id {'}'} = defineProps(["id"]),
+const {'{'} pid {'}'} = defineProps(["pid"]),
   pages = inject("pages"),
-  {'{'} title, description {'}'} = pages[id],
+  {'{'} title, description {'}'} = pages[pid],
   features = [
     {'{'}
       name: "Самый простой сайт",
@@ -258,9 +258,9 @@ import ElementPlus from "element-plus";
 import { AlarmClock } from "@element-plus/icons-vue";
 import { inject, getCurrentInstance } from "vue";
 const { appContext: { app } } = getCurrentInstance(),
-  { id } = defineProps(["id"]),
+  { pid } = defineProps(["pid"]),
   pages = inject("pages"),
-  { title, description, $children } = pages[id];
+  { title, description, $children } = pages[pid];
 app.use(ElementPlus);
 <\/script>
 <style>
@@ -283,9 +283,9 @@ app.use(ElementPlus);
 </template>
 <script setup>
 import { inject } from "vue";
-const { id } = defineProps(["id"]),
+const { pid } = defineProps(["pid"]),
   pages = inject("pages"),
-  { i, title, description } = pages[id];
+  { i, title, description } = pages[pid];
 <\/script>`,
       src: "images/qstart/4.png",
       to: [t("link42"), t("link43"), t("link44"), t("link45")],
@@ -310,9 +310,9 @@ const { id } = defineProps(["id"]),
 <script setup>
 import { inject } from "vue";
 import { getParagraph } from "speech-code";
-const { id } = defineProps(["id"]),
+const { pid } = defineProps(["pid"]),
   pages = inject("pages"),
-  { title, description } = pages[id],
+  { title, description } = pages[pid],
   text = Array(12).fill().map(() => getParagraph());
 <\/script>`,
       src: "images/qstart/6.png",

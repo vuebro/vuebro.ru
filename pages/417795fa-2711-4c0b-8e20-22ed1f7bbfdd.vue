@@ -5,9 +5,9 @@
             <h2 class="text-4xl my-5 font-['Caveat']">{{ the.title }}</h2>
             <el-text size="large">{{ the.description }}</el-text>
         </div>
-       <el-text>{{ t("site") }}: <a href="https://vueuse.org" target="_blank">https://vueuse.org</a></el-text>
+        <el-text>{{ t("site") }}: <a href="https://vueuse.org" target="_blank">https://vueuse.org</a></el-text>
         <h3 class="mt-8 mb-3 !font-semibold !text-2xl">Importmap</h3>
-        <dl class="grid grid-cols-[repeat(2,auto)] gap-x-4 w-fit">
+        <dl class="grid grid-cols-[repeat(2,auto)] gap-x-4 w-fit not-prose">
             <template v-for="{ key, value } in params">
                 <dt class="font-bold text-slate-700">{{ key }}</dt>
                 <dd class="text-slate-500 overflow-hidden text-ellipsis">{{ value }}</dd>
@@ -49,8 +49,9 @@ const { t } = useI18n({
         }
     }
 }),
- { id } = defineProps(["id"]),
-    the = inject("pages")[id], params = [{
+    { pid } = defineProps(["pid"]),
+    the = inject("pages")[pid],
+    params = [{
         key: "@vueuse/core",
         value: "https://cdn.jsdelivr.net/npm/@vueuse/core@13/index.mjs"
     }, {

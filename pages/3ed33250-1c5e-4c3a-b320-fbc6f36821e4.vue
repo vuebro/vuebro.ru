@@ -28,6 +28,6 @@
 <script setup vapor>
 import { inject } from "vue";
 
-const { id } = defineProps(["id"]),
-    the = inject("pages")[id];
+const { pid } = defineProps(["pid"]),
+    the = inject("pages")[pid];
 </script>

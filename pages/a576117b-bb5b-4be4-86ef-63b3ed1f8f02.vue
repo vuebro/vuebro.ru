@@ -63,10 +63,12 @@
         </div>
         <div class="not-prose flex mt-48">
             <el-button-group class="mx-auto" size="large">
-                <el-button class="my-1" type="primary" :icon="ArrowLeft" :to="the.$prev.to" v-if="the.$prev" tag="router-link">{{
-                    the.$prev.header }}</el-button>
-                <el-button  class="my-1" type="primary" v-if="the.$next" :to="the.$next.to" tag="router-link">{{ the.$next.header
-                }}<el-icon class="el-icon--right">
+                <el-button class="my-1" type="primary" :icon="ArrowLeft" :to="the.$prev.to" v-if="the.$prev"
+                    tag="router-link">{{
+                        the.$prev.header }}</el-button>
+                <el-button class="my-1" type="primary" v-if="the.$next" :to="the.$next.to" tag="router-link">{{
+                    the.$next.header
+                    }}<el-icon class="el-icon--right">
                         <ArrowRight></ArrowRight>
                     </el-icon></el-button>
             </el-button-group>
@@ -79,9 +81,9 @@ import { useI18n } from "vue-i18n";
 import { ref, computed, inject, reactive } from "vue";
 import { ArrowLeft, ArrowRight } from "@element-plus/icons-vue";
 
-const props = defineProps(["id"]);
+const { pid } = defineProps(["pid"]);
 const pages = inject("pages");
-const the = pages[props.id];
+const the = pages[pid];
 const { t } = useI18n({
     messages: {
         en: {

@@ -12,7 +12,7 @@
     <p v-html="t('p[1]')"></p>
     <h3>Sitemap.xml</h3>
     <p v-html="t('p[2]')"></p>
-    <dl class="grid grid-cols-[repeat(2,auto)] gap-x-4 w-fit">
+    <dl class="grid grid-cols-[repeat(2,auto)] gap-x-4 w-fit not-prose">
       <dt class="font-bold text-slate-700">loc:</dt>
       <dd class="text-slate-500">{{ t("dd[0]") }}</dd>
       <dt class="font-bold text-slate-700">changefreq:</dt>
@@ -44,7 +44,7 @@
     <h3>Open Graph</h3>
     <p>{{ t("p[8]") }}</p>
     <br>
-    <dl class="grid grid-cols-[repeat(2,auto)] gap-x-4 w-fit">
+    <dl class="grid grid-cols-[repeat(2,auto)] gap-x-4 w-fit not-prose">
       <dt class="font-bold text-slate-700">type:</dt>
       <dd class="text-slate-500">{{ t("dd[4]") }}</dd>
       <dt class="font-bold text-slate-700">header:</dt>
@@ -60,7 +60,7 @@
     <div class="my-10"><el-alert type="info" :closable="false" :title="t('title[4]')" effect="dark"><img
           :src="the.images[5].url"></el-alert></div>
     <p>{{ t("p[10]") }}</p>
-    <dl class="grid grid-cols-[repeat(2,auto)] gap-x-4 w-fit">
+    <dl class="grid grid-cols-[repeat(2,auto)] gap-x-4 w-fit not-prose">
       <dt class="font-bold text-slate-700">images:</dt>
       <dd class="text-slate-500">{{ t("dd[8]") }}</dd>
     </dl>
@@ -87,9 +87,9 @@ import { ArrowLeft, ArrowRight } from "@element-plus/icons-vue";
 import { useI18n } from "vue-i18n";
 import { inject } from "vue";
 
-const { id } = defineProps(["id"]),
+const { pid } = defineProps(["pid"]),
   pages = inject("pages"),
-  the = pages[id],
+  the = pages[pid],
   code1 = `<title>title</title>
 <meta name="description" content="description" />
 <meta name="keywords" content="" />

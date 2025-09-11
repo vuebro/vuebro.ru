@@ -59,9 +59,9 @@ import { inject } from "vue";
 import { useI18n } from "vue-i18n";
 import { ArrowLeft, ArrowRight } from "@element-plus/icons-vue";
 
-const { id } = defineProps(["id"]);
+const { pid } = defineProps(["pid"]);
 const pages = inject("pages");
-const the = pages[id];
+const the = pages[pid];
 
 const messages = {
   en: {
@@ -108,7 +108,7 @@ const messages = {
       prose: true,
       description: "Beautiful typographic settings for HTML using <a href='https://tailwindcss.com/docs/typography-plugin' target='_blank' rel='noopener noreferrer' class='text-color-blue-500 hover:underline'>prose</a>.",
       link: "https://unocss.dev/presets/typography",
-      body: `<article class="prose-pink lg:text-xl">
+      body: `<article class="prose-pink prose-xl">
   <h1>Garlic bread with cheese: What the science tells us</h1>
   <p>
     For years parents have espoused the health benefits of eating garlic bread with cheese to their
@@ -178,7 +178,7 @@ const messages = {
       prose: true,
       description: "Красивые типографские настройки <a href='https://tailwindcss.ru/docs/typography-plugin' target='_blank' rel='noopener noreferrer' class='text-color-blue-500 hover:underline'>prose</a> для HTML.",
       link: "https://unocss.dev/presets/typography",
-      body: `<article class="prose-pink lg:text-xl">
+      body: `<article class="prose-pink prose-xl">
   <h1>Чесночный хлеб с сыром: что говорит нам наука</h1>
   <p>
     В течение многих лет родители поддерживали пользу для здоровья от употребления в пищу чесночного хлеба с сыром
