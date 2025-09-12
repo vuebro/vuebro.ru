@@ -30,7 +30,7 @@
         <h3>{{ t("h3") }}</h3>
         <div class="grid grid-cols-1 gap-6 lg:grid-cols-8">
             <div class="col-span-1 lg:col-span-5 text-justify">{{ t("p5") }}</div>
-            <div class="col-span-1 lg:col-span-3"><el-image src="/images/qstart/2.png"
+            <div class="col-span-1 lg:col-span-3 not-prose"><el-image src="/images/qstart/2.png"
                     :preview-src-list="['/images/qstart/2.png']"
                     class="w-full h-auto" />
             </div>
