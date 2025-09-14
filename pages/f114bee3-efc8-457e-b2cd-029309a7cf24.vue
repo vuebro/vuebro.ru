@@ -22,21 +22,8 @@
                         </el-image></div>
                 </div>
             </li>
-            <li>
-                <div class="grid grid-cols-1 gap-6 lg:grid-cols-8">
-                    <div class="col-span-1 lg:col-span-5 text-justify">
-                        <i18n-t keypath="70">
-                            <el-tag>Ctrl+Shift+Space</el-tag>
-                            <el-tag>Complete Code</el-tag>
-                        </i18n-t>
-                    </div>
-                    <div class="col-span-1 lg:col-span-3 not-prose"><el-image src="/images/screenshots/8.png"
-                            :preview-src-list="['/images/screenshots/8.png']" class="w-full h-auto">
-                        </el-image></div>
-                </div>
-            </li>
         </ol>
-        <p>{{ t(80) }}</p>
+        <p>{{ t(70) }}</p>
         <div class="not-prose flex mt-48">
             <el-button-group class="mx-auto" size="large">
                 <el-button class="my-1" type="primary" :icon="ArrowLeft" :to="the.$prev.to" v-if="the.$prev"
@@ -71,8 +58,7 @@ const { pid } = defineProps(["pid"]),
                 40: "Вставить ключ в настройки VueBro",
                 50: "Внимание!",
                 60: "Используйте ключ только на безопасном компьютере. Пожалуйста, во избежание кражи ключа не используйте его на компьютерах с общим доступом.",
-                70: "В режиме редактирования исходного кода нажмите {0} или выберите мышкой элемент контекстного меню {1}.",
-                80: "Нейросеть работает в контексте текущей страницы и неплохо показывает себя в задачах автодополнения кода. А если написать для нее комментарии в теле кода с подробным описанием задачи, она способна довольно качественно решить её. Все зависит от того, насколько подробно и четко поставить задачу для искусственного интеллекта."
+                70: "Нейросеть работает в контексте текущей страницы и неплохо показывает себя в задачах автодополнения кода. А если написать для нее комментарии в теле кода с подробным описанием задачи, она способна довольно качественно решить её. Все зависит от того, насколько подробно и четко поставить задачу для искусственного интеллекта."
             },
             en: {
                 0: "Neural network support",
@@ -82,10 +68,8 @@ const { pid } = defineProps(["pid"]),
                 40: "Insert the key into VueBro settings",
                 50: "Attention!",
                 60: "Use the key only on a secure computer. Please, to avoid key theft, do not use it on computers with shared access.",
-                70: "In the source code editing mode, press {0} or select the context menu item {1} with the mouse.",
-                80: "The neural network operates within the context of the current page and performs well in code autocompletion tasks. If you provide detailed comments in the code describing the task, it can solve the problem quite effectively. The quality of the result depends on how clearly and thoroughly the task is defined for the artificial intelligence."
+                70: "The neural network operates within the context of the current page and performs well in code autocompletion tasks. If you provide detailed comments in the code describing the task, it can solve the problem quite effectively. The quality of the result depends on how clearly and thoroughly the task is defined for the artificial intelligence."
             }
         }
     });
-
 </script>
