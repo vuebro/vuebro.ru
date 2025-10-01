@@ -71,7 +71,7 @@ const { t } = useI18n({
             support1: "Поддержите проект звездой на github, подпиской, лайками и комментариями!",
             support2: "Ваша поддержка важна для дальнейшего развития проекта!",
             documentation: "документация",
-            appUrl: "https://run.vuebro.ru",
+            appUrl: "https://web.vuebro.ru",
             githubText: "VueBro на github",
             socialUrl: "https://vk.com/vuebro",
             socialIcon: "fa6-brands:vk",
