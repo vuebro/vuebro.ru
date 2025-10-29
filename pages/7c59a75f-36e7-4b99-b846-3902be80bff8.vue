@@ -13,32 +13,17 @@
                 <dd class="text-slate-500 overflow-hidden text-ellipsis">{{ value }}</dd>
             </template>
         </dl>
-        <h3 class="mt-8 mb-3 !font-semibold !text-2xl">{{ t("code") }}</h3>
-        <highlightjs language="js" :code="js" class="not-prose"></highlightjs>
         <h3 class="mt-8 mb-3 !font-semibold !text-2xl">{{ t("example") }}</h3>
         <el-tabs class="not-prose 2xl:row-start-auto">
             <el-tab-pane :label="t('result')">
                 <div class="size-96">
-                    <TresCanvas v-bind="gl">
-                        <TresPerspectiveCamera :args="[450, 1, 0.1, 1000]"></TresPerspectiveCamera>
-                        <TresMesh :position="[-2, 2, 0]" :rotation="[0, Math.PI, 0]">
-                            <TresConeGeometry :args="[1, 1.5, 3]"></TresConeGeometry>
-                            <TresMeshToonMaterial color="#82DBC5"></TresMeshToonMaterial>
-                        </TresMesh>
-                        <TresMesh ref="boxRef" cast-shadow :position="[0, 0, 0]">
-                            <TresBoxGeometry :args="[1.5, 1.5, 1.5]"></TresBoxGeometry>
-                            <TresMeshToonMaterial color="#4F4F4F"></TresMeshToonMaterial>
-                        </TresMesh>
-                        <TresMesh cast-shadow :position="[2, -2, 0]">
-                            <TresSphereGeometry></TresSphereGeometry>
-                            <TresMeshToonMaterial color="#FBB03B"></TresMeshToonMaterial>
-                        </TresMesh>
-                        <TresMesh receive-shadow :position="[0, -3, 0]" :rotation="[-Math.PI / 2, 0, 0]">
-                            <TresPlaneGeometry :args="[10, 10, 10, 10]"></TresPlaneGeometry>
-                            <TresMeshStandardMaterial color="#f7f7f7"></TresMeshStandardMaterial>
-                        </TresMesh>
-                        <TresAmbientLight :intensity="1"></TresAmbientLight>
-                        <TresDirectionalLight cast-shadow :position="[0, 2, 0]" :intensity="1"></TresDirectionalLight>
+                    <TresCanvas clear-color="white">
+                        <Levioso :speed="2" :range="[0, 0.7]" :rotation-factor="9">
+                            <TorusKnot :scale="0.45">
+                                <TresMeshNormalMaterial />
+                            </TorusKnot>
+                        </Levioso>
+                        <ContactShadows :position-y="-1" color="#335" :scale="20" />
                     </TresCanvas>
                 </div>
             </el-tab-pane>
@@ -53,13 +38,12 @@
 </template>
 
 <script setup vapor>
-import { inject, getCurrentInstance, shallowRef } from "vue";
+import { inject } from "vue";
 import { useI18n } from "vue-i18n";
-import Tres, { TresCanvas, useRenderLoop } from "https://cdn.jsdelivr.net/npm/@tresjs/core@4/dist/tres.js";
-import { BasicShadowMap, SRGBColorSpace, NoToneMapping } from "three";
+import { ContactShadows, Levioso, TorusKnot } from "https://cdn.jsdelivr.net/npm/@tresjs/cientos@5.1.0/dist/trescientos.js";
+import { TresCanvas } from "@tresjs/core";
 
-const { appContext: { app } } = getCurrentInstance(),
-    { t } = useI18n({
+const { t } = useI18n({
         messages: {
             en: {
                 site: "The project website",
@@ -79,79 +63,30 @@ const { appContext: { app } } = getCurrentInstance(),
     the = inject("pages")[pid],
     params = [{
         key: "@tresjs/core",
-        value: "https://cdn.jsdelivr.net/npm/@tresjs/core@4/dist/tres.js"
+        value: "https://cdn.jsdelivr.net/npm/@tresjs/core@5/dist/tres.js"
+    }, {
+        key: "@tresjs/cientos",
+        value: "https://cdn.jsdelivr.net/npm/@tresjs/cientos@5/dist/trescientos.js"
     }, {
         key: "three",
-        value: "https://cdn.jsdelivr.net/npm/three/build/three.module.min.js"
+        value: "https://cdn.jsdelivr.net/npm/three@0.180/build/three.module.min.js"
     }, {
         key: "@vueuse/core",
-        value: "https://cdn.jsdelivr.net/npm/@vueuse/core@13/index.mjs"
+        value: "https://cdn.jsdelivr.net/npm/@vueuse/core@14/dist/index.js"
     }, {
         key: "@vueuse/shared",
-        value: "https://cdn.jsdelivr.net/npm/@vueuse/shared@13/index.mjs"
+        value: "https://cdn.jsdelivr.net/npm/@vueuse/shared@14/dist/index.js"
     }],
-    js = `<script setup>
-import { getCurrentInstance } from "vue";
-import Tres from "@tresjs/core";
-const { appContext: { app } } = getCurrentInstance();
-app.use(Tres);
-<\/script>`,
-    html = `<TresCanvas v-bind="gl">
-    <TresPerspectiveCamera :args="[450, 1, 0.1, 1000]"></TresPerspectiveCamera>
-    <TresMesh :position="[-2, 2, 0]" :rotation="[0, Math.PI, 0]">
-        <TresConeGeometry :args="[1, 1.5, 3]"></TresConeGeometry>
-        <TresMeshToonMaterial color="#82DBC5"></TresMeshToonMaterial>
-    </TresMesh>
-    <TresMesh ref="boxRef" cast-shadow :position="[0, 0, 0]">
-        <TresBoxGeometry :args="[1.5, 1.5, 1.5]"></TresBoxGeometry>
-        <TresMeshToonMaterial color="#4F4F4F"></TresMeshToonMaterial>
-    </TresMesh>
-    <TresMesh cast-shadow :position="[2, -2, 0]">
-        <TresSphereGeometry></TresSphereGeometry>
-        <TresMeshToonMaterial color="#FBB03B"></TresMeshToonMaterial>
-    </TresMesh>
-    <TresMesh receive-shadow :position="[0, -3, 0]" :rotation="[-Math.PI / 2, 0, 0]">
-        <TresPlaneGeometry :args="[10, 10, 10, 10]"></TresPlaneGeometry>
-        <TresMeshStandardMaterial color="#f7f7f7"></TresMeshStandardMaterial>
-    </TresMesh>
-    <TresAmbientLight :intensity="1"></TresAmbientLight>
-    <TresDirectionalLight cast-shadow :position="[0, 2, 0]" :intensity="1"></TresDirectionalLight>
-</TresCanvas>`,
-    script = `import { shallowRef } from "vue";
-import { TresCanvas, useRenderLoop } from "@tresjs/core";
-import { BasicShadowMap, SRGBColorSpace, NoToneMapping } from "three";
+    html = `<TresCanvas clear-color="white">
+    <Levioso :speed="2" :range="[0, 0.7]" :rotation-factor="9">
+      <TorusKnot :scale="0.45">
+        <TresMeshNormalMaterial />
+      </TorusKnot>
+    </Levioso>
+    <ContactShadows :position-y="-1" color="#335" :scale="20" />
+  </TresCanvas>`,
+    script = `import { ContactShadows, Levioso, TorusKnot } from '@tresjs/cientos'
+import { TresCanvas } from '@tresjs/core'`;
 
-const gl = {
-  clearColor: "#82DBC5",
-  shadows: true,
-  alpha: false,
-  shadowMapType: BasicShadowMap,
-  outputColorSpace: SRGBColorSpace,
-  toneMapping: NoToneMapping,
-};
-const boxRef = shallowRef();
-const { onLoop } = useRenderLoop();
-
-onLoop(() => {
-  if(boxRef.value) boxRef.value.rotation.y += 0.01;
-});`,
-    gl = {
-        clearColor: '#82DBC5',
-        shadows: true,
-        alpha: false,
-        shadowMapType: BasicShadowMap,
-        outputColorSpace: SRGBColorSpace,
-        toneMapping: NoToneMapping,
-    },
-    boxRef = shallowRef(),
-    { onLoop } = useRenderLoop();
-
-app.use(Tres);
-
-onLoop(() => {
-    if (boxRef.value) boxRef.value.rotation.y += 0.01;
-});
 
 </script>
-
-<style scoped src="https://cdn.jsdelivr.net/npm/quasar@2/dist/quasar.prod.css"></style>

@@ -53,10 +53,10 @@ const { t } = useI18n({
     the = inject("pages")[pid],
     params = [{
         key: "@vueuse/core",
-        value: "https://cdn.jsdelivr.net/npm/@vueuse/core@13/index.mjs"
+        value: "https://cdn.jsdelivr.net/npm/@vueuse/core@14/dist/index.js"
     }, {
         key: "@vueuse/shared",
-        value: "https://cdn.jsdelivr.net/npm/@vueuse/shared@13/index.mjs"
+        value: "https://cdn.jsdelivr.net/npm/@vueuse/shared@14/dist/index.js"
     }],
     js = `import { useNow } from '@vueuse/core';
 
