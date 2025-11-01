@@ -45,9 +45,9 @@ import { ArrowLeft, ArrowRight } from "@element-plus/icons-vue";
 import { useI18n } from "vue-i18n";
 import { inject } from "vue";
 
-const { pid } = defineProps(["pid"]),
+const { id } = defineProps(["id"]),
     pages = inject("pages"),
-    the = pages[pid],
+    the = pages[id],
     { t } = useI18n({
         messages: {
             ru: {

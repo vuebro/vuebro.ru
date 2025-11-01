@@ -66,9 +66,9 @@ import { inject } from "vue";
 import { useI18n } from "vue-i18n";
 import { ArrowLeft, ArrowRight } from "@element-plus/icons-vue";
 
-const { pid } = defineProps(["pid"]);
+const { id } = defineProps(["id"]);
 const pages = inject("pages");
-const the = pages[pid];
+const the = pages[id];
 
 const messages = {
     en: {
@@ -86,13 +86,13 @@ import {'{'} computed, inject {'}'} from "vue";
 /** Import the composable for the selected route */
 import {'{'} useRoute {'}'} from "vue-router";
 /** Get the id of the current page */
-const {'{'} pid {'}'} = defineProps(["pid"]);
+const {'{'} id {'}'} = defineProps(["id"]);
 /** Get the object of the selected route */
 const route = useRoute();
 /** Inject the array of semantic objects for the site's pages */
 const pages = inject("pages");
 /**  Get the semantic object of the current page */
-const the = pages[pid];
+const the = pages[id];
 /** Compute the semantic object of the selected page */
 const that = computed(() => pages[route.name]);`,
         nav: {
@@ -150,13 +150,13 @@ import {'{'} computed, inject {'}'} from "vue";
 /** Импортируем композабл выбранного роута */
 import {'{'} useRoute {'}'} from "vue-router";
 /** Получаем id данной страницы */
-const {'{'} pid {'}'} = defineProps(["pid"]);
+const {'{'} id {'}'} = defineProps(["id"]);
 /** Получаем объект выбранного роута */
 const route = useRoute();
 /** Инжектируем массив семантических объектов страниц сайта */
 const pages = inject("pages");
 /** Получаем семантический объект данной станицы */
-const the = pages[pid];
+const the = pages[id];
 /** Вычисляем семантический объект выбранной страницы */
 const that = computed(() => pages[route.name]);`,
         nav: {

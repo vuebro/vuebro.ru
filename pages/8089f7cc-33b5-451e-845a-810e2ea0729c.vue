@@ -78,8 +78,8 @@ const { t } = useI18n({
         }
     }
 }),
-    { pid } = defineProps(["pid"]),
-    the = inject("pages")[pid],
+    { id } = defineProps(["id"]),
+    the = inject("pages")[id],
     links = reactive([{
         icon: "ph:number-circle-one-duotone",
         title: t("hosingTitle"),

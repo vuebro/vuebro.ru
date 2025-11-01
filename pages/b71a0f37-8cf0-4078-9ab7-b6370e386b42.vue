@@ -83,9 +83,9 @@ const { t } = useI18n({
         }
     }
 });
-const { pid } = defineProps(["pid"]),
+const { id } = defineProps(["id"]),
     pages = inject("pages"),
-    the = pages[pid],
+    the = pages[id],
     tree = reactive([
         {
             icon: "folder", name: ".vite", description: t("dsc1"), children: [

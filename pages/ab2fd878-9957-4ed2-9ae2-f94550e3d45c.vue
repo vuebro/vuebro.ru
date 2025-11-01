@@ -59,9 +59,9 @@ import { inject } from "vue";
 import { useI18n } from "vue-i18n";
 import { ArrowLeft, ArrowRight } from "@element-plus/icons-vue";
 
-const { pid } = defineProps(["pid"]);
+const { id } = defineProps(["id"]);
 const pages = inject("pages");
-const the = pages[pid];
+const the = pages[id];
 
 const messages = {
   en: {

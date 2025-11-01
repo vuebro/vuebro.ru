@@ -20,8 +20,8 @@
 <script setup vapor>
 import { inject, ref } from "vue";
 import { vIntersectionObserver } from "@vueuse/components";
-const { pid } = defineProps(["pid"]),
-    the = inject("pages")[pid],
+const { id } = defineProps(["id"]),
+    the = inject("pages")[id],
     anima = ref([]);
 </script>
 

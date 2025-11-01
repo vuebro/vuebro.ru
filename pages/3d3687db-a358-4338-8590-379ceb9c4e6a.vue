@@ -67,8 +67,8 @@ const { appContext: { app } } = getCurrentInstance(),
             }
         }
     }),
-    { pid } = defineProps(["pid"]),
-    the = inject("pages")[pid],
+    { id } = defineProps(["id"]),
+    the = inject("pages")[id],
     params = [{
         key: "quasar",
         value: "https://cdn.jsdelivr.net/npm/quasar@2/dist/quasar.client.js"

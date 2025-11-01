@@ -49,8 +49,8 @@ const { t } = useI18n({
         }
     }
 }),
-    { pid } = defineProps(["pid"]),
-    the = inject("pages")[pid],
+    { id } = defineProps(["id"]),
+    the = inject("pages")[id],
     params = [{
         key: "@vueuse/core",
         value: "https://cdn.jsdelivr.net/npm/@vueuse/core@14/dist/index.js"

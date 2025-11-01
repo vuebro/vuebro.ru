@@ -59,8 +59,8 @@ const { t } = useI18n({
             }
         }
     }),
-    { pid } = defineProps(["pid"]),
-    the = inject("pages")[pid],
+    { id } = defineProps(["id"]),
+    the = inject("pages")[id],
     params = [{
         key: "@tresjs/core",
         value: "https://cdn.jsdelivr.net/npm/@tresjs/core@5/dist/tres.js"

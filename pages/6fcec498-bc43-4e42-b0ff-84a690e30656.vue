@@ -63,8 +63,8 @@ const { appContext: { app } } = getCurrentInstance(),
             }
         }
     }),
-    { pid } = defineProps(["pid"]),
-    the = inject("pages")[pid],
+    { id } = defineProps(["id"]),
+    the = inject("pages")[id],
     params = [{
         key: "vuetify",
         value: "https://cdn.jsdelivr.net/npm/vuetify@3/dist/vuetify.esm.js"

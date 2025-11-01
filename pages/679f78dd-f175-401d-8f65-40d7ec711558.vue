@@ -54,8 +54,8 @@ const { t } = useI18n({
         }
     }
 }),
-    { pid } = defineProps(["pid"]),
-    the = inject("pages")[pid],
+    { id } = defineProps(["id"]),
+    the = inject("pages")[id],
     params = [{
         key: "element-plus",
         value: "https://cdn.jsdelivr.net/npm/element-plus@2/dist/index.full.min.mjs"

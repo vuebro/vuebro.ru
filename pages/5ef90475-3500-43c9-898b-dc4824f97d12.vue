@@ -122,9 +122,9 @@ const { t } = useI18n({
         }
     }
 });
-const { pid } = defineProps(["pid"]),
+const { id } = defineProps(["id"]),
     pages = inject("pages"),
-    the = pages[pid],
+    the = pages[id],
     views = computed(() => the.$children.filter(({ $children }) => $children.length)),
     ready = ref(true),
     pageHeaderRef = useTemplateRef("pageHeader"),
