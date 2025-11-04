@@ -23699,32 +23699,25 @@ const Xg = async (e) => {
     URL.revokeObjectURL(t);
   }
 }, JP = async (e, { parseOptions: t, scriptOptions: { templateOptions: { compilerOptions: { expressionPlugins: s, ...n } = {}, ...i } = {}, ...o } = {}, styleOptions: c } = {}) => {
-  const l = `data-v-${zT(e)}`, { descriptor: p, errors: d } = ib(await Xg(e) ?? "<template></template>", { filename: e, ...t }), { script: f, scriptSetup: m, slotted: x, styles: g, template: y } = p, v = new Set([f, m].filter((Y) => Y !== null).flatMap(({ lang: Y = "js" }) => [.../[jt]sx$/.test(Y) ? ["jsx"] : [], .../tsx?$/.test(Y) ? ["typescript"] : []])), { ast: b, content: E = "" } = y ?? {};
-  let w = "";
-  const C = [], A = document.getElementById(l) instanceof HTMLStyleElement ? Promise.resolve([]) : Promise.all(g.map(async ({ content: Y, module: le, scoped: J = !1, src: $ }) => {
+  let l = "";
+  const p = `data-v-${zT(e)}`, d = [], { descriptor: f, errors: m } = ib(await Xg(e) ?? "<template></template>", { filename: e, ...t }), { script: x, scriptSetup: g, slotted: y, styles: v, template: b } = f, E = new Set([x, g].filter((Y) => Y !== null).flatMap(({ lang: Y = "js" }) => [.../[jt]sx$/.test(Y) ? ["jsx"] : [], .../tsx?$/.test(Y) ? ["typescript"] : []])), w = { expressionPlugins: [.../* @__PURE__ */ new Set([...s ?? [], ...E])], filename: e, scopeId: p, slotted: y, ...n }, C = { compilerOptions: w, filename: e, id: p, scoped: v.some(({ scoped: Y }) => Y), slotted: y, ...i }, A = { id: p, templateOptions: C, ...o }, O = document.getElementById(p) instanceof HTMLStyleElement ? Promise.resolve([]) : Promise.all(v.map(async ({ content: Y, module: le, scoped: J = !1, src: $ }) => {
     const ie = !!le;
-    if (ie && !w) return w = "<style module> is not supported in the playground.", "";
+    if (ie && !l) return l = "<style module> is not supported in the playground.", "";
     {
-      const { code: Q, errors: se } = await sP({ filename: e, id: l, modules: ie, scoped: J, source: $ ? await Xg($) ?? "" : Y, ...c });
-      return C.push(...se), Q;
+      const { code: Q, errors: se } = await sP({ filename: e, id: p, modules: ie, scoped: J, source: $ ? await Xg($) ?? "" : Y, ...c });
+      return d.push(...se), Q;
     }
-  })), O = { expressionPlugins: [.../* @__PURE__ */ new Set([...s ?? [], ...v])], filename: e, scopeId: l, slotted: x, ...n }, D = { compilerOptions: O, filename: e, id: l, scoped: g.some(({ scoped: Y }) => Y), slotted: x, ...i }, N = { id: l, templateOptions: D, ...o }, j = { jsxRuntime: "preserve", transforms: [...v] }, { bindings: U, content: X, warnings: W } = f || m ? WP(p, N) : {};
-  U && (O.bindingMetadata = U);
-  const { code: V, errors: F, tips: q } = !y || m && N.inlineTemplate ? {} : l0({ ...b, filename: e, id: l, source: E, ...D });
-  [...d, ...F ?? [], ...C].forEach((Y) => {
-    co.error(Y);
-  }), [...W ?? [], ...w ? [w] : []].forEach((Y) => {
-    co.warn(Y);
-  }), [...q ?? []].forEach((Y) => {
-    co.info(Y);
-  });
-  const [G, ee, ae] = await Promise.all([A, X ? Kg(v.size ? nd(X, j).code : X) : Promise.resolve(void 0), V ? Kg(v.size ? nd(V, j).code : V) : Promise.resolve(void 0)]), be = G.join(`
+  })), D = { jsxRuntime: "preserve", transforms: [...E] }, { ast: N, content: j = "" } = b ?? {}, { bindings: U, content: X, warnings: W } = x || g ? WP(f, A) : {};
+  U && (w.bindingMetadata = U);
+  const { code: V, errors: F, tips: q } = !b || g && A.inlineTemplate ? {} : l0({ ...N, filename: e, id: p, source: j, ...C });
+  [...m, ...F ?? [], ...d].forEach(co.error), [...W ?? [], ...l ? [l] : []].forEach(co.warn), [...q ?? []].forEach(co.info);
+  const [G, ee, ae] = await Promise.all([O, X ? Kg(E.size ? nd(X, D).code : X) : Promise.resolve(void 0), V ? Kg(E.size ? nd(V, D).code : V) : Promise.resolve(void 0)]), be = G.join(`
 `).trim();
   if (be) {
     const Y = document.createElement("style");
-    Y.id = l, Y.textContent = be, document.head.appendChild(Y);
+    Y.id = p, Y.textContent = be, document.head.appendChild(Y);
   }
-  return { __scopeId: l, ...ee?.default, ...ae };
+  return { __scopeId: p, ...ee?.default, ...ae };
 };
 export {
   JP as default
